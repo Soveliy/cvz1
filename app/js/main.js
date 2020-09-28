@@ -328,7 +328,7 @@ timer('.action--3 .timer', '2020-12-15');
 
 $('.review-post__select').niceSelect();
 
-$('.review-post__form').validate({
+$('.review-post__form,.form').validate({
 
   messages:{
     login:{
@@ -340,3 +340,54 @@ $('.review-post__form').validate({
 
 
 });
+
+
+// upload width Browser
+windowSize = $(window).width(); 
+$(window).on('resize', function(event){
+windowSize = $(window).width(); 
+});
+
+
+$(".header__buttons-item-icon--edit").on('click', function(){
+    $(".mobile-buttons").slideToggle();
+    $(".mobile-menu").hide();
+    $(".burger").removeClass("js-active")
+})
+$(".burger").on('click', function(){
+    $(this).toggleClass("js-active")
+    $(".mobile-menu").slideToggle();
+    $(".mobile-buttons").hide();
+})
+$(".mobile-menu__nav > ul > li > span").on('click', function(){
+
+  
+    if(windowSize < 1025){
+    if ($(this).hasClass("js-active")) {
+        $(this).removeClass("js-active");
+        $(this).next().removeClass("js-active");
+        $(this).next().slideToggle();
+        
+    } else {
+      
+      $(this).closest(".mobile-menu__nav").find("ul.js-active").slideToggle();
+      $(this).closest(".mobile-menu__nav").find("ul.js-active").removeClass("js-active");
+      $(".mobile-menu__nav > ul > li > span").removeClass("js-active");
+      $(this).addClass("js-active");
+      $(this).next().addClass("js-active");
+      $(this).next().slideToggle();
+    }
+    }  
+  });
+
+
+  $(".callback-js").click(function(){
+    $("#callback-modal").arcticmodal();
+  });
+  $(".reception-js").click(function(){
+    $("#reception-modal").arcticmodal();
+  });
+  $('.options-buttons__search-btn').click(function(){
+    $(this).next().toggleClass('js-active');
+  });
+  
