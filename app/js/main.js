@@ -223,6 +223,30 @@ $('.content-slider.video-slider__slider').each(function(){
   });
 });
 
+// News main
+
+$('.content-slider.news-main__slider').each(function(){
+  var contentSlider = new Swiper(this, {
+    spaceBetween: 30,
+    // slidesPerView: 3,
+    navigation: {
+      nextEl: $(this).prev().find('.content-slider__arrow-right')[0],
+      prevEl: $(this).prev().find('.content-slider__arrow-left')[0],
+    },
+    breakpoints: {
+      310: {
+        slidesPerView: 1,
+      },
+      600: {
+        slidesPerView: 2,
+      },
+      1025: {
+        slidesPerView: 4,
+      }
+    }
+  });
+});
+
 
 
 
@@ -255,8 +279,18 @@ dropdown('.glossary-item__title', 'active');
 $('.rate').each(function () {
   $(this).rateYo({
     ratedFill: "#DF7EB1",
+    ratedStroke: "#DF7EB1",
     fullStar: true,
-    starWidth: "22px"
+    starWidth: "22px",
+  });
+});
+
+$('.reitings-rate').each(function () {
+  $(this).rateYo({
+    ratedFill: "#AE44B9",
+    fullStar: true,
+    starWidth: "31px",
+    spacing: "9.6px"
   });
 });
 
