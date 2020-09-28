@@ -308,6 +308,15 @@ a {
       .content-slider__arrow-right {
         margin-left: 0; } }
 
+.sticky {
+  position: fixed !important;
+  background-color: #fff;
+  width: 100%;
+  z-index: 100; }
+
+.sticky + main {
+  padding-top: 75px; }
+
 /* global */
 .g-hidden {
   display: none; }
