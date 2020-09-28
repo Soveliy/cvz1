@@ -452,21 +452,34 @@ $(".mobile-menu__nav > ul > li > span").on('click', function(){
   });
 
 
-  // When the user scrolls the page, execute myFunction
-window.onscroll = function() {stickyHeader()};
+//   // When the user scrolls the page, execute myFunction
+// window.onscroll = function() {stickyHeader()};
 
-// Get the header
-var header = document.querySelector("header");
+// // Get the header
+// var header = document.querySelector("header");
 
-// Get the offset position of the navbar
-var sticky = header.offsetTop;
+// // Get the offset position of the navbar
+// var sticky = header.offsetTop;
 
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function stickyHeader() {
-  if (window.pageYOffset >= sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
+// // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+// function stickyHeader() {
+//   if (window.pageYOffset >= sticky) {
+//     header.classList.add("sticky");
+//   } else {
+//     header.classList.remove("sticky");
+//   }
+// }
+
+var lastScrollTop = 0;
+$(window).scroll(function(event){
+   var st = $(this).scrollTop();
+   if (st > lastScrollTop){
+       // код для прокрутки вниз
+       $('header').addClass('sticky');
+   } else {
+      // код для прокрутки вверх
+      $('header').removeClass('sticky');
+   }
+   lastScrollTop = st;
+});
   

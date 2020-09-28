@@ -317,6 +317,9 @@ a {
 
 .sticky + main {
   padding-top: 75px; }
+  @media (max-width: 1024px) {
+    .sticky + main {
+      padding-top: 68px; } }
 
 /* global */
 .g-hidden {
