@@ -1823,6 +1823,9 @@ label.error {
   font-style: normal;
   font-display: swap; }
 
+.btn {
+  text-decoration: none; }
+
 .swiper-pagination-fraction {
   position: static;
   width: auto; }
@@ -4304,6 +4307,11 @@ label.error {
       -webkit-transform: rotate(180deg);
           -ms-transform: rotate(180deg);
               transform: rotate(180deg); }
+
+.content-block h2 {
+  font-size: 48px;
+  line-height: 51px;
+  margin-bottom: 25px; }
 
 .content-block p {
   font-size: 16px;
@@ -7698,3 +7706,66 @@ label.error {
 .news-main__date {
   margin-top: 10.5px;
   color: #868786; }
+
+.about-slider {
+  padding-bottom: 0;
+  margin-bottom: 0; }
+  .about-slider .swiper-slide {
+    padding-bottom: 80px; }
+  .about-slider__btn-container {
+    margin-top: 56px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+  .about-slider .btn {
+    text-decoration: none; }
+  .about-slider__btn {
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 30px; }
+
+.stars__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 80px 70px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.stars__image-block {
+  position: relative;
+  height: 357px;
+  width: 357px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 82px; }
+  .stars__image-block:before {
+    content: '';
+    position: absolute;
+    width: 431px;
+    height: 418px;
+    background: url(../img/about-image-before.svg) no-repeat center center;
+    background-size: contain;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+  .stars__image-block img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 50%; }
+
+.stars__content {
+  -ms-flex-item-align: center;
+      align-self: center; }
+
+.stars__bottom {
+  text-align: right; }

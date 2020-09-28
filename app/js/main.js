@@ -82,6 +82,32 @@ $('.content-slider.questions__slider').each(function(){
   });
 });
 
+// about slider
+
+$('.about-slider .swiper-container').each(function(){
+  var contentSlider = new Swiper(this, {
+    spaceBetween: 60,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: $(this).prev().find('.content-slider__arrow-right')[0],
+      prevEl: $(this).prev().find('.content-slider__arrow-left')[0],
+    },
+  });
+});
+
+// stars__slider
+
+$('.stars__slider').each(function(){
+  var contentSlider = new Swiper(this, {
+    spaceBetween: 60,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: $(this).prev().find('.content-slider__arrow-right')[0],
+      prevEl: $(this).prev().find('.content-slider__arrow-left')[0],
+    },
+  });
+});
+
 // Reviews slider
 
 $('.content-slider.reviews__slider').each(function(){
