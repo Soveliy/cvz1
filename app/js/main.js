@@ -305,9 +305,15 @@ dropdown('.glossary-item__title', 'active');
 $('.rate').each(function () {
   $(this).rateYo({
     ratedFill: "#DF7EB1",
-    ratedStroke: "#DF7EB1",
     fullStar: true,
     starWidth: "22px",
+    starSvg: `
+    
+    <svg xmlns="http://www.w3.org/2000/svg" width="24.795" height="23.582" viewBox="0 0 24.795 23.582">
+      <path id="Path_460" data-name="Path 460" d="M1190.379,937.887l-2.678,7.808-8.254.135,6.6,4.96-2.422,7.891,6.756-4.743,6.756,4.743-2.422-7.891,6.6-4.96-8.254-.135Z" transform="translate(-1177.981 -936.346)" fill="" stroke="#df7eb1" stroke-width="1"/>
+    </svg>
+
+    `
   });
 });
 
@@ -316,7 +322,14 @@ $('.reitings-rate').each(function () {
     ratedFill: "#AE44B9",
     fullStar: true,
     starWidth: "31px",
-    spacing: "9.6px"
+    spacing: "9.6px",
+    starSvg: `
+    
+    <svg xmlns="http://www.w3.org/2000/svg" width="24.795" height="23.582" viewBox="0 0 24.795 23.582">
+      <path id="Path_460" data-name="Path 460" d="M1190.379,937.887l-2.678,7.808-8.254.135,6.6,4.96-2.422,7.891,6.756-4.743,6.756,4.743-2.422-7.891,6.6-4.96-8.254-.135Z" transform="translate(-1177.981 -936.346)" fill="" stroke="#AE44B9" stroke-width="1"/>
+    </svg>
+
+    `
   });
 });
 
@@ -380,11 +393,12 @@ $('.reitings-rate').each(function () {
 
   
 baguetteBox.run('.gallery__slider .swiper-wrapper');
+baguetteBox.run('.gallery-page__wrapper');
 
 
-timer('.action--1 .timer', '2020-10-15');
-timer('.action--2 .timer', '2020-11-15');
-timer('.action--3 .timer', '2020-12-15');
+// timer('.action--1 .timer', '2020-10-15');
+// timer('.action--2 .timer', '2020-11-15');
+// timer('.action--3 .timer', '2020-12-15');
 
 $('.review-post__select').niceSelect();
 
@@ -451,26 +465,17 @@ $(".mobile-menu__nav > ul > li > span").on('click', function(){
     $(this).next().toggleClass('js-active');
   });
 
+  $(document).click( function(e){
+    if ( $(e.target).closest('.options-buttons__search-btn').length || $(e.target).closest('.search__input-container').length) {
+        // клик внутри элемента 
+        return;
+    }
+    // клик снаружи элемента 
+    $('.search__input-container').removeClass('js-active');
+  });
+    
 
-//   // When the user scrolls the page, execute myFunction
-// window.onscroll = function() {stickyHeader()};
-
-// // Get the header
-// var header = document.querySelector("header");
-
-// // Get the offset position of the navbar
-// var sticky = header.offsetTop;
-
-// // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-// function stickyHeader() {
-//   if (window.pageYOffset >= sticky) {
-//     header.classList.add("sticky");
-//   } else {
-//     header.classList.remove("sticky");
-//   }
-// }
-
-var lastScrollTop = 0;
+var lastScrollTop = 62;
 $(window).scroll(function(event){
    var st = $(this).scrollTop();
    if (st > lastScrollTop){
@@ -478,8 +483,26 @@ $(window).scroll(function(event){
        $('header').addClass('sticky');
    } else {
       // код для прокрутки вверх
-      $('header').removeClass('sticky');
+      if(window.innerWidth > 1024) {
+        $('header').removeClass('sticky');
+      }
    }
-   lastScrollTop = st;
+   if(window.innerWidth < 1024) {
+    lastScrollTop = st;
+  } else{
+    if(st>62){
+      lastScrollTop = st;
+    }
+  }
+   
 });
-  
+
+
+var $page = $('html, body');
+$('.service-menu__item').click(function() {
+    $page.animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 400);
+    return false;
+});
+
