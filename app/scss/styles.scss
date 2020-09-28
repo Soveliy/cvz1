@@ -2,30 +2,38 @@
 @import "_vars";
 @import "libs";
 @import "_fonts";
+// @import '_baguettebox.js/dist/baguetteBox.min.css';
 
-.swiper-pagination-fraction{
+
+.swiper-pagination-fraction {
     position: static;
     width: auto;
 }
-.swiper-button-next,.swiper-button-prev{
+
+.swiper-button-next,
+.swiper-button-prev {
     position: static;
     margin: 0;
-    &:before,&:after{
+
+    &:before,
+    &:after {
         display: none;
     }
-    svg{
-       width: 100%;
-       height: 100%;
-       transition: $transition;
-       stroke: $white;
-       
-   }
+
+    svg {
+        width: 100%;
+        height: 100%;
+        transition: $transition;
+        stroke: $white;
+
+    }
 }
 
-.logo{
+.logo {
     width: 235px;
     height: 53px;
-    &__image{
+
+    &__image {
         display: block;
         height: 100%;
         width: 100%;
@@ -3059,3 +3067,4 @@
         }
     }
 }
+    
