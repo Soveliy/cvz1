@@ -339,6 +339,9 @@ a{
 }
 .sticky + main{
     padding-top: 75px;
+    @include for-md{
+        padding-top: 68px;
+    }
 }
 
 
