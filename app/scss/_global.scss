@@ -85,6 +85,7 @@ a{
     box-sizing: border-box;
     padding: 7.5px 20px;
     transition: $transition;
+    cursor: pointer;
     &--upper{
         text-transform: uppercase;
     }
