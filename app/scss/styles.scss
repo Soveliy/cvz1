@@ -55,6 +55,9 @@
             width: 177px;
             height: 41px;
         }
+        @include for-lit-mob(){
+            width: 150px;
+        }
     }
     &__buttons{
         display: none;
@@ -86,7 +89,11 @@
             &:active{
                 background-color: $purple;
             }
-
+            @include for-lit-mob(){
+                width: 36px;
+                height: 36px;
+                padding: 8px;
+            }
             svg{
                 max-width: 100%;
                 max-height: 100%;
@@ -869,6 +876,13 @@
         padding: 0 22px;
         background-color: $white;
         box-sizing: border-box;
+        @include for-md(){
+            font-size: 28px;
+            line-height: 33px;
+        }
+        @include for-sm(){
+            padding: 0 10px;
+        }
     }
    
     &--bordered{
@@ -877,6 +891,11 @@
         box-sizing: border-box;
         padding: 75px 25px 20px;
         border: 1px solid;
+        @include for-sm(){
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 50px;
+        }
     }
     &--border-purple{
         border-color: $purple_border2;
@@ -965,12 +984,23 @@
         z-index: 10;
         margin: 23px 0 82px;
         text-align: center;
+        @include for-md(){
+            margin: 10px 0 63px;
+        }
     }
     &__phone-link{
         font-size: 52px;
         line-height: 64px;
         color: $dark_blue;
         font-weight: 500;
+        @include for-md(){
+            font-size: 38px;
+            line-height: 41px;
+        }
+        @include for-sm(){
+            font-size: 34px;
+            line-height: 40px;
+        }
     }
 }
 
@@ -1010,18 +1040,33 @@
                     height: 547px;
                     background: url(../img/footer-forms/form-item-1.svg) no-repeat center center;
                     background-size: contain;
+                    @include for-lg(){
+                        transform: scale(0.8);
+                    }
+
+                    @include for-sm(){
+                        left: 50%;
+                        transform: translateX(-50%) scale(.8);
+                        top: 0;
+                    }
                 }
             }
         }
         &--blue{
             .form{
                 &:after{
-                    top: 20px;
+                    top: 0;
                     left: 0;
                     width: 638px;
                     height: 566px;
                     background: url(../img/footer-forms/form-item-2.svg) no-repeat center center;
                     background-size: contain;
+
+                    @include for-sm(){
+                        // top: 40px;
+                        left: 50%;
+                        transform: translateX(-50%) scale(.8);
+                    }
                 }
             }
         }
@@ -1038,6 +1083,10 @@
         line-height: 26px;
         text-align: center;
         color: $dark_blue;
+        @include for-md(){
+            font-size: 16px;
+            line-height: 20px;
+        }
       
     }
     p + p{
@@ -1046,6 +1095,8 @@
     
 }
 .footer{
+    position: relative;
+    z-index: 10;
     background-color: $grey;
     padding: 50px 0 100px;
     @include for-md(){
@@ -2521,6 +2572,9 @@
         transform: translate(-50%);
         border: 1px dotted $blue;
         width: 1146px;
+        @include for-lg(){
+            width: calc(100% - 36px);
+        }
     }
 
     &__btn-container{
@@ -2551,6 +2605,11 @@
    grid-gap: 43px;
    max-width: 463px;
    margin: 0 auto;
+   @include for-sm(){
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+   }
 
    &__item{
        cursor: pointer;
@@ -2596,10 +2655,23 @@
    }
 }
 .services{
+    padding-bottom: 70px;
+
+    .page-title{
+        @include for-md(){
+            margin-bottom: 50px;
+        }
+    }
     &__grid{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: 30px 20px;
+       columns:3;
+       column-gap: 30px;
+       @include for-md(){
+           columns: 2;
+       }
+       @include for-sm(){
+           columns: auto;
+       }
+      
         &-title{
             font-size: 26px;
             line-height: 31px;
@@ -2615,6 +2687,7 @@
             text-decoration: underline;
         }
         &-item{
+            margin-bottom: 20px;
             padding-bottom: 13px;
             border-bottom: 1px dotted $blue;
         }
@@ -2758,6 +2831,7 @@
     }
     &__btn{
         padding: 11px 34px;
+        border-radius: 30px;
     }
 }
 .contacts{
@@ -2823,9 +2897,20 @@
         justify-content: center;
         flex-wrap: wrap;
         margin: 30px 0;
+        @include for-sm(){
+            flex-direction: column;
+            align-items: center;
+        }
     }
     &__btn{
         margin: 0 16px;
+        @include for-sm(){
+            margin: 0;
+
+            & + &{
+                margin-top: 34px;
+            }
+        }
     }
 }
 .operating{
@@ -2956,7 +3041,11 @@
 
 .map{
     position: relative;
-  
+    .container{
+        @include for-sm(){
+            padding: 0;
+        }
+    }
 
     &__info{
         padding: 22px 29px 30px 21px;
@@ -2966,6 +3055,11 @@
         z-index: 20;
         box-sizing: border-box;
         background-color: rgba($blue, .8);
+        @include for-sm(){
+            min-height: inherit;
+            max-width: 100%;
+            padding: 26px 15px 20px;
+        }
         &-item{
             display: flex;
             align-items: flex-start;
@@ -2994,6 +3088,15 @@
         width: 100%;
         height: 100%;
     }
+
+    &--js{
+        @include for-sm(){
+            position: relative;
+            left: auto;
+            top: auto;
+            height: 470px;
+        }
+    }
 }
 
 .how-to-get{
@@ -3007,8 +3110,18 @@
         padding-bottom: 34px;
         margin-bottom: 24px;
         border-bottom: 1px dotted $blue;
+
+        @include for-sm(){
+            flex-direction: column;
+            margin-bottom: 25px;
+            padding-bottom: 35px;
+            padding-left: 0;
+        }
         .contacts__links{
             margin-right: -15px;
+            @include for-sm(){
+                margin-right: 0;
+            }
         }
     }
     &__title{
@@ -3036,6 +3149,9 @@
       flex-wrap: wrap;
       box-sizing: border-box;
       padding-left: 25px;
+      @include for-sm(){
+          padding-left: 0;
+      }
 
         p{
             color: #181716;
@@ -3061,9 +3177,15 @@
             background: url(../img/icons/unrderground-color.svg) no-repeat center center;
             background-size: contain;
         }
+        @include for-sm(){
+            width: 100%;
+        }
 
         &:nth-child(2n + 1){
             padding-right: 20px;
+            @include for-sm(){
+                padding-right: 0;
+            }
         }
     }
 }
