@@ -2805,7 +2805,7 @@ body{
    }
 }
 .services{
-    padding-bottom: 70px;
+    padding-bottom: 90px;
 
     .page-title{
         @include for-md(){
@@ -2813,10 +2813,13 @@ body{
         }
     }
     &__grid{
+        padding-top: 50px;
        columns:3;
        column-gap: 30px;
+       
        @include for-md(){
            columns: 2;
+           padding-top: 0;
        }
        @include for-sm(){
            columns: auto;

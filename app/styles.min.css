@@ -5010,11 +5010,12 @@ body.js-hidden {
         transition: 0.3s; }
 
 .services {
-  padding-bottom: 70px; }
+  padding-bottom: 90px; }
   @media (max-width: 1024px) {
     .services .page-title {
       margin-bottom: 50px; } }
   .services__grid {
+    padding-top: 50px;
     -webkit-columns: 3;
        -moz-columns: 3;
             columns: 3;
@@ -5025,7 +5026,8 @@ body.js-hidden {
       .services__grid {
         -webkit-columns: 2;
            -moz-columns: 2;
-                columns: 2; } }
+                columns: 2;
+        padding-top: 0; } }
     @media (max-width: 768px) {
       .services__grid {
         -webkit-columns: auto;
