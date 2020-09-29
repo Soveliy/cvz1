@@ -401,9 +401,13 @@ $('.gallery-item__info-link').magnificPopup({
   }
 });
 
+$('.about-center__image-block .video').magnificPopup({
+  type: 'image',  
+});
 
 
-baguetteBox.run('.about-center__row');
+
+// baguetteBox.run('.about-center__row');
 
 
 // timer('.action--1 .timer', '2020-10-15');
