@@ -3500,6 +3500,7 @@ body{
       padding-left: 25px;
       @include for-sm(){
           padding-left: 0;
+          columns: 1;
       }
 
         p{

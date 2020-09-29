@@ -5848,7 +5848,10 @@ body.js-hidden {
     padding-left: 25px; }
     @media (max-width: 768px) {
       .how-to-get__body {
-        padding-left: 0; } }
+        padding-left: 0;
+        -webkit-columns: 1;
+           -moz-columns: 1;
+                columns: 1; } }
     .how-to-get__body p {
       color: #181716; }
       .how-to-get__body p b {
