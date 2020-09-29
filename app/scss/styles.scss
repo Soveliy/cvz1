@@ -600,7 +600,7 @@ body{
             @include for-md-mob(){
                 width: 100%;
                 left: 0;
-                bottom: 40px;
+                bottom: 24px;
                 margin-left: 0;
             }
             .main-slider__arrow{
@@ -2733,6 +2733,10 @@ body{
     background-color: $white;
     width: 100%;
     margin: 0 auto;
+    box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.16);
+    @include for-md(){
+        padding: 80px 7px 20px;
+    }
 
     &_close{
         cursor: pointer;
@@ -2744,6 +2748,10 @@ body{
         background: url(img/icons/close.svg) no-repeat center center;
         background-size: contain;
         transition: $transition;
+        @include for-md(){
+            top: 20px;
+            right: 20px
+        }
         &:hover{
             transform: rotate(180deg);
         }
@@ -4231,7 +4239,7 @@ body{
     &__swiper-slide{
         width: 363px !important;
         @include for-md{
-            width: 100% !important;    
+            width:90% !important;    
         }
     }
 
