@@ -65,6 +65,7 @@ body{
     background-color: $white;
     z-index: 100;
     transition: $transition;
+    width: 100%;
     @include for-md{
         top: 0;
     }
