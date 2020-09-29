@@ -464,7 +464,7 @@ a{
  .arcticmodal-container_i { height: 100%; margin: 0 auto; width:100%; }
  .arcticmodal-container_i2 { padding: 24px; margin: 0; border: 0; vertical-align: middle;
      @include for-tiny-tablet(){
-         padding: 10px;
+         padding: 0;
      }
   }
  .arcticmodal-error { padding: 20px;  border-radius: 10px; background: #000; color: #fff; }
