@@ -1432,67 +1432,170 @@
             </footer>
         </div>
     </div>
-    <div class="g-hidden">
-        <div class="b-modal" id="callback-modal">
-            <div class="b-modal_close arcticmodal-close"></div>
-            <form action="#" class="form form--border-blue form--bordered reception__form" id="" method="POST"
-                name="consult">
-                <div class="form__title-container form__title-container--abs">
-                    <h3 class="form__title">
-                        Закажите звонок
-                    </h3>
-                </div>
-                <div class="form__input-container">
-                    <input type="text" class="form__input" name="name" placeholder="Ваше имя">
-                </div>
-                <div class="form__input-container">
-                    <input type="text" class="form__input numbox" name="phone" placeholder="Телефон 8 (ХХХ)  ХХХ-ХХ-ХХ">
-                </div>
-                <div class="form__input-container">
-                    <input type="text" class="form__input" name="time" placeholder="Время звонка 17:00">
-                </div>
+  <!--modals-->
+  <div class="g-hidden">
+    <!--callback-modal-->
+    <div class="b-modal" id="callback-modal">
+        <div class="b-modal_close arcticmodal-close"></div>
+        <form action="#" class="form form--border-blue form--bordered reception__form" id="" method="POST"
+            name="consult">
+            <div class="form__title-container form__title-container--abs">
+                <h3 class="form__title">
+                    Закажите звонок
+                </h3>
+            </div>
+            <div class="form__input-container">
+                <input type="text" class="form__input" name="name" placeholder="Ваше имя">
+            </div>
+            <div class="form__input-container">
+                <input type="text" class="form__input numbox" name="phone" placeholder="Телефон 8 (ХХХ)  ХХХ-ХХ-ХХ">
+            </div>
+            <div class="form__input-container">
+                <input type="text" class="form__input" name="time" placeholder="Время звонка 17:00">
+            </div>
 
-                <div class="form__btn-container">
-                    <button class="btn form__btn btn--blue btn--medium">
-                        Заказать звонок
-                    </button>
-                </div>
-                <p class="form__politics">
-                    Нажимая кнопку «Отправить», я даю согласие на обработку моих персональных данных
-                    в соответствии c Политикой конфиденциальности.
-                </p>
-            </form>
-        </div>
-        <div class="b-modal" id="reception-modal">
-            <div class="b-modal_close arcticmodal-close"></div>
-            <form action="#" class="form form--border-blue form--bordered reception__form" id="" method="POST"
-                name="consult">
-                <div class="form__title-container form__title-container--abs">
-                    <h3 class="form__title">
-                        Закажите звонок
-                    </h3>
-                </div>
-                <div class="form__input-container">
-                    <input type="text" class="form__input" name="name" placeholder="Ваше имя">
-                </div>
-                <div class="form__input-container">
-                    <input type="text" class="form__input numbox" name="phone" placeholder="Телефон 8 (ХХХ)  ХХХ-ХХ-ХХ">
-                </div>
-                <div class="form__input-container">
-                    <textarea name="coment" class="form__textarea" placeholder="Комментарии и пожелания"></textarea>
-                </div>
-                <div class="form__btn-container">
-                    <button class="btn form__btn btn--blue btn--medium">
-                        Отправить заявку
-                    </button>
-                </div>
-                <p class="form__politics">
-                    Нажимая кнопку «Отправить», я даю согласие на обработку моих персональных данных
-                    в соответствии c Политикой конфиденциальности.
-                </p>
-            </form>
-        </div>
+            <div class="form__btn-container">
+                <button class="btn form__btn btn--blue btn--medium">
+                    Заказать звонок
+                </button>
+            </div>
+            <p class="form__politics">
+                Нажимая кнопку «Отправить», я даю согласие на обработку моих персональных данных
+                в соответствии c Политикой конфиденциальности.
+            </p>
+        </form>
     </div>
+    <!-- reception-modal -->
+    <div class="b-modal" id="reception-modal">
+        <div class="b-modal_close arcticmodal-close"></div>
+        <form action="#" class="form form--border-blue form--bordered reception__form" method="POST"
+            name="consult">
+            <div class="form__title-container form__title-container--abs">
+                <h3 class="form__title">
+                    Записаться на приём
+                </h3>
+            </div>
+            <div class="form__input-container">
+                <input type="text" class="form__input" name="name" placeholder="Ваше имя">
+            </div>
+            <div class="form__input-container">
+                <input type="text" class="form__input numbox" name="phone" placeholder="Телефон 8 (ХХХ)  ХХХ-ХХ-ХХ">
+            </div>
+            <div class="form__input-container">
+                <textarea name="coment" class="form__textarea" placeholder="Комментарии и пожелания"></textarea>
+            </div>
+            <div class="form__btn-container">
+                <button class="btn form__btn btn--blue btn--medium">
+                    Отправить заявку
+                </button>
+            </div>
+            <p class="form__politics">
+                Нажимая кнопку «Отправить», я даю согласие на обработку моих персональных данных
+                в соответствии c Политикой конфиденциальности.
+            </p>
+        </form>
+    </div>
+    <!-- review-modal -->
+    <div class="b-modal" id="review-modal">
+        <div class="b-modal_close arcticmodal-close"></div>
+        <form action="#" class="form form--border-blue form--bordered reception__form" method="POST"
+            name="consult">
+            <div class="form__title-container form__title-container--abs">
+                <h3 class="form__title">
+                    Отправить отзыв
+                </h3>
+            </div>
+            <div class="form__input-container">
+                <input type="text" class="form__input" name="name" placeholder="Ваше имя">
+            </div>
+            <div class="forn__input-container">
+                <select class="review-post__select">
+                    <option value="1">Вид услуги</option>
+                    <option value="1">Вид услуги 1</option>
+                    <option value="1">Вид услуги 2</option>
+                    <option value="1">Вид услуги 3</option>
+                </select>
+            </div>
+            <div class="form__input-container">
+                <input type="text" class="form__input numbox" name="email" placeholder="Адрес электронной почты">
+            </div>
+            <div class="form__input-container">
+                <textarea name="coment" class="form__textarea" placeholder="Ваш отзыв"></textarea>
+            </div>
+            <div class="form__btn-container">
+                <button class="btn form__btn btn--blue btn--medium">
+                    Отправить отзыв
+                </button>
+            </div>
+            <p class="form__politics">
+                Нажимая кнопку «Отправить», я даю согласие на обработку моих персональных данных
+                в соответствии c Политикой конфиденциальности.
+            </p>
+        </form>
+    </div>
+     <!-- consult-modal -->
+    <div class="b-modal" id="consult-modal">
+        <div class="b-modal_close arcticmodal-close"></div>
+        <form action="#" class="form form--border-blue form--bordered reception__form" method="POST"
+            name="consult">
+            <div class="form__title-container form__title-container--abs">
+                <h3 class="form__title">
+                    Записаться на приём
+                </h3>
+            </div>
+            <div class="form__input-container">
+                <input type="text" class="form__input" name="name" placeholder="Ваше имя">
+            </div>
+            <div class="form__input-container">
+                <input type="text" class="form__input numbox" name="phone" placeholder="Телефон 8 (ХХХ)  ХХХ-ХХ-ХХ">
+            </div>
+            <div class="form__input-container">
+                <textarea name="coment" class="form__textarea" placeholder="Комментарии и пожелания"></textarea>
+            </div>
+            <div class="form__btn-container">
+                <button class="btn form__btn btn--blue btn--medium">
+                    Отправить заявку
+                </button>
+            </div>
+            <p class="form__politics">
+                Нажимая кнопку «Отправить», я даю согласие на обработку моих персональных данных
+                в соответствии c Политикой конфиденциальности.
+            </p>
+        </form>
+    </div>
+      <!-- question-modal -->
+      <div class="b-modal" id="question-modal">
+        <div class="b-modal_close arcticmodal-close"></div>
+        <form action="#" class="form form--border-blue form--bordered reception__form" method="POST"
+            name="consult">
+            <div class="form__title-container form__title-container--abs">
+                <h3 class="form__title">
+                    Задать вопрос
+                </h3>
+            </div>
+            <div class="form__input-container">
+                <input type="text" class="form__input" name="name" placeholder="Ваше имя">
+            </div>
+           
+            <div class="form__input-container">
+                <input type="text" class="form__input numbox" name="email" placeholder="Адрес электронной почты">
+            </div>
+            <div class="form__input-container">
+                <textarea name="coment" class="form__textarea" placeholder="Вопрос"></textarea>
+            </div>
+            <div class="form__btn-container">
+                <button class="btn form__btn btn--blue btn--medium">
+                    Отправить вопрос
+                </button>
+            </div>
+            <p class="form__politics">
+                Нажимая кнопку «Отправить», я даю согласие на обработку моих персональных данных
+                в соответствии c Политикой конфиденциальности.
+            </p>
+        </form>
+    </div>
+    
+</div>
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
 </body>

@@ -1885,6 +1885,9 @@ label.error {
   position: static;
   width: auto; }
 
+a {
+  cursor: pointer; }
+
 .swiper-button-next,
 .swiper-button-prev {
   position: static;
