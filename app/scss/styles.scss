@@ -1362,7 +1362,7 @@ body{
         align-items: flex-start;
     }
     &__contacts{
-        width: 267.5px;
+        width: 270.5px;
         flex-shrink: 0;
         margin-left: auto;
         @include for-sm(){
@@ -1381,7 +1381,7 @@ body{
     }
     &__menu-container{
         display: flex;
-        margin-right: 28px;
+        margin-right: 33px;
         @include for-sm(){
             display: none;
         }

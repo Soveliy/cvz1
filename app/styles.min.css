@@ -3659,7 +3659,7 @@ body.js-hidden {
         -ms-flex-align: start;
             align-items: flex-start; }
   .footer__contacts {
-    width: 267.5px;
+    width: 270.5px;
     -ms-flex-negative: 0;
         flex-shrink: 0;
     margin-left: auto; }
@@ -3686,7 +3686,7 @@ body.js-hidden {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-right: 28px; }
+    margin-right: 33px; }
     @media (max-width: 768px) {
       .footer__menu-container {
         display: none; } }
