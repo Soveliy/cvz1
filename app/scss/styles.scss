@@ -1564,10 +1564,13 @@ body{
     }
     &__lang{
         font-size: 13px;
-        line-height: 16px;
+        line-height: 19px;
         text-align: center;
         font-weight: 700;
         color: $blue;
+        @include for-md-mob(){
+            font-size: 16px;
+        }
 
         &:hover,&:active{
             color: $white;
