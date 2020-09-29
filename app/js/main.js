@@ -32,6 +32,17 @@ var aboutSlider = new Swiper('.main-slider .swiper-container', {
   },
 });
 
+var aboutSlider_banner = new Swiper('.main-slider-inside .swiper-container', {
+  pagination: {
+    el: '.main-slider-inside  .swiper-pagination',
+    type: 'fraction',
+  },
+  navigation: {
+    nextEl: '.main-slider-inside  .swiper-button-next',
+    prevEl: '.main-slider-inside  .swiper-button-prev',
+  },
+});
+
 // Slider
 
 // $('.content-slider').each(function () {
