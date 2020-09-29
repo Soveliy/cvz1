@@ -2202,6 +2202,25 @@ body.js-hidden {
       -webkit-columns: 3;
          -moz-columns: 3;
               columns: 3; }
+      .main-menu .submenu-container ul:before {
+        content: '';
+        position: absolute;
+        border: 15px solid transparent;
+        border-bottom: 15px solid #EBEBEB;
+        top: -25px;
+        left: 50%;
+        margin-left: -300px;
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
+        z-index: -1; }
+      .main-menu .submenu-container ul:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -40px;
+        height: 40px;
+        width: 100%; }
       .main-menu .submenu-container ul li {
         margin-bottom: 9px; }
         .main-menu .submenu-container ul li a {
@@ -3023,7 +3042,14 @@ body.js-hidden {
     font-size: 16px;
     line-height: 20px;
     color: #868786;
-    font-weight: 500; }
+    font-weight: 500;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
+    .footer__menu-list a:hover {
+      color: #007FC2; }
+    .footer__menu-list a:active {
+      color: #81028E; }
   .footer__right-bottom {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3395,12 +3421,21 @@ body.js-hidden {
         -ms-flex-pack: justify;
             justify-content: space-between; }
   .preheader .social .social__link {
-    border-color: #007FC2;
-    stroke: #007FC2;
-    fill: #007FC2; }
+    border-color: #007FC2; }
+    .preheader .social .social__link svg {
+      fill: #007FC2; }
     .preheader .social .social__link:hover {
-      border-color: #024B76;
-      fill: #024B76; }
+      border-color: #007FC2;
+      background-color: #007FC2;
+      fill: #fff; }
+      .preheader .social .social__link:hover svg {
+        fill: #fff; }
+    .preheader .social .social__link:active {
+      fill: #fff;
+      background-color: #81028E;
+      border-color: #81028E; }
+      .preheader .social .social__link:active svg {
+        fill: #fff; }
 
 .services-page__container {
   color: #565655; }
