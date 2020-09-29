@@ -3412,6 +3412,15 @@ body.js-hidden {
     line-height: 15px;
     text-align: center;
     color: #A7A7A8; }
+    .form__politics a {
+      text-decoration: underline;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s; }
+      .form__politics a:hover {
+        color: #007FC2; }
+      .form__politics a:active {
+        color: #81028E; }
   .form__phone-container {
     position: relative;
     z-index: 10;

@@ -1102,6 +1102,17 @@ body{
         line-height: 15px;
         text-align: center;
         color: $politics_color;
+
+        a{
+            text-decoration: underline;
+            transition: $transition;
+            &:hover{
+                color: $blue;
+            }
+            &:active{
+                color: $purple;
+            }
+        }
     }
     &__phone-container{
         position: relative;
