@@ -1369,6 +1369,23 @@ body{
         box-sizing: border-box;
         border: 1px solid $dark_blue;
         padding: 5px;
+
+        &:hover{
+            border-color: $blue;
+            background-color: $blue;
+            
+
+            svg{
+                fill: $white;
+            }
+        }
+        &:active{
+            background-color: $purple;
+            svg{
+               fill: $white;
+            }
+            
+        }
         svg{
             max-height: 15px;
             max-width: 100%;
@@ -1610,6 +1627,19 @@ body{
         padding: 7px 0 10px 60px;
         box-sizing: border-box;
         justify-content: space-between;
+    }
+    .social{
+        .social__link{
+            border-color: $blue;
+              stroke: $blue;
+             fill: $blue;
+
+             &:hover{
+                 border-color: $dark_blue;
+                 fill: $dark_blue;
+             }
+        }
+       
     }
     // &__time-work{
     //     margin-right: 83px;
