@@ -412,12 +412,15 @@ windowSize = $(window).width();
 $(".header__buttons-item-icon--edit").on('click', function(){
     $(".mobile-buttons").slideToggle();
     $(".mobile-menu").hide();
-    $(".burger").removeClass("js-active")
+    $(".burger").removeClass("js-active");
+    $("body").removeClass("js-hidden");
 })
 $(".burger").on('click', function(){
     $(this).toggleClass("js-active")
     $(".mobile-menu").slideToggle();
     $(".mobile-buttons").hide();
+    $("body").toggleClass("js-hidden");
+
 })
 $(".mobile-menu__nav > ul > li > span").on('click', function(){
 
