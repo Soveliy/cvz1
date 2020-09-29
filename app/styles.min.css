@@ -3876,17 +3876,18 @@ body.js-hidden {
         line-height: 21px; } }
     .adress__link:hover {
       text-decoration: none; }
-  .adress__link-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-top: 30px;
-    padding-right: 59px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box; }
+  @media (max-width: 768px) {
+    .adress__link-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin-top: 30px;
+      padding-right: 59px;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box; } }
 
 .time-work {
   display: -webkit-box;
