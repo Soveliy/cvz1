@@ -3111,6 +3111,10 @@ body.js-hidden {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 6px; }
+  .messangeres__icon:hover {
+    background-color: #007FC2; }
+  .messangeres__icon:active {
+    background-color: #81028E; }
   .messangeres__icon svg {
     max-width: 100%;
     fill: #fff;
