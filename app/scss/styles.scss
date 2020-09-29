@@ -1047,6 +1047,12 @@ body{
             line-height: 40px;
         }
     }
+    .error{
+        border-color: $pink;
+    }
+    label.error{
+        display: none !important;
+    }
 }
 
 .footer-forms{
@@ -5490,12 +5496,7 @@ body{
         color: $blue;
         font-weight: 400;
     }
-    .error{
-        border-color: $pink;
-    }
-    label.error{
-        display: none !important;
-    }
+    
 }
 
 .questions-menu {

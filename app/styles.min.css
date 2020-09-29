@@ -3238,6 +3238,10 @@ body.js-hidden {
       .form__phone-link {
         font-size: 34px;
         line-height: 40px; } }
+  .form .error {
+    border-color: #E6007C; }
+  .form label.error {
+    display: none !important; }
 
 .footer-forms {
   padding-bottom: 126px; }
@@ -7657,10 +7661,6 @@ body.js-hidden {
   .review-post .nice-select .option {
     color: #007FC2;
     font-weight: 400; }
-  .review-post .error {
-    border-color: #E6007C; }
-  .review-post label.error {
-    display: none !important; }
 
 .questions-menu {
   margin-top: 50px;

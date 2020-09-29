@@ -416,18 +416,22 @@ $('.about-center__image-block .video').magnificPopup({
 
 $('.review-post__select').niceSelect();
 
-$('.review-post__form,.form').validate({
 
-  messages:{
-    login:{
-      required: "",
-   }    
-  }
+$('.form').each(function(){
+  $(this).validate({
 
+    messages:{
+      login:{
+        required: "",
+     }    
+    }
+  
+  });
+  
+  
+  });
 });
 
-
-});
 
 
 // upload width Browser
