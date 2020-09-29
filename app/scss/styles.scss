@@ -2677,6 +2677,7 @@ body{
     margin: 0 auto;
 
     &_close{
+        cursor: pointer;
         position: absolute;
         top: 26px;
         right: 26px;
