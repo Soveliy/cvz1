@@ -3082,7 +3082,7 @@ body.js-hidden {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-right: 34px; }
+    margin-right: 28px; }
     @media (max-width: 768px) {
       .footer__menu-container {
         display: none; } }

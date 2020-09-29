@@ -1306,7 +1306,7 @@ body{
     }
     &__menu-container{
         display: flex;
-        margin-right: 34px;
+        margin-right: 28px;
         @include for-sm(){
             display: none;
         }
