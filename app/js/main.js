@@ -532,7 +532,7 @@ $(".mobile-menu__nav > ul > li > span").on('click', function(){
   });
     
 
-var lastScrollTop = 62;
+var lastScrollTop = 55;
 $(window).scroll(function(event){
    var st = $(this).scrollTop();   
    const scroll = window.pageYOffset;
@@ -547,7 +547,7 @@ $(window).scroll(function(event){
       }
    } else {
       // код для прокрутки вверх
-      $('header').css('top', `76px`);
+      $('header').css('top', `55px`);
       $('header').css('transition', `.3s`); 
       if(window.innerWidth < 1024) {
         $('header').css('top', `0`); 
