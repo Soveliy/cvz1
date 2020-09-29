@@ -944,6 +944,9 @@ body{
         line-height: 23px;
         background-color: $white;
         color: $dark_blue;
+        &:placeholder-shown{
+            opacity: 0;
+        }
         &::placeholder{
             color: $blue;
         }
