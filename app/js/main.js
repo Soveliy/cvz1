@@ -403,6 +403,8 @@ $('.gallery-item__info-link').magnificPopup({
 
 
 
+baguetteBox.run('.about-center__row');
+
 
 // timer('.action--1 .timer', '2020-10-15');
 // timer('.action--2 .timer', '2020-11-15');
@@ -469,8 +471,17 @@ $(".mobile-menu__nav > ul > li > span").on('click', function(){
   $(".callback-js").click(function(){
     $("#callback-modal").arcticmodal();
   });
-  $(".reception-js").click(function(){
+  $(".reception-js,.doc-page__callback-item--appointment").click(function(){
     $("#reception-modal").arcticmodal();
+  });
+  $(".free-conslut .btn").click(function(){
+    $("#consult-modal").arcticmodal();
+  });
+  $(".doc-page__callback-item--review").click(function(){
+    $("#review-modal").arcticmodal();
+  });
+  $(".doc-page__callback-item--question").click(function(){
+    $("#question-modal").arcticmodal();
   });
   $('.options-buttons__search-btn').click(function(){
     $(this).next().toggleClass('js-active');
