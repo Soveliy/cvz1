@@ -1,4 +1,6 @@
 
+
+
 window.addEventListener('load', function() {
   
 
@@ -464,6 +466,14 @@ $(".header__buttons-item-icon--edit").on('click', function(){
     $(".burger").removeClass("js-active");
     $("body").removeClass("js-hidden");
 })
+$(".tabs__caption").on('click', function(){
+  $(this)
+  .addClass('js-active').siblings().removeClass('js-active')
+  .closest('div.tabs').find('div.tabs__content').removeClass('js-active').eq($(this).index()).addClass('js-active');
+})
+
+
+
 $(".burger").on('click', function(){
     $(this).toggleClass("js-active")
     $(".mobile-menu").slideToggle();

@@ -601,7 +601,7 @@
                     </div>
                 </div>
             </div>
-            <div class="contacts-top-info">
+            <div class="contacts-top-info tabs">
                <div class="container">
                    <div class="contacts-top-info__row">
                        <div class="contacts-top-info__left-side">
@@ -660,113 +660,210 @@
                        </div>
                    </div>
                    <div class="contacts__links">
-                       <a href="#" class="btn contacts__btn btn--transparent">Филиал на улице Лобачевского</a>
-                       <a href="" class="btn contacts__btn btn--transparent">Филиал на улице Россолимо</a>
+                       <a class="btn contacts__btn btn--transparent tabs__caption js-active">Филиал на улице Лобачевского</a>
+                       <a class="btn contacts__btn btn--transparent tabs__caption">Филиал на улице Россолимо</a>
                    </div>
                    
                </div>
-               <div class="map">
-                   <div class="container">
-                       <div class="map__info">
-                           <div class="map__info-item">
-                             <div class="map__info-item-icon">
-                                 <img src="img/icons/geo2.svg" alt="">
+             <div class="tabs__body">
+                <div class="tabs__content js-active">
+                    <div class="map">
+                        <div class="container">
+                            <div class="map__info">
+                                <div class="map__info-item">
+                                  <div class="map__info-item-icon">
+                                      <img src="img/icons/geo2.svg" alt="">
+                                  </div>
+                                  <div class="map__info-item-content">
+                                     г. Москва, ул. Лобачевского, д.108
+                                  </div>
+                                </div>
+                                <div class="map__info-item">
+                                 <div class="map__info-item-icon">
+                                     <img src="img/icons/under.svg" alt="">
+                                 </div>
+                                 <div class="map__info-item-content">
+                                 <p>
+                                     м. Мичуринский проспект (пешком) <br>
+                                     м. Юго-Западная,  <br>
+                                     м. Проспект Вернадского (на транспорте) 
+                                 </p>
+                                 </div>
+                               </div>
+                               <div class="map__info-item">
+                                 <div class="map__info-item-icon">
+                                     <img src="img/icons/phone-white.svg" alt="">
+                                 </div>
+                                 <div class="map__info-item-content">
+                                 <p>
+                                     +7 (499) 517-99-00 
+                                 </p>
+                                 </div>
+                               </div>
+                               <div class="map__info-item">
+                                 <div class="map__info-item-icon">
+                                     <img src="img/icons/time-work.svg" alt="">
+                                 </div>
+                                 <div class="map__info-item-content">
+                                 <p>
+                                     Часы работы: <br>
+                                     (по предварительной записи) <br>
+                                     понедельник - пятница с 9:00 до 20:00  <br>
+                                     суббота с 10:00 до 20:00 
+                                 </p>
+                                 </div>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="map--js">
+                         <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A46e3bc881636de240f08e01e0386029c8ab4c7ef897f3828cbc6eba68bac7c75&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                    <div class="how-to-get">
+                        <div class="container">
+                           <div class="how-to-get__head">
+                             
+                                 <h3 class="how-to-get__title">
+                                     Как проехать
+                                 </h3>
+                                 <div class="contacts__links">
+                                     <a href="#" class="btn contacts__btn btn--transparent">Фото маршрута</a>
+                                     <a href="" class="btn contacts__btn btn--transparent">Фото здания</a>
+                                 </div>
+                                
+                           </div>
+                           <div class="how-to-get__body">
+                               <div class="how-to-get__item">
+                                   <p>
+                                    <b> Метро «Мичуринский проспект»</b>. Пешком около 600 м. 
+                                     Последний вагон из центра, идти вдоль Мичуринского проспекта, 
+                                     не переходя дорогу, по направлению движения автомобилей, далее 
+                                     первый поворот направо на ул. Лобачевского.
+                                   </p>
+                               </div>
+                               <div class="how-to-get__item">
+                                 <p>
+                                   <b>  Метро «Проспект Вернадского»</b>. Из центра первый вагон, в переходе 
+                                     направо. Автобусы 42, 120, 830, 793. До остановки "Мичуринский 
+                                     проспект".
+                                 </p>
                              </div>
-                             <div class="map__info-item-content">
-                                г. Москва, ул. Лобачевского, д.108
+                             <div class="how-to-get__item">
+                                 <p>
+                                    <b> Метро «Юго-Западная»</b>. последний вагон из центра, в переходе 
+                                     направо. Автобус 688, 688к. До остановки "Мичуринский проспект".
+                                 </p>
+                             </div>
+                              <div class="how-to-get__item">
+                                 <p>
+                                   <b>  Метро «Кунцевская»</b>. Автобус 688, 688к, 459. До остановки: 
+                                     "улица Лобачевского, 116".
+                                 </p>
+                             </div>
+                              <div class="how-to-get__item">
+                                 <p>
+                                    <b> Метро «Киевская»</b>. Автобус 902, троллейбус № 17. До остановки 
+                                     "Мичуринский проспект".
+                                 </p>
                              </div>
                            </div>
-                           <div class="map__info-item">
-                            <div class="map__info-item-icon">
-                                <img src="img/icons/under.svg" alt="">
-                            </div>
-                            <div class="map__info-item-content">
-                            <p>
-                                м. Мичуринский проспект (пешком) <br>
-                                м. Юго-Западная,  <br>
-                                м. Проспект Вернадского (на транспорте) 
-                            </p>
-                            </div>
-                          </div>
-                          <div class="map__info-item">
-                            <div class="map__info-item-icon">
-                                <img src="img/icons/phone-white.svg" alt="">
-                            </div>
-                            <div class="map__info-item-content">
-                            <p>
-                                +7 (499) 517-99-00 
-                            </p>
-                            </div>
-                          </div>
-                          <div class="map__info-item">
-                            <div class="map__info-item-icon">
-                                <img src="img/icons/time-work.svg" alt="">
-                            </div>
-                            <div class="map__info-item-content">
-                            <p>
-                                Часы работы: <br>
-                                (по предварительной записи) <br>
-                                понедельник - пятница с 9:00 до 20:00  <br>
-                                суббота с 10:00 до 20:00 
-                            </p>
-                            </div>
-                          </div>
-                       </div>
-                   </div>
-                   <div class="map--js">
-                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A46e3bc881636de240f08e01e0386029c8ab4c7ef897f3828cbc6eba68bac7c75&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
-                   </div>
-               </div>
-               <div class="how-to-get">
-                   <div class="container">
-                      <div class="how-to-get__head">
-                        
-                            <h3 class="how-to-get__title">
-                                Как проехать
-                            </h3>
-                            <div class="contacts__links">
-                                <a href="#" class="btn contacts__btn btn--transparent">Фото маршрута</a>
-                                <a href="" class="btn contacts__btn btn--transparent">Фото здания</a>
-                            </div>
-                           
-                      </div>
-                      <div class="how-to-get__body">
-                          <div class="how-to-get__item">
-                              <p>
-                               <b> Метро «Мичуринский проспект»</b>. Пешком около 600 м. 
-                                Последний вагон из центра, идти вдоль Мичуринского проспекта, 
-                                не переходя дорогу, по направлению движения автомобилей, далее 
-                                первый поворот направо на ул. Лобачевского.
-                              </p>
-                          </div>
-                          <div class="how-to-get__item">
-                            <p>
-                              <b>  Метро «Проспект Вернадского»</b>. Из центра первый вагон, в переходе 
-                                направо. Автобусы 42, 120, 830, 793. До остановки "Мичуринский 
-                                проспект".
-                            </p>
                         </div>
-                        <div class="how-to-get__item">
-                            <p>
-                               <b> Метро «Юго-Западная»</b>. последний вагон из центра, в переходе 
-                                направо. Автобус 688, 688к. До остановки "Мичуринский проспект".
-                            </p>
+                    </div>
+                  </div>
+                  <div class="tabs__content">
+                    <div class="map">
+                        <div class="container">
+                            <div class="map__info">
+                                <div class="map__info-item">
+                                  <div class="map__info-item-icon">
+                                      <img src="img/icons/geo2.svg" alt="">
+                                  </div>
+                                  <div class="map__info-item-content">
+                                    г. Москва, ул. Россолимо, д.11А
+                                  </div>
+                                </div>
+                                <div class="map__info-item">
+                                 <div class="map__info-item-icon">
+                                     <img src="img/icons/under.svg" alt="">
+                                 </div>
+                                 <div class="map__info-item-content">
+                                 <p>
+                                    м. Парк Культуры (пешком) 
+                                   
+                                 </p>
+                                 </div>
+                               </div>
+                               <div class="map__info-item">
+                                 <div class="map__info-item-icon">
+                                     <img src="img/icons/phone-white.svg" alt="">
+                                 </div>
+                                 <div class="map__info-item-content">
+                                 <p>
+                                    +7 (499) 517-99-00 
+                                 </p>
+                                 </div>
+                               </div>
+                               <div class="map__info-item">
+                                 <div class="map__info-item-icon">
+                                     <img src="img/icons/time-work.svg" alt="">
+                                 </div>
+                                 <div class="map__info-item-content">
+                                 <p>
+                                   <b> Часы работы взрослого отделения:</b> <br>
+                                    (по предварительной записи)
+                                    понедельник - пятница с 9:00 до 17:00, 
+                                    суббота, воскресенье - выходной. 
+                                    <br>
+                                    <br>
+                                    <b>Часы работы детского отделения:</b>
+                                    (по предварительной записи)
+                                    понедельник - пятница с 8:00 до 18:00, 
+                                    суббота с 9:00 до 17:00.
+                                    (в выходные дни запись в детское отделение ограничена)
+                                 </p>
+                                 </div>
+                               </div>
+                            </div>
                         </div>
-                         <div class="how-to-get__item">
-                            <p>
-                              <b>  Метро «Кунцевская»</b>. Автобус 688, 688к, 459. До остановки: 
-                                "улица Лобачевского, 116".
-                            </p>
+                        <div class="map--js">
+                         <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A46e3bc881636de240f08e01e0386029c8ab4c7ef897f3828cbc6eba68bac7c75&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
                         </div>
-                         <div class="how-to-get__item">
-                            <p>
-                               <b> Метро «Киевская»</b>. Автобус 902, троллейбус № 17. До остановки 
-                                "Мичуринский проспект".
-                            </p>
+                    </div>
+                    <div class="how-to-get">
+                        <div class="container">
+                           <div class="how-to-get__head">
+                             
+                                 <h3 class="how-to-get__title">
+                                     Как проехать
+                                 </h3>
+                                 <div class="contacts__links">
+                                     <a href="#" class="btn contacts__btn btn--transparent">Фото маршрута</a>
+                                     <a href="" class="btn contacts__btn btn--transparent">Фото здания</a>
+                                 </div>
+                                
+                           </div>
+                           <div class="how-to-get__body">
+                               <div class="how-to-get__item">
+                                   <p>
+                                    <b>Метро «Парк Культуры (кольцевая)»:</b> Пешком около 900 м. При выходе из метро налево и идти по Зубовскому бульвару (Садовое кольцо), далее повернуть второй поворот налево (после дома 37) в Дашков переулок, который переходит в улицу Россолимо до указателя ФГБНУ НИИ Глазных болезней. Пройти за шлагбаум вглубь территории до 13-ти этажного здания.
+                                   </p>
+                               </div>
+                               <div class="how-to-get__item">
+                                 <p>
+                                   <b> Метро «Фрунзенская»:</b> Пешком около 1 км. При выходе из метро идти налево по переулку Хользунова, далее повернуть направо (третий поворот) на улицу Россолимо. Идти по правой стороне улицы Россолимо до указателя ФГБНУ НИИ Глазных болезней. Пройти за шлагбаум вглубь территории до 13-ти этажного здания. 
+                                 </p>
+                             </div>
+                             <div class="how-to-get__item">
+                                 <p>
+                                   <b> Метро «Кропоткинская»</b> Выход из метро на площадь "Пречистенские ворота". Проезд на автобусах 5, 255, М3 в сторону Новодевичьего монастыря до остановки ул. Льва Толстого (5-ая остановка). На светофоре перейти на противоположную сторону и идти по ул. Льва Толстого. Первый поворот направо - улица Россолимо. Идти по правой стороне улицы Россолимо до указателя ФГБНУ НИИ Глазных болезней. Пройти за шлагбаум вглубь территории до 13-ти этажного здания.
+                                 </p>
+                             </div>
+                              
+                           </div>
                         </div>
-                      </div>
-                   </div>
-               </div>
+                    </div>
+                  </div>
+             </div>
 
             </div>
         </div>
