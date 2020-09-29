@@ -2300,6 +2300,9 @@ label.error {
   position: static;
   width: auto; }
 
+.swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled {
+  opacity: 1; }
+
 a {
   cursor: pointer; }
 
@@ -2772,6 +2775,8 @@ body.js-hidden {
     width: 32px;
     height: 30px; }
     .main-slider__arrow:hover svg {
+      stroke: #E6007C; }
+    .main-slider__arrow:active svg {
       stroke: #81028E; }
   .main-slider__navigation-row {
     display: -webkit-box;
