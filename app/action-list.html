@@ -1,10 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Центр восстановления зрения</title>
+    <meta name="description" content="Краткое описание страницы">
+    <meta name="keywords" content="ключевая фраза 1, ключевая фраза 2, ключевая фраза 3">
+    <meta property="og:locale" content="ru_RU"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Название страницы"/>
+    <meta property="og:description" content="Описание страницы"/>
+    <meta property="og:image" content="images/banner-main.jpg"/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content="Название сайта"/>
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="Автор">
+    <meta name="twitter:title" content="Название страницы">
+    <meta name="twitter:description" content="Описание страницы">
+    <meta name="twitter:image" content="images/banner-main.jpg">
+    <meta itemprop="name" content="Название сайта"/>
+    <meta itemprop="description" content="Описание сайта"/>
+    <meta itemprop="image" content="http://site.com/image_1.png"/>
     <link rel="stylesheet" href="styles.min.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
@@ -712,7 +730,7 @@
                                 </div>
                                 <div class="form__btn-container">
                                     <button class="btn form__btn btn--pink btn--medium">
-                                        Отправить заявку
+                                        Заказать обратный звонок
                                     </button>
                                 </div>
 
@@ -727,10 +745,10 @@
                                     </h3>
                                 </div>
                                 <div class="form__input-container">
-                                    <input type="text" class="form__input" name="name" placeholder="Ваше имя">
+                                    <input type="text" class="form__input" name="name" placeholder="Ваше имя" required>
                                 </div>
                                 <div class="form__input-container">
-                                    <input type="text" class="form__input numbox" name="phone"
+                                    <input type="text" class="form__input numbox" name="phone" required
                                         placeholder="Телефон 8 (ХХХ)  ХХХ-ХХ-ХХ">
                                 </div>
                                 <div class="form__input-container">
@@ -744,7 +762,7 @@
                                 </div>
                                 <p class="form__politics">
                                     Нажимая кнопку «Отправить», я даю согласие на обработку моих персональных данных
-                                    в соответствии c Политикой конфиденциальности.
+                                    в соответствии c <a href="#">Политикой конфиденциальности</a>.
                                 </p>
                             </form>
                         </div>
@@ -860,9 +878,11 @@
                                     <div class="adress footer__adress">
                                         <p> г. Москва, ул. Россолимо, д.11а</p>
                                         <p> г. Москва, ул. Лобачевского, д.108</p>
+                                       <span class="adress__link-container">
                                         <a href="#" class="adress__link">
                                             Схема проезда
                                         </a>
+                                       </span>
                                     </div>
                                 </div>
                             </div>
@@ -872,8 +892,8 @@
             </footer>
         </div>
     </div>
-   <!--modals-->
-   <div class="g-hidden">
+  <!--modals-->
+  <div class="g-hidden">
     <!--callback-modal-->
     <div class="b-modal" id="callback-modal">
         <div class="b-modal_close arcticmodal-close"></div>
@@ -901,7 +921,7 @@
             </div>
             <p class="form__politics">
                 Нажимая кнопку «Отправить», я даю согласие на обработку моих персональных данных
-                в соответствии c Политикой конфиденциальности.
+                в соответствии c <a href="#">Политикой конфиденциальности</a>.
             </p>
         </form>
     </div>
@@ -931,7 +951,7 @@
             </div>
             <p class="form__politics">
                 Нажимая кнопку «Отправить», я даю согласие на обработку моих персональных данных
-                в соответствии c Политикой конфиденциальности.
+                в соответствии c <a href="#">Политикой конфиденциальности</a>.
             </p>
         </form>
     </div>
@@ -969,7 +989,7 @@
             </div>
             <p class="form__politics">
                 Нажимая кнопку «Отправить», я даю согласие на обработку моих персональных данных
-                в соответствии c Политикой конфиденциальности.
+                в соответствии c <a href="#">Политикой конфиденциальности</a>.
             </p>
         </form>
     </div>
@@ -999,7 +1019,7 @@
             </div>
             <p class="form__politics">
                 Нажимая кнопку «Отправить», я даю согласие на обработку моих персональных данных
-                в соответствии c Политикой конфиденциальности.
+                в соответствии c <a href="#">Политикой конфиденциальности</a>.
             </p>
         </form>
     </div>
@@ -1030,7 +1050,7 @@
             </div>
             <p class="form__politics">
                 Нажимая кнопку «Отправить», я даю согласие на обработку моих персональных данных
-                в соответствии c Политикой конфиденциальности.
+                в соответствии c <a href="#">Политикой конфиденциальности</a>.
             </p>
         </form>
     </div>
