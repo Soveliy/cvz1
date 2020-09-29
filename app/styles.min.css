@@ -1913,7 +1913,7 @@ body.js-hidden {
     display: block;
     height: 100%;
     width: 100%;
-    background: url(../img/icons/logo.svg) no-repeat left center;
+    background: url(img/icons/logo.svg) no-repeat left center;
     background-size: contain; }
 
 .header {
@@ -2285,7 +2285,7 @@ body.js-hidden {
           bottom: 0;
           width: 100%;
           height: calc(100% - 202px);
-          background: url(../img/mob-stock.jpg) no-repeat center bottom;
+          background: url(img/mob-stock.jpg) no-repeat center bottom;
           background-size: cover; } }
     .main-slider__item--main-page {
       padding-bottom: 124px; }
@@ -2312,7 +2312,7 @@ body.js-hidden {
   .main-slider__help-arrow {
     width: 7px;
     height: 8.5px;
-    background: url(../img/icons/arrow_bot.svg) no-repeat center center;
+    background: url(img/icons/arrow_bot.svg) no-repeat center center;
     background-size: contain;
     margin: 0 0 17px 17px; }
     @media (max-width: 550px) {
@@ -2492,7 +2492,7 @@ body.js-hidden {
       margin-top: -19.5px;
       height: 39px;
       width: 39px;
-      background: url(../img/icons/title-icon.svg) no-repeat center center;
+      background: url(img/icons/title-icon.svg) no-repeat center center;
       background-size: contain; }
     .head-block__title--bold {
       font-weight: 700; }
@@ -2581,7 +2581,7 @@ body.js-hidden {
               transform: translateY(-50%);
       width: 283px;
       height: 287px;
-      background-image: url(../img/features/features-before-pink.svg); }
+      background-image: url(img/features/features-before-pink.svg); }
     .features__item-container:nth-child(2n + 1) .features-item__icon-container {
       border-color: #AE44B9; }
     .features__item-container:nth-child(2n) .features-item:before {
@@ -2594,7 +2594,7 @@ body.js-hidden {
               transform: translateY(-50%);
       width: 293px;
       height: 280px;
-      background-image: url(../img/features/features-before-blue-1.svg); }
+      background-image: url(img/features/features-before-blue-1.svg); }
     .features__item-container:nth-child(2n) .features-item__icon-container {
       border-color: #80BFE2; }
     .features__item-container:nth-child(4n) .features-item:before {
@@ -2607,7 +2607,7 @@ body.js-hidden {
               transform: translateY(-50%);
       width: 280px;
       height: 280px;
-      background-image: url(../img/features/features-before-blue-2.svg); }
+      background-image: url(img/features/features-before-blue-2.svg); }
     .features__item-container:nth-child(4n) .features-item__icon-container {
       border-color: #80BFE2; }
 
@@ -2862,7 +2862,7 @@ body.js-hidden {
       left: -74px;
       width: 625px;
       height: 547px;
-      background: url(../img/footer-forms/form-item-1.svg) no-repeat center center;
+      background: url(img/footer-forms/form-item-1.svg) no-repeat center center;
       background-size: contain; }
       @media (max-width: 1100px) {
         .footer-forms__item--purple .form:after {
@@ -2881,7 +2881,7 @@ body.js-hidden {
       left: 0;
       width: 638px;
       height: 566px;
-      background: url(../img/footer-forms/form-item-2.svg) no-repeat center center;
+      background: url(img/footer-forms/form-item-2.svg) no-repeat center center;
       background-size: contain; }
       @media (max-width: 768px) {
         .footer-forms__item--blue .form:after {
@@ -2969,7 +2969,7 @@ body.js-hidden {
       display: block;
       height: 100%;
       width: 100%;
-      background: url(../img/icons/logo_foot.svg) center center no-repeat;
+      background: url(img/icons/logo_foot.svg) center center no-repeat;
       background-size: contain; }
   .footer__text {
     font-size: 11px;
@@ -3213,7 +3213,7 @@ body.js-hidden {
     top: 0;
     height: 28px;
     width: 29px;
-    background: url(../img/icons/geo.svg) no-repeat left center;
+    background: url(img/icons/geo.svg) no-repeat left center;
     background-size: contain; }
   .adress__link {
     display: inline-block;
@@ -3237,7 +3237,7 @@ body.js-hidden {
     top: 2px;
     height: 27px;
     width: 25px;
-    background: url(../img/icons/work-time.svg) no-repeat center left;
+    background: url(img/icons/work-time.svg) no-repeat center left;
     background-size: contain; }
   .time-work__title {
     font-size: 12px;
@@ -3572,7 +3572,7 @@ body.js-hidden {
       position: absolute;
       width: 256px;
       height: 310px;
-      background-image: url(../images/methodology/img-before.png);
+      background-image: url(images/methodology/img-before.png);
       background-size: cover;
       background-repeat: no-repeat;
       top: 0;
@@ -4434,7 +4434,7 @@ body.js-hidden {
     right: 26px;
     height: 23px;
     width: 23px;
-    background: url(../img/icons/close.svg) no-repeat center center;
+    background: url(img/icons/close.svg) no-repeat center center;
     background-size: contain;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
@@ -4712,7 +4712,7 @@ body.js-hidden {
       margin-top: -10px;
       height: 20px;
       width: 22px;
-      background: url(../img/icons/quest-icon.svg) no-repeat center left;
+      background: url(img/icons/quest-icon.svg) no-repeat center left;
       background-size: contain; }
   .test-item__btn {
     padding: 11px 34px;
@@ -4754,7 +4754,7 @@ body.js-hidden {
               transform: translateY(-50%);
       height: 35px;
       width: 40px;
-      background: url(../img/icons/allert-icon.svg) no-repeat center center;
+      background: url(img/icons/allert-icon.svg) no-repeat center center;
       background-size: contain; }
     .contacts__allert .container:before {
       left: 0; }
@@ -5047,7 +5047,7 @@ body.js-hidden {
               transform: translateY(-50%);
       height: 39px;
       width: 34px;
-      background: url(../img/icons/how-to.svg) no-repeat center center;
+      background: url(img/icons/how-to.svg) no-repeat center center;
       background-size: contain; }
   .how-to-get__body {
     display: -webkit-box;
@@ -5079,7 +5079,7 @@ body.js-hidden {
       top: 0;
       width: 25px;
       height: 20px;
-      background: url(../img/icons/unrderground-color.svg) no-repeat center center;
+      background: url(img/icons/unrderground-color.svg) no-repeat center center;
       background-size: contain; }
     @media (max-width: 768px) {
       .how-to-get__item {
@@ -5222,7 +5222,7 @@ body.js-hidden {
       position: absolute;
       width: 256px;
       height: 310px;
-      background-image: url(../images/methodology/img-before.png);
+      background-image: url(images/methodology/img-before.png);
       background-size: cover;
       background-repeat: no-repeat;
       top: 0;
@@ -6497,7 +6497,7 @@ body.js-hidden {
     position: absolute;
     width: 420px;
     height: 411px;
-    background-image: url(../img/video-block/before.png);
+    background-image: url(img/video-block/before.png);
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
@@ -7917,7 +7917,7 @@ body.js-hidden {
     position: absolute;
     width: 431px;
     height: 418px;
-    background: url(../img/about-image-before.svg) no-repeat center center;
+    background: url(img/about-image-before.svg) no-repeat center center;
     background-size: contain;
     z-index: -1;
     top: 50%;
@@ -8002,7 +8002,7 @@ body.js-hidden {
       position: absolute;
       width: 431px;
       height: 418px;
-      background: url(../img/about-image-before.svg) no-repeat center center;
+      background: url(img/about-image-before.svg) no-repeat center center;
       background-size: contain;
       z-index: -1;
       top: 50%;
