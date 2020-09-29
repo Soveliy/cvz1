@@ -171,7 +171,7 @@ a {
 
 .page-title {
   font-weight: 700;
-  margin-top: 25px;
+  margin-top: 30px;
   font-size: 42px;
   line-height: 40px;
   color: #024B76;
@@ -3643,7 +3643,7 @@ body.js-hidden {
       .footer__list-title {
         display: none; } }
   .footer__messangeres {
-    margin-left: 100px; }
+    margin-left: 90px; }
     @media (max-width: 768px) {
       .footer__messangeres {
         margin: 0 auto; } }
@@ -3679,7 +3679,7 @@ body.js-hidden {
         -ms-flex-align: start;
             align-items: flex-start; }
   .footer__contacts {
-    width: 264.5px;
+    width: 278.5px;
     -ms-flex-negative: 0;
         flex-shrink: 0;
     margin-left: auto; }
@@ -3706,7 +3706,7 @@ body.js-hidden {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-right: 33px; }
+    margin-right: 23px; }
     @media (max-width: 768px) {
       .footer__menu-container {
         display: none; } }
@@ -3872,12 +3872,14 @@ body.js-hidden {
   padding-left: 43px;
   font-size: 14px;
   line-height: 17px;
-  color: #868786; }
+  color: #868786;
+  margin-left: 5px; }
   @media (max-width: 768px) {
     .adress {
       font-size: 18px;
       line-height: 21px;
-      padding-left: 59px; } }
+      padding-left: 59px;
+      margin-left: 0; } }
   .adress:before {
     content: '';
     position: absolute;
@@ -5549,6 +5551,10 @@ body.js-hidden {
 
 .test {
   padding-bottom: 80px; }
+  @media (max-width: 1024px) {
+    .test .page-title {
+      margin-top: 80px;
+      margin-bottom: 90px; } }
   .test__list {
     max-width: 754px;
     margin: 0 auto;
