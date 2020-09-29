@@ -2228,20 +2228,7 @@ body{
     }
 }
 
-.reviews{
-    &__slider{
-        margin-top: 60px;
-        @include for-sm{
-            margin-top: 37px;
-        }
-    }
-    &__swiper-slide{
-        width: 362px !important;
-        @include for-md{
-            width: 100% !important;
-        }
-    }
-}
+
 
 .reviews-item{
     @include for-md{
@@ -2322,15 +2309,6 @@ body{
         margin-top: 60px;
         @include for-sm{
             margin-top: 34px;
-        }
-    }
-    &__swiper-slide{
-        width: 362px !important;
-        @include for-md{
-            width: 45% !important;
-        }
-        @include for-sm{
-            width: 100% !important;
         }
     }
 }
@@ -4005,14 +3983,6 @@ body{
             margin-top: 37px;
         }
     }
-
-    &__swiper-slide {
-        width: 362px !important;
-
-        @include for-md {
-            width: 100% !important;
-        }
-    }
 }
 
 .reviews-item {
@@ -4096,12 +4066,7 @@ body{
         }
     }
 
-    &__swiper-slide {
-        width: 362px !important;
-        @include for-md {
-            width: 100% !important;
-        }
-    }
+
 }
 
 .gallery-item {
