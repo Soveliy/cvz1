@@ -6389,7 +6389,7 @@ body.js-hidden {
   width: 363px !important; }
   @media (max-width: 1024px) {
     .specialists__swiper-slide {
-      width: 100% !important; } }
+      width: 90% !important; } }
 
 .specialists__container {
   display: -webkit-box;
