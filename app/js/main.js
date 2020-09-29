@@ -479,6 +479,9 @@ $(".burger").on('click', function(){
     $(".mobile-menu").slideToggle();
     $(".mobile-buttons").hide();
     $("body").toggleClass("js-hidden");
+    $(".mobile-menu .js-active").removeClass();
+    $(".mobile-menu .mobile-menu__nav ul li > ul").hide();
+
 
 })
 $(".mobile-menu__nav > ul > li > span").on('click', function(){
