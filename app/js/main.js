@@ -479,7 +479,7 @@ $(".burger").on('click', function(){
     $(".mobile-menu").slideToggle();
     $(".mobile-buttons").hide();
     $("body").toggleClass("js-hidden");
-    $(".mobile-menu .js-active").removeClass();
+    $(".mobile-menu .js-active").removeClass("js-active");
     $(".mobile-menu .mobile-menu__nav ul li > ul").hide();
 
 
