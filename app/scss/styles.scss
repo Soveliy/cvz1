@@ -60,11 +60,15 @@ body{
     width: 100%;
     padding: 11px 0;
     box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.16);
-    top: 62px;
+    top: 76px;
     left: 50%;
     transform: translateX(-50%);
     background-color: $white;
     z-index: 100;
+    transition: $transition;
+    @include for-md{
+        top: 0;
+    }
     &__logo{
       
         @include for-md(){
@@ -6594,3 +6598,20 @@ body{
         width: auto;
     }
 }
+
+
+
+.sticky{
+    position: fixed;
+    background-color: $white;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    transition: .3s;
+}
+// .sticky + main{
+//     padding-top: 75px;
+//     @include for-md{
+//         padding-top: 68px;
+//     }
+// }

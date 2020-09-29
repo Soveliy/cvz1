@@ -73,7 +73,6 @@ $('.content-slider.price__slider').each(function(){
   });
 });
 
-
 $('.services-slider-main').each(function(){
   var contentSlider = new Swiper(this, {
     spaceBetween: 20,
@@ -440,15 +439,12 @@ $('.review-post__select').niceSelect();
 
 $('.form').each(function(){
   $(this).validate({
-
     messages:{
       login:{
         required: "",
      }    
-    }
-  
-  });
-  
+    }  
+  });  
   
   });
 });
@@ -528,14 +524,25 @@ $(".mobile-menu__nav > ul > li > span").on('click', function(){
 
 var lastScrollTop = 62;
 $(window).scroll(function(event){
-   var st = $(this).scrollTop();
+   var st = $(this).scrollTop();   
+   const scroll = window.pageYOffset;
    if (st > lastScrollTop){
        // код для прокрутки вниз
-       $('header').addClass('sticky');
+         
+       $('header').css('top', `${scroll}px`);
+       $('header').css('position', `absolute`); 
+       $('header').css('transition', `.3s`); 
+       if(window.innerWidth < 1024) {
+        // $('header').css('top', `0`); 
+      }
    } else {
       // код для прокрутки вверх
-      if(window.innerWidth > 1024) {
-        $('header').removeClass('sticky');
+      $('header').css('top', `76px`);
+      $('header').css('transition', `.3s`); 
+      if(window.innerWidth < 1024) {
+        $('header').css('top', `0`); 
+        $('header').css('position', `fixed`); 
+        $('header').css('transition', `0s`);         
       }
    }
    if(window.innerWidth < 1024) {
