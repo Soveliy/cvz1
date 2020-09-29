@@ -238,13 +238,15 @@ a {
   .content-block p + p {
     margin-top: 1em; }
   .content-block__btn-block {
-    margin-top: 32px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-top: 32px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
+  .content-block__btn {
+    text-decoration: none !important; }
 
 .section-page {
   margin-bottom: 80px; }
