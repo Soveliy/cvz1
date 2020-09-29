@@ -965,9 +965,7 @@ body{
         line-height: 23px;
         background-color: $white;
         color: $dark_blue;
-        &:placeholder-shown{
-            opacity: 0;
-        }
+        
         &::placeholder{
             color: $blue;
         }
@@ -1365,7 +1363,12 @@ body{
         border-bottom: 1px solid $dark_blue;
         cursor: pointer;
         &:hover{
-            border-color: transparent;
+            border-color: $blue;
+            color: $blue;
+        }
+        &:active{
+            border-color: $purple;
+            color: $purple;
         }
     }
     
@@ -1478,7 +1481,12 @@ body{
         border-bottom: 1px dashed $dark_blue;
         transition: $transition;
         &:hover{
-            border-color: transparent;
+            color: $blue;
+            border-color: $blue;
+        }
+        &:active{
+            color: $purple;
+            border-color: $purple;
         }
     }
 }
