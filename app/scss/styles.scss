@@ -983,6 +983,11 @@ body{
         
         &::placeholder{
             color: $blue;
+            transition: $transition;
+
+            &:focus{
+                opacity:0
+            }
         }
 
         &:focus{
