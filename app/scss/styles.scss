@@ -1424,6 +1424,11 @@ body{
         @include for-md(){
             height: 36px;
             width: 36px;
+
+            svg{
+                max-width: 20px;
+                max-height: 20px;
+            }
         }
 
         &:hover{
