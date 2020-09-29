@@ -6401,7 +6401,7 @@ body.js-hidden {
 
 .specialists__swiper-slide {
   width: 363px !important; }
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
     .specialists__swiper-slide {
       width: 90% !important; } }
 

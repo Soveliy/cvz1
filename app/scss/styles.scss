@@ -4277,7 +4277,7 @@ body{
 
     &__swiper-slide{
         width: 363px !important;
-        @include for-md{
+        @include for-sm{
             width:90% !important;    
         }
     }
