@@ -27,6 +27,7 @@
     "baguettebox.js": "^1.11.1",
     "jquery-nice-select": "^1.1.0",
     "jquery.maskedinput": "^1.4.1",
+    "magnific-popup": "^1.1.0",
     "swiper": "^6.1.1"
   }
 }

@@ -31,6 +31,7 @@ gulp.task('css', function(){
     'node_modules/swiper/swiper-bundle.css',
     'node_modules/rateyo/lib/es/rateyo.css',
     'node_modules/baguettebox.js/dist/baguetteBox.css',
+    'node_modules/magnific-popup/dist/magnific-popup.css',
     'assest/css/jquery.rateyo.css',
     'assest/css/nice-select.css',
     'assest/css/validation.css',
@@ -56,6 +57,7 @@ gulp.task('js', function(){
   return gulp.src([
     'node_modules/swiper/swiper-bundle.js',
     'node_modules/baguettebox.js/dist/baguetteBox.js',
+    'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
     'assest/js/mask.js',
     'assest/js/jquery.validate.min.js',
     'assest/js/jquery.arcticmodal.js',

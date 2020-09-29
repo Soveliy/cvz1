@@ -404,6 +404,47 @@ a{
     }
 }
 
+.mfp-counter{
+    display: none;
+}
+.mfp-close{
+    color: $blue !important;
+    font-size: 44px !important;
+    opacity: 1 !important;
+    right: -33px !important;
+}
+.mfp-arrow-left{
+    width: 19px !important;
+    height: 38px !important;
+    margin-top: 0 !important;
+    left: 4% !important;
+    background-image: url(../img/icons/gallery-prev.svg) !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    &::before{
+        display: none !important;
+    }
+    &::after{
+        display: none !important;
+    }
+
+}
+.mfp-arrow-right{
+    width: 19px !important;
+    height: 38px !important;
+    margin-top: 0 !important;
+    right: 4% !important;
+    background-image: url(../img/icons/gallery-next.svg) !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    &::before{
+        display: none !important;
+    }
+    &::after{
+        display: none !important;
+    }
+
+}
 
 
  /* global */

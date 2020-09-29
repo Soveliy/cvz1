@@ -391,9 +391,17 @@ $('.reitings-rate').each(function () {
   
   }
 
+
+
+$('.gallery-item__info-link').magnificPopup({
+  type: 'image',
   
-baguetteBox.run('.gallery__slider .swiper-wrapper');
-baguetteBox.run('.gallery-page__wrapper');
+  gallery:{
+    enabled:true,
+  }
+});
+
+
 
 
 // timer('.action--1 .timer', '2020-10-15');
