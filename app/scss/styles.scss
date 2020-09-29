@@ -11,6 +11,9 @@
     position: static;
     width: auto;
 }
+.swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled{
+    opacity: 1;
+}
 a{
     cursor: pointer;
 }
@@ -552,9 +555,14 @@ body{
         height: 30px;
        &:hover{
            svg{
-               stroke: $purple;
+               stroke: $pink;
            }
        }
+       &:active{
+        svg{
+            stroke: $purple;
+        }
+    }
     }
 
     &__navigation{
@@ -592,7 +600,7 @@ body{
             @include for-md-mob(){
                 width: 100%;
                 left: 0;
-                bottom: 24px;
+                bottom: 40px;
                 margin-left: 0;
             }
             .main-slider__arrow{

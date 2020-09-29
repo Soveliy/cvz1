@@ -492,7 +492,7 @@ $(".mobile-menu__nav > ul > li > span").on('click', function(){
   $(".doc-page__callback-item--review").click(function(){
     $("#review-modal").arcticmodal();
   });
-  $(".doc-page__callback-item--question").click(function(){
+  $(".doc-page__callback-item--question,.questions-page .page-title__btn").click(function(){
     $("#question-modal").arcticmodal();
   });
   $('.options-buttons__search-btn').click(function(){
