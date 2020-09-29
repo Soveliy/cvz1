@@ -1346,7 +1346,7 @@ body{
         }
     }
     &__messangeres{
-        margin-left: 100px;
+        margin-left: 90px;
         @include for-sm(){
             margin: 0 auto;
         }
@@ -1383,7 +1383,7 @@ body{
         align-items: flex-start;
     }
     &__contacts{
-        width: 264.5px;
+        width: 278.5px;
         flex-shrink: 0;
         margin-left: auto;
         @include for-sm(){
@@ -1402,7 +1402,7 @@ body{
     }
     &__menu-container{
         display: flex;
-        margin-right: 33px;
+        margin-right: 23px;
         @include for-sm(){
             display: none;
         }
@@ -1565,10 +1565,12 @@ body{
     font-size: 14px;
     line-height: 17px;
     color: $grey2;
+    margin-left: 5px;
     @include for-sm(){
         font-size: 18px;
         line-height: 21px;
         padding-left: 59px;
+        margin-left: 0;
     }
     &:before{
         content: '';
@@ -1874,6 +1876,9 @@ body{
 
 
 .services-page{
+    .page-title{
+        margin: 0;
+    }
     &__container{        
         color: $black;
     }
@@ -3024,6 +3029,9 @@ body{
             font-weight: 700;
             color: $black;
             margin-bottom: 2px;
+            @include for-sm(){
+                font-weight: 400;
+            }
         }
         &-link{
             font-size: 16px;
@@ -3036,6 +3044,16 @@ body{
             margin-bottom: 20px;
             padding-bottom: 13px;
             border-bottom: 1px dotted $blue;
+            @include for-sm(){
+                margin-bottom: 18px;
+                padding-bottom: 28px;
+
+                &:last-child{
+                    border-bottom: 0;
+                }
+            }
+           
+           
         }
     }
 
@@ -3122,6 +3140,8 @@ body{
 }
 
 .contacts{
+    position: relative;
+    overflow: hidden;
     @include for-md(){
         padding-top: 35px;
     }
@@ -3212,6 +3232,12 @@ body{
     }
 }
 .test{
+    .page-title{
+        @include for-md(){
+            margin-top: 80px;
+            margin-bottom: 90px;
+        }
+    }
     padding-bottom: 80px;
     &__list{
         max-width: 754px;
@@ -3500,6 +3526,7 @@ body{
       padding-left: 25px;
       @include for-sm(){
           padding-left: 0;
+          columns: 1;
       }
 
         p{
