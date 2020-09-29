@@ -200,7 +200,7 @@ $('.content-slider.methodology-slider__slider').each(function(){
     breakpoints: {
       320: {
         slidesPerView: 1,
-        spaceBetween: 0
+        spaceBetween: 40
       },
       1024: {
         slidesPerView: 2,
