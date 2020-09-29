@@ -3733,7 +3733,7 @@ body.js-hidden {
       -ms-flex-align: start;
           align-items: flex-start;
   margin: 0 5px; }
-  .messangeres__item:last-child() {
+  .messangeres__item:last-child {
     margin-left: 18px;
     margin-right: 0; }
 
