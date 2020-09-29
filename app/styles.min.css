@@ -2376,28 +2376,28 @@ label.error {
 
 @font-face {
   font-family: 'PT Root UI Web';
-  src: url("../fonts/PTRootUIWeb-Bold.woff2") format("woff2"), url("../fonts/PTRootUIWeb-Bold.woff") format("woff");
+  src: url("fonts/PTRootUIWeb-Bold.woff2") format("woff2"), url("fonts/PTRootUIWeb-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: 'PT Root UI Web';
-  src: url("../fonts/PTRootUIWeb-Light.woff2") format("woff2"), url("../fonts/PTRootUIWeb-Light.woff") format("woff");
+  src: url("fonts/PTRootUIWeb-Light.woff2") format("woff2"), url("fonts/PTRootUIWeb-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: 'PT Root UI Web';
-  src: url("../fonts/PTRootUIWeb-Regular.woff2") format("woff2"), url("../fonts/PTRootUIWeb-Regular.woff") format("woff");
+  src: url("fonts/PTRootUIWeb-Regular.woff2") format("woff2"), url("fonts/PTRootUIWeb-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: 'PT Root UI Web';
-  src: url("../fonts/PTRootUIWeb-Medium.woff2") format("woff2"), url("../fonts/PTRootUIWeb-Medium.woff") format("woff");
+  src: url("fonts/PTRootUIWeb-Medium.woff2") format("woff2"), url("fonts/PTRootUIWeb-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap; }
@@ -4155,6 +4155,9 @@ body.js-hidden {
       .preheader__options-buttons {
         margin: 0; } }
 
+.services-page .page-title {
+  margin: 0; }
+
 .services-page__container {
   color: #565655; }
 
@@ -5370,6 +5373,9 @@ body.js-hidden {
       font-weight: 700;
       color: #565655;
       margin-bottom: 2px; }
+      @media (max-width: 768px) {
+        .services__grid-title {
+          font-weight: 400; } }
     .services__grid-link {
       font-size: 16px;
       line-height: 25px;
@@ -5382,6 +5388,12 @@ body.js-hidden {
       margin-bottom: 20px;
       padding-bottom: 13px;
       border-bottom: 1px dotted #007FC2; }
+      @media (max-width: 768px) {
+        .services__grid-item {
+          margin-bottom: 18px;
+          padding-bottom: 28px; }
+          .services__grid-item:last-child {
+            border-bottom: 0; } }
 
 .advantages {
   margin-top: 90px;
