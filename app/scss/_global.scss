@@ -34,6 +34,9 @@ header{
  .main{
     /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
     flex: 1 0 auto;
+    @include for-md{
+        margin-top: 68px;
+    }
  }
  .bottom-blocks{
     /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
@@ -435,20 +438,6 @@ a{
 
 
 
-.sticky{
-    position: fixed !important;
-    background-color: $white;
-    width: 100%;
-    z-index: 100;
-    top: 0 !important;
-    // transition: .3s;
-}
-// .sticky + main{
-//     padding-top: 75px;
-//     @include for-md{
-//         padding-top: 68px;
-//     }
-// }
 
 .mfp-counter{
     display: none;
