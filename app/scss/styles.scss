@@ -387,7 +387,7 @@ body{
                 border-bottom: 15px solid #EBEBEB;
                 top: -25px;
                 left: 50%;
-                margin-left: -195px;
+                margin-left: -160px;
                 transform: translateX(-50%);
                 z-index: -1;
             }
@@ -1943,7 +1943,7 @@ body{
     }
     .swiper-slide{
         width: 557px !important;
-        @include for-md{
+        @include for-md-mob(){
             width: 100% !important;
         }
     }
@@ -3621,7 +3621,7 @@ body{
     .swiper-slide {
         width: 557px !important;
 
-        @include for-md {
+        @include for-md-mob{
             width: 100% !important;
         }
     }
@@ -4353,7 +4353,7 @@ body{
 
     &__swiper-slide{
         width: 363px !important;
-        @include for-sm{
+        @include for-md-mob{
             width:90% !important;    
         }
     }

@@ -2757,7 +2757,7 @@ body.js-hidden {
         border-bottom: 15px solid #EBEBEB;
         top: -25px;
         left: 50%;
-        margin-left: -195px;
+        margin-left: -160px;
         -webkit-transform: translateX(-50%);
             -ms-transform: translateX(-50%);
                 transform: translateX(-50%);
@@ -4231,7 +4231,7 @@ body.js-hidden {
 
 .methodology-slider .swiper-slide {
   width: 557px !important; }
-  @media (max-width: 1024px) {
+  @media (max-width: 550px) {
     .methodology-slider .swiper-slide {
       width: 100% !important; } }
 
@@ -5949,7 +5949,7 @@ body.js-hidden {
 
 .methodology-slider .swiper-slide {
   width: 557px !important; }
-  @media (max-width: 1024px) {
+  @media (max-width: 550px) {
     .methodology-slider .swiper-slide {
       width: 100% !important; } }
 
@@ -6612,7 +6612,7 @@ body.js-hidden {
 
 .specialists__swiper-slide {
   width: 363px !important; }
-  @media (max-width: 768px) {
+  @media (max-width: 550px) {
     .specialists__swiper-slide {
       width: 90% !important; } }
 
