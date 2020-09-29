@@ -2818,7 +2818,7 @@ body.js-hidden {
       .main-slider__navigation--inside {
         width: 100%;
         left: 0;
-        bottom: 40px;
+        bottom: 24px;
         margin-left: 0; } }
     .main-slider__navigation--inside .main-slider__arrow {
       height: 26px;
