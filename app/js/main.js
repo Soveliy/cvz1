@@ -21,16 +21,20 @@ window.addEventListener('load', function() {
 // });
 // });
 
-var aboutSlider = new Swiper('.main-slider .swiper-container', {
-  pagination: {
-    el: '.main-slider .swiper-pagination',
-    type: 'fraction',
-  },
-  navigation: {
-    nextEl: '.main-slider .swiper-button-next',
-    prevEl: '.main-slider .swiper-button-prev',
-  },
+$('.main-slider .swiper-container').each(function(){
+  var aboutSlider = new Swiper(this, {
+    pagination: {
+      el: $(this).next().find('.swiper-pagination')[0],
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: $(this).next().find('.swiper-button-next')[0],
+      prevEl: $(this).next().find('.swiper-button-prev')[0],
+    },
+  });
 });
+
+
 
 // Slider
 
