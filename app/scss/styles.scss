@@ -1362,7 +1362,7 @@ body{
         align-items: flex-start;
     }
     &__contacts{
-        width: 270.5px;
+        width: 264.5px;
         flex-shrink: 0;
         margin-left: auto;
         @include for-sm(){
@@ -1793,6 +1793,9 @@ body{
 .preheader{
     background-color: $preheader-color;
     @include for-md(){
+        display: none;
+    }
+    br{
         display: none;
     }
     &__social{

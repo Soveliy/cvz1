@@ -3659,7 +3659,7 @@ body.js-hidden {
         -ms-flex-align: start;
             align-items: flex-start; }
   .footer__contacts {
-    width: 270.5px;
+    width: 264.5px;
     -ms-flex-negative: 0;
         flex-shrink: 0;
     margin-left: auto; }
@@ -4092,6 +4092,8 @@ body.js-hidden {
   @media (max-width: 1024px) {
     .preheader {
       display: none; } }
+  .preheader br {
+    display: none; }
   .preheader__social {
     margin-left: 85px; }
     @media (max-width: 1100px) {
