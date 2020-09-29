@@ -395,6 +395,8 @@ $('.reitings-rate').each(function () {
 baguetteBox.run('.gallery__slider .swiper-wrapper');
 baguetteBox.run('.gallery-page__wrapper');
 
+baguetteBox.run('.about-center__row');
+
 
 // timer('.action--1 .timer', '2020-10-15');
 // timer('.action--2 .timer', '2020-11-15');

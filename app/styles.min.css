@@ -3111,6 +3111,11 @@ body.js-hidden {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 6px; }
+  @media (max-width: 1024px) {
+    .messangeres__icon {
+      height: 36px;
+      width: 36px;
+      padding: 8px; } }
   .messangeres__icon:hover {
     background-color: #007FC2; }
   .messangeres__icon:active {
@@ -3131,6 +3136,14 @@ body.js-hidden {
   line-height: 25px;
   color: #024B76;
   font-weight: 500; }
+  @media (max-width: 1024px) {
+    .messangeres__phone {
+      font-size: 28px;
+      line-height: 31px; } }
+  @media (max-width: 370px) {
+    .messangeres__phone {
+      font-size: 20px;
+      line-height: 23px; } }
   .messangeres__phone--lit {
     font-size: 20px;
     line-height: 23px;
@@ -3183,6 +3196,10 @@ body.js-hidden {
           box-sizing: border-box;
   border: 1px solid #024B76;
   padding: 5px; }
+  @media (max-width: 1024px) {
+    .social__link {
+      height: 36px;
+      width: 36px; } }
   .social__link:hover {
     border-color: #007FC2;
     background-color: #007FC2; }
@@ -7998,6 +8015,27 @@ body.js-hidden {
     -ms-flex-negative: 0;
         flex-shrink: 0;
     margin-right: 82px; }
+    .about-center__image-block a {
+      position: relative;
+      display: block;
+      height: 100%;
+      width: 100%;
+      border-radius: 50%; }
+    .about-center__image-block a.video:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      background: url(img/icons/video-btn.svg) no-repeat center center rgba(151, 65, 109, 0.6);
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
+      opacity: 0; }
+    .about-center__image-block a.video:hover:before {
+      opacity: 1; }
     @media (max-width: 1024px) {
       .about-center__image-block {
         margin: 0 auto 31px;

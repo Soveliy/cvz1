@@ -1330,6 +1330,11 @@ body{
         transition: $transition;
         box-sizing: border-box;
         padding: 6px;
+        @include for-md(){
+            height: 36px;
+            width: 36px;
+            padding: 8px;
+        }
         &:hover{
             background-color: $blue;
         }
@@ -1353,7 +1358,14 @@ body{
         line-height: 25px;
         color: $dark_blue;
         font-weight: 500;
-
+        @include for-md(){
+            font-size: 28px;
+            line-height: 31px;
+        }
+        @include for-lit-mob(){
+            font-size: 20px;
+            line-height: 23px;
+        }
         &--lit{
             font-size: 20px;
             line-height: 23px;
@@ -1406,6 +1418,11 @@ body{
         box-sizing: border-box;
         border: 1px solid $dark_blue;
         padding: 5px;
+
+        @include for-md(){
+            height: 36px;
+            width: 36px;
+        }
 
         &:hover{
             border-color: $blue;
@@ -6199,6 +6216,33 @@ body{
         width: 357px;
         flex-shrink: 0;
         margin-right: 82px;
+
+        a{  
+            position: relative;
+            display: block;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+        }
+        a.video{
+            &:before{
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                border-radius: 50%;
+                background: url(img/icons/video-btn.svg) no-repeat center center rgba(#97416D , .6);
+                transition: $transition;
+                opacity: 0;
+            }
+            &:hover{
+                &:before{
+                    opacity: 1;
+                }
+            }
+        }
 
         @include for-md(){
             margin: 0 auto 31px;
