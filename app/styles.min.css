@@ -5500,6 +5500,9 @@ body.js-hidden {
 
 .contacts__btn {
   margin: 0 16px; }
+  .contacts__btn.js-active {
+    background-color: #007FC2;
+    color: #fff; }
   @media (max-width: 768px) {
     .contacts__btn {
       margin: 0; }
@@ -5816,11 +5819,9 @@ body.js-hidden {
       background: url(img/icons/how-to.svg) no-repeat center center;
       background-size: contain; }
   .how-to-get__body {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-columns: 2;
+       -moz-columns: 2;
+            columns: 2;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     padding-left: 25px; }
@@ -5833,7 +5834,6 @@ body.js-hidden {
         color: #024B76; }
   .how-to-get__item {
     position: relative;
-    width: 50%;
     margin-bottom: 23px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -9036,3 +9036,21 @@ body.js-hidden {
   margin-top: 27px; }
   .services-slider-main .swiper-slide {
     width: auto; }
+
+.tabs__content {
+  height: 0;
+  opacity: 0;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+  visibility: hidden;
+  -webkit-transform: translateY(-40px);
+      -ms-transform: translateY(-40px);
+          transform: translateY(-40px); }
+  .tabs__content.js-active {
+    height: auto;
+    visibility: visible;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1; }

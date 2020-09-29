@@ -3167,6 +3167,10 @@ body{
     }
     &__btn{
         margin: 0 16px;
+        &.js-active{
+            background-color: $blue;
+            color: $white;
+        }
         @include for-sm(){
             margin: 0;
 
@@ -3467,8 +3471,7 @@ body{
        
     }
     &__body{
-      display: flex;
-      flex-wrap: wrap;
+    columns: 2;
       box-sizing: border-box;
       padding-left: 25px;
       @include for-sm(){
@@ -3485,7 +3488,7 @@ body{
     }
     &__item{
         position: relative;
-        width: 50%;
+      
         margin-bottom: 23px;
         box-sizing: border-box;
         padding-left: 33px;
@@ -6721,5 +6724,21 @@ body{
     margin-top: 27px;
     .swiper-slide{
         width: auto;
+    }
+}
+
+.tabs{
+    &__content{
+        height: 0;
+        opacity: 0;
+        transition: all .5s ease;
+        visibility: hidden;
+        transform: translateY(-40px);
+        &.js-active{
+            height: auto;
+            visibility: visible;
+            transform: translateY(0);
+            opacity: 1;
+        }
     }
 }
