@@ -3617,7 +3617,10 @@ body.js-hidden {
   @media (max-width: 1024px) {
     .social__link {
       height: 36px;
-      width: 36px; } }
+      width: 36px; }
+      .social__link svg {
+        max-width: 20px;
+        max-height: 20px; } }
   .social__link:hover {
     border-color: #007FC2;
     background-color: #007FC2; }
@@ -3749,10 +3752,13 @@ body.js-hidden {
 
 .options-buttons__lang {
   font-size: 13px;
-  line-height: 16px;
+  line-height: 19px;
   text-align: center;
   font-weight: 700;
   color: #007FC2; }
+  @media (max-width: 550px) {
+    .options-buttons__lang {
+      font-size: 16px; } }
   .options-buttons__lang:hover, .options-buttons__lang:active {
     color: #fff; }
 

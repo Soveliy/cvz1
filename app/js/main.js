@@ -490,7 +490,7 @@ $(".mobile-menu__nav > ul > li > span").on('click', function(){
   $('.options-buttons__search-btn').click(function(){
     $(this).next().toggleClass('js-active');
   });
-
+  $(".numbox").mask("+7 (999) 999-99-99");
   $(document).click( function(e){
     if ( $(e.target).closest('.options-buttons__search-btn').length || $(e.target).closest('.search__input-container').length) {
         // клик внутри элемента 
