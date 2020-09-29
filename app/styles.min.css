@@ -2987,15 +2987,20 @@ body.js-hidden {
         margin-right: 0; } }
   .features__item-container {
     width: 33.3%;
-    margin-bottom: 141px; }
+    margin-bottom: 141px;
+    padding-right: 50px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
     @media screen and (max-width: 1024px) and (min-width: 769px) {
       .features__item-container {
-        width: 50%; }
+        width: 50%;
+        padding-right: 25px; }
         .features__item-container .features-item:before {
           width: 200px !important; } }
     @media (max-width: 768px) {
       .features__item-container {
-        width: 100%; } }
+        width: 100%;
+        padding-left: 0; } }
     .features__item-container:nth-child(2n + 1) .features-item:before {
       content: '';
       position: absolute;
