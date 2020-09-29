@@ -170,7 +170,7 @@ $('.content-slider.gallery__slider').each(function(){
 
 $('.content-slider.articles__slider').each(function(){
   var contentSlider = new Swiper(this, {
-    spaceBetween: 10,
+    spaceBetween: 0,
     slidesPerView: 4,
     navigation: {
       nextEl: $(this).prev().find('.content-slider__arrow-right')[0],
@@ -179,15 +179,13 @@ $('.content-slider.articles__slider').each(function(){
     breakpoints: {
       320: {
         slidesPerView: 1,
-        spaceBetween: 0
       },
       768: {
         slidesPerView: 2,
-        spaceBetween: 0
       },
       1024: {
-        slidesPerView: 3,
-        spaceBetween: 40
+        slidesPerView: 4,
+        spaceBetween: 10,
       }
     }
 
