@@ -73,6 +73,18 @@ $('.content-slider.price__slider').each(function(){
   });
 });
 
+
+$('.services-slider-main').each(function(){
+  var contentSlider = new Swiper(this, {
+    spaceBetween: 20,
+    slidesPerView: "auto",
+    navigation: {
+      nextEl: $(this).prev().find('.content-slider__arrow-right')[0],
+      prevEl: $(this).prev().find('.content-slider__arrow-left')[0],
+    },
+  });
+});
+
 // Question slider
 
 $('.content-slider.questions__slider').each(function(){
