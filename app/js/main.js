@@ -21,27 +21,27 @@ window.addEventListener('load', function() {
 // });
 // });
 
-var aboutSlider = new Swiper('.main-slider .swiper-container', {
-  pagination: {
-    el: '.main-slider .swiper-pagination',
-    type: 'fraction',
-  },
-  navigation: {
-    nextEl: '.main-slider .swiper-button-next',
-    prevEl: '.main-slider .swiper-button-prev',
-  },
-});
+// var aboutSlider = new Swiper('.main-slider .swiper-container', {
+//   pagination: {
+//     el: '.main-slider .swiper-pagination',
+//     type: 'fraction',
+//   },
+//   navigation: {
+//     nextEl: '.main-slider .swiper-button-next',
+//     prevEl: '.main-slider .swiper-button-prev',
+//   },
+// });
 
-var aboutSlider_banner = new Swiper('.main-slider-inside .swiper-container', {
-  pagination: {
-    el: '.main-slider-inside  .swiper-pagination',
-    type: 'fraction',
-  },
-  navigation: {
-    nextEl: '.main-slider-inside  .swiper-button-next',
-    prevEl: '.main-slider-inside  .swiper-button-prev',
-  },
-});
+// var aboutSlider_banner = new Swiper('.main-slider-inside .swiper-container', {
+//   pagination: {
+//     el: '.main-slider-inside  .swiper-pagination',
+//     type: 'fraction',
+//   },
+//   navigation: {
+//     nextEl: '.main-slider-inside  .swiper-button-next',
+//     prevEl: '.main-slider-inside  .swiper-button-prev',
+//   },
+// });
 
 // Slider
 
