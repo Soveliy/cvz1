@@ -8030,7 +8030,7 @@ body.js-hidden {
     padding-left: 0; }
 
 .glossary-menu {
-  margin-top: 50px;
+  margin-top: 35px;
   margin-bottom: 64px;
   background-color: #F8F8F8; }
   @media (max-width: 1024px) {
@@ -8136,7 +8136,7 @@ body.js-hidden {
 
 .glossary__page-title {
   padding: 0 10px;
-  margin: 50px 0 53px; }
+  margin: 50px 0 35px; }
 
 .glossary-item {
   max-width: 854px;
