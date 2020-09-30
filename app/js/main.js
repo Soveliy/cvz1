@@ -577,3 +577,14 @@ $('.service-menu__item').click(function() {
     return false;
 });
 
+$('.page-title__btn').click(function() {
+  $page.animate({
+      scrollTop: $($.attr(this, 'href')).offset().top
+  }, 400);
+  return false;
+});
+
+$('.price__more').on('click', function(){
+  $('.price__tr--mobile').toggleClass('active');
+});
+

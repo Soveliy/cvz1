@@ -193,6 +193,7 @@ a{
 }
 
 .page-title{
+    position: relative;
     font-weight: 700;
     margin-top:30px;
     font-size: 42px;
@@ -205,6 +206,7 @@ a{
         line-height: 22px;
         font-weight: 400;
         margin-left: 100px;
+        top: 5px;
         @include for-lg{
             margin-left: 40px;
         }
@@ -220,7 +222,7 @@ a{
         align-items: center;
     }
     @include for-md-mob{
-        margin-bottom: 90px;
+        margin-bottom: 30px;
         font-size: 34px;
         line-height: 42px;
         font-weight: 400;
