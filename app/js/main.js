@@ -241,6 +241,7 @@ $('.content-slider.specialists__slider').each(function(){
     },
     breakpoints: {
       320: {
+        centeredSlides: true,
         slidesPerView: 1,
       },
       1025: {
@@ -490,6 +491,7 @@ $(".mobile-menu__nav > ul > li > span").on('click', function(){
     if(windowSize < 1025){
     if ($(this).hasClass("js-active")) {
         $(this).removeClass("js-active");
+        $(this).parent().removeClass("js-active");
         $(this).next().removeClass("js-active");
         $(this).next().slideToggle();
         
@@ -497,7 +499,8 @@ $(".mobile-menu__nav > ul > li > span").on('click', function(){
       
       $(this).closest(".mobile-menu__nav").find("ul.js-active").slideToggle();
       $(this).closest(".mobile-menu__nav").find("ul.js-active").removeClass("js-active");
-      $(".mobile-menu__nav > ul > li > span").removeClass("js-active");
+      $(".mobile-menu__nav > ul > li > span,.mobile-menu__nav > ul > li").removeClass("js-active");
+      $(this).parent().addClass("js-active");
       $(this).addClass("js-active");
       $(this).next().addClass("js-active");
       $(this).next().slideToggle();
@@ -506,15 +509,16 @@ $(".mobile-menu__nav > ul > li > span").on('click', function(){
   });
 
 
-  $(".callback-js").click(function(){
+  $(".callback-js,.free-conslut .btn").click(function(){
     $("#callback-modal").arcticmodal();
   });
+  
   $(".reception-js,.doc-page__callback-item--appointment").click(function(){
     $("#reception-modal").arcticmodal();
   });
-  $(".free-conslut .btn").click(function(){
-    $("#consult-modal").arcticmodal();
-  });
+  // $(".free-conslut .btn").click(function(){
+  //   $("#consult-modal").arcticmodal();
+  // });
   $(".doc-page__callback-item--review").click(function(){
     $("#review-modal").arcticmodal();
   });
@@ -615,6 +619,25 @@ $('.service-menu__item').click(function() {
     return false;
 });
 
+function resizeMenu() {
+  var windowWidth = $(window).width();
+  if (windowWidth <= 1024) {
+    //for_body
+    if ($(".burger").hasClass("js-active")) {
+      //code
+      $('.burger').removeClass('js-active');
+      $('bode').removeClass('js-hidden');
+      $(".mobile-menu").hide();
+    }
+  } else {
+    //for_body
+   
+  }
+}
+resizeMenu();
+$(window).resize(function () {
+  resizeMenu();
+});
 $('.page-title__btn').click(function() {
   $page.animate({
       scrollTop: $($.attr(this, 'href')).offset().top
@@ -625,4 +648,3 @@ $('.page-title__btn').click(function() {
 $('.price__more').on('click', function(){
   $('.price__tr--mobile').toggleClass('active');
 });
-
