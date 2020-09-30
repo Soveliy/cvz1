@@ -6093,6 +6093,12 @@ body{
 }
 
 .stars{
+
+    .head-block__title--black{
+        @include for-md(){
+            font-weight: bold;
+        }
+    }
     margin-bottom: 16px;
     @include for-sm(){
         padding-top: 32px;

@@ -8423,6 +8423,9 @@ body.js-hidden {
 
 .stars {
   margin-bottom: 16px; }
+  @media (max-width: 1024px) {
+    .stars .head-block__title--black {
+      font-weight: bold; } }
   @media (max-width: 768px) {
     .stars {
       padding-top: 32px; }
