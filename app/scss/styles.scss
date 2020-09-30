@@ -3256,6 +3256,28 @@ body{
     // @include for-md(){
     //     padding-top: 35px;
     // }
+    .social__link{
+        border-color: $blue;
+
+        svg{
+            fill: $blue;
+        }
+        &:hover{
+            border-color: $dark_blue;
+            background-color: $dark_blue;
+
+            svg{
+                fill: $white;
+            }
+        }
+        &:active{
+            border-color: $purple;
+            background-color: $purple;
+            svg{
+                fill: $white;
+            }
+        }
+    }
     &__title{
         margin-bottom: 50px;
         @include for-md(){
@@ -3270,6 +3292,10 @@ body{
         box-sizing: border-box;
         text-align: center;
         background-color: #FCE5E8;
+        transition: $transition;
+        &:hover{
+            opacity: .7;
+        }
 
         .container{
             position: relative;
@@ -3337,7 +3363,7 @@ body{
             text-align: center;
             padding: 11px 10px;
             & + &{
-                margin-top: 34px;
+                margin-top: 15px;
             }
         }
     }
@@ -3620,6 +3646,9 @@ body{
            margin: 0 -15px 0 0;
             @include for-sm(){
                margin: 34px 0 0 0;
+              .contacts__btn{
+                padding: 11px 40px;
+              }
             }
         }
     }
@@ -3643,6 +3672,7 @@ body{
         }
        
     }
+    
     &__body{
     columns: 2;
       box-sizing: border-box;
@@ -5908,7 +5938,7 @@ body{
         }
         &+&{
             @include for-sm{
-                margin-top: 65px;
+                margin-top: 35px;
             }
         }
     }
@@ -5922,7 +5952,11 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 56px;
+        max-height: 56px;
+
+        img{
+            max-width: 100%;
+        }
        
     }
     .rate-block__inner{
@@ -5936,9 +5970,9 @@ body{
     }
     &__rate{
         margin-top: 11px;
-        // @include for-md(){
-        //     margin-top: 0;
-        // }
+        @include for-md(){
+            margin-top: 0;
+        }
     }
     .jq-ry-normal-group{
         svg{
@@ -6147,7 +6181,7 @@ body{
         margin-right: 112px;
 
         @include for-md(){
-            margin: 0 auto 31px;
+            margin: 0 auto 10px;
             width: 285px;
             height: 285px;
         }
@@ -6218,13 +6252,16 @@ body{
 .about-center{
     padding-bottom: 70px;
     padding-top: 25px;
+    @include for-md(){
+        padding-top: 40px;
+    }
 
     .head-block__btn{
         padding: 9.5px 41px;
     }
     &--title{
         @include for-md(){
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
     }
     &__row{
@@ -6310,7 +6347,7 @@ body{
     &__btn-container--mob{
         display: none;
         @include for-md(){
-            margin-top: 31px;
+            margin-top: 15px;
             display: flex;
             justify-content: center;
         }
@@ -6561,7 +6598,7 @@ body{
         &__row{
             margin-top: 120px;
             @include for-md(){
-                margin-top: 90px;
+                margin-top: 105px;
             }
         }
     }

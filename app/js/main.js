@@ -235,6 +235,7 @@ $('.content-slider.specialists__slider').each(function(){
   var contentSlider = new Swiper(this, {
     spaceBetween: 30,
     slidesPerView: 3,
+    centeredSlides: true,
     centeredSlides: false,
     navigation: {
       nextEl: $(this).prev().find('.content-slider__arrow-right')[0],
@@ -242,10 +243,11 @@ $('.content-slider.specialists__slider').each(function(){
     },
     breakpoints: {
       320: {
-        centeredSlides: true,
+        centeredSlides: false,
         slidesPerView: 1,
       },
       1025: {
+
         slidesPerView: 3,
       }
     }
