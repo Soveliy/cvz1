@@ -420,7 +420,8 @@ a {
   left: 4% !important;
   background-image: url(img/icons/gallery-prev.svg) !important;
   background-size: contain !important;
-  background-repeat: no-repeat !important; }
+  background-repeat: no-repeat !important;
+  opacity: 1 !important; }
   .mfp-arrow-left::before {
     display: none !important; }
   .mfp-arrow-left::after {
@@ -433,7 +434,8 @@ a {
   right: 4% !important;
   background-image: url(img/icons/gallery-next.svg) !important;
   background-size: contain !important;
-  background-repeat: no-repeat !important; }
+  background-repeat: no-repeat !important;
+  opacity: 1 !important; }
   .mfp-arrow-right::before {
     display: none !important; }
   .mfp-arrow-right::after {

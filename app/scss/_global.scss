@@ -462,6 +462,7 @@ a{
     background-image: url(img/icons/gallery-prev.svg) !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
+    opacity: 1 !important;
     &::before{
         display: none !important;
     }
@@ -478,6 +479,7 @@ a{
     background-image: url(img/icons/gallery-next.svg) !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
+    opacity: 1 !important;
     &::before{
         display: none !important;
     }

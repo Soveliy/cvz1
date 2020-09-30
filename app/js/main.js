@@ -535,14 +535,51 @@ $(".mobile-menu__nav > ul > li > span").on('click', function(){
   });
     
 
-var lastScrollTop = 55;
-$(window).scroll(function(event){
-   var st = $(this).scrollTop();   
-   const scroll = window.pageYOffset;
-   if (st > lastScrollTop){
-       // код для прокрутки вниз
+// var preheaderHeight = $('.preheader').height();
+// $(window).scroll(function(event){
+//    var st = $(this).scrollTop();   
+//    const scroll = window.pageYOffset;
+//    if (st > preheaderHeight){
+//        // код для прокрутки вниз
          
-       $('header').css('top', `${scroll}px`);
+//        $('header').css('top', `${scroll}px`);
+//        $('header').css('position', `absolute`); 
+//        $('header').css('transition', `.3s`); 
+//        if(window.innerWidth < 1024) {
+//         // $('header').css('top', `0`); 
+//       }
+//    } else {
+//       // код для прокрутки вверх
+//       $('header').css('top', `${preheaderHeight}px`);
+//       $('header').css('transition', `.3s`); 
+//       if(window.innerWidth < 1024) {
+//         $('header').css('position', `fixed`); 
+//         $('header').css('top', `0`); 
+//         $('header').css('transition', `.3s`);         
+//       }
+//    }
+//    if(window.innerWidth < 1024) {
+//     preheaderHeight = st;
+//   } else{
+//     if(st>$('.preheader').height()){
+//       preheaderHeight = st;
+//     }
+//   }
+   
+// });
+
+
+let preheaderHeight = +(window.getComputedStyle(document.querySelector('.preheader')).height).replace(/\D/gi, '');
+let lastScrollTop = 0;
+// let preheaderHeight = $('.preheader').height();
+$(window).scroll(function(event){
+  let st = $(this).scrollTop();   
+  const scroll = window.pageYOffset;
+  if (st > lastScrollTop){
+    // код для прокрутки вниз
+    
+      console.log(preheaderHeight);
+      $('header').css('top', `${scroll}px`);
        $('header').css('position', `absolute`); 
        $('header').css('transition', `.3s`); 
        if(window.innerWidth < 1024) {
@@ -550,7 +587,8 @@ $(window).scroll(function(event){
       }
    } else {
       // код для прокрутки вверх
-      $('header').css('top', `55px`);
+      $('header').css('top', `${preheaderHeight}px`);
+      $('header').css('position', `absolute`);
       $('header').css('transition', `.3s`); 
       if(window.innerWidth < 1024) {
         $('header').css('top', `0`); 
