@@ -573,16 +573,20 @@ $(".mobile-menu__nav > ul > li > span").on('click', function(){
 // });
 
 
-let preheaderHeight = +(window.getComputedStyle(document.querySelector('.preheader')).height).replace(/\D/gi, '');
+// let preheaderHeight = +(window.getComputedStyle(document.querySelector('.preheader')).height).replace(/\D/gi, '');
 let lastScrollTop = 0;
-// let preheaderHeight = $('.preheader').height();
-$(window).scroll(function(event){
-  let st = $(this).scrollTop();   
-  const scroll = window.pageYOffset;
-  if (st > lastScrollTop){
-    // код для прокрутки вниз
-    
-      console.log(preheaderHeight);
+let preheaderHeight = $('.preheader').height(),
+    headerHeight = +(window.getComputedStyle(document.querySelector('header')).height).replace(/\D/gi, '');
+    $('main').css('margin-top', headerHeight);
+    window.addEventListener(`resize`, event => {
+      $('main').css('margin-top', headerHeight);
+    });
+    $(window).scroll(function(event){
+      let st = $(this).scrollTop();   
+      const scroll = window.pageYOffset;
+      if (st > lastScrollTop){
+        // код для прокрутки вниз
+    headerHeight = $('header').height();
       $('header').css('top', `${scroll}px`);
        $('header').css('position', `absolute`); 
        $('header').css('transition', `.3s`); 
@@ -645,6 +649,32 @@ $('.page-title__btn').click(function() {
   return false;
 });
 
+//Price table dropdpwn
+
 $('.price__more').on('click', function(){
-  $('.price__tr--mobile').toggleClass('active');
+  $('.price__tr--mobile').toggleClass('active');  
+  $('header').css('position', `fixed`);
+  if($(this).hasClass('active')){
+    $(this).removeClass('active');
+    $(this).html(`
+    
+    Развернуть
+    <div class="price__more-icon-container">
+        <svg class="price__more-icon">
+            <use xlink:href="img/sprite.svg#arrow-down"></use>
+        </svg>
+    </div> 
+    `);
+  } else{
+    $(this).addClass('active');
+    $(this).html(`
+    
+    Свернуть
+    <div class="price__more-icon-container">
+        <svg class="price__more-icon">
+            <use xlink:href="img/sprite.svg#arrow-down"></use>
+        </svg>
+    </div> 
+    `);
+  }
 });
