@@ -2710,6 +2710,9 @@ body.js-hidden {
   @media (max-width: 1024px) {
     .main-menu {
       display: none; } }
+  @media (max-width: 1100px) {
+    .main-menu {
+      margin-right: auto; } }
   .main-menu > ul {
     display: -webkit-box;
     display: -ms-flexbox;

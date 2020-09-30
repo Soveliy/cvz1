@@ -338,6 +338,9 @@ body{
     @include for-md(){
         display: none;
     }
+    @include for-lg(){
+        margin-right: auto;
+    }
     > ul {
         display: flex;
         flex-wrap: wrap;
