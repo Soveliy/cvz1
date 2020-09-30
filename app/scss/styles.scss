@@ -2336,6 +2336,10 @@ body{
         display: flex;
         align-items: center;
         padding: 5px 14px;
+
+        .price__more-icon{
+            transition: $transition
+        }
         &:hover{
             .price__more-icon-container{
                 border-color: $white;                

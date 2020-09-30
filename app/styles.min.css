@@ -4647,6 +4647,10 @@ body.js-hidden {
       -ms-flex-align: center;
           align-items: center;
   padding: 5px 14px; }
+  .price__more .price__more-icon {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
   .price__more:hover .price__more-icon-container {
     border-color: #fff; }
   .price__more:hover .price__more-icon {
