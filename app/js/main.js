@@ -235,6 +235,7 @@ $('.content-slider.specialists__slider').each(function(){
   var contentSlider = new Swiper(this, {
     spaceBetween: 30,
     slidesPerView: 3,
+    centeredSlides: false,
     navigation: {
       nextEl: $(this).prev().find('.content-slider__arrow-right')[0],
       prevEl: $(this).prev().find('.content-slider__arrow-left')[0],

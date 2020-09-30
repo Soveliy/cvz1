@@ -8001,7 +8001,7 @@ body.js-hidden {
   padding-top: 12px; }
 
 .news-list__page-title {
-  margin-top: 68px; }
+  margin-top: 30px; }
 
 .news-item {
   margin: 0 auto;
@@ -8139,7 +8139,7 @@ body.js-hidden {
 
 .glossary__page-title {
   padding: 0 10px;
-  margin: 50px 0 35px; }
+  margin: 30px 0 30px; }
 
 .glossary-item {
   max-width: 854px;
@@ -8702,7 +8702,7 @@ body.js-hidden {
 
 .staff__page-title {
   padding: 10px 0;
-  margin: 50px 0; }
+  margin: 30px 0; }
 
 .staff__wrapper {
   display: -webkit-box;
@@ -8776,7 +8776,7 @@ body.js-hidden {
     padding: 12px 20px;
     border-radius: 25px; }
   .gallery-page__page-title {
-    margin: 50px 0; }
+    margin: 30px 0; }
 
 .about-center + .specialists {
   margin-top: 10px; }
