@@ -4388,6 +4388,13 @@ body{
     padding: 18px 0;
     border-top: 1px dotted $dark_blue;
 
+    @include for-md(){
+        padding: 25px 0;
+        & + &{
+            margin-top: 20px;
+        }
+    }
+
     &__inner {
         display: flex;
         align-items: flex-start;
@@ -4444,7 +4451,7 @@ body{
         @include for-md {
             flex-direction: column-reverse;
             align-items: center;
-            padding-bottom: 106.5px;
+            padding-bottom: 20px;
         }
     }
 
@@ -4702,7 +4709,7 @@ body{
             margin-left: 38px;
             @include for-md{
                 margin-left: 0;
-                margin-top: 38px;
+                margin-top: 20px;
             }
         }
         &:hover{
@@ -5223,6 +5230,10 @@ body{
         text-decoration: underline;
         &--grey{
             color: #D9DADA;
+
+            @include for-sm(){
+                display: none;
+            }
         }
     }
     &__photo{
@@ -5239,15 +5250,17 @@ body{
         transform: translateY(-50%);
         transition: $transition;
         &:hover{
-            border-color: $dark_blue;
+            border-color: $blue;
+            background-color: $blue;
             .review__icon--photo{
-                fill: $dark_blue;
+                fill: $white;
             }
         }
         &:active{
             border-color: $purple;
+            background-color: $purple;
             .review__icon--photo{
-                fill: $purple;
+                fill: $white;
             }
         }
         @include for-md{
