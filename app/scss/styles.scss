@@ -1903,7 +1903,7 @@ body{
 }
 
 .service-menu{
-    margin-top: 50px;   
+    margin-top: 35px;   
     margin-bottom: 13px;     
     background-color: #F8F8F8;
     @include for-md{
@@ -2292,8 +2292,6 @@ body{
         border-radius: 15px;
         background-color: $white;
         box-shadow: 0px 2px 10px 1px rgba(0,0,0,0.33);
-        -webkit-box-shadow: 0px 2px 10px 1px rgba(0,0,0,0.33);
-        -moz-box-shadow: 0px 2px 10px 1px rgba(0,0,0,0.33);
         top: 22px;
         z-index: 10;
         &::before{
@@ -2343,6 +2341,11 @@ body{
                 stroke: $white;
             }
         }
+        &.active{
+            .price__more-icon{
+                transform: rotate(180deg);
+            }
+        }
     }
     &__more-container{
         position: relative;
@@ -2359,7 +2362,7 @@ body{
             transform: translateY(-50%);
             z-index: -1;
         }
-        @include for-tiny-tablet{
+        @include for-md{
             display: flex;
         }
     }
@@ -2534,6 +2537,9 @@ body{
         flex-shrink: 0;
         @include for-sm{
             margin-right: 17px;
+        }
+        @include for-md-mob{
+            display: none;
         }
     }
     &__icon{
@@ -3675,85 +3681,6 @@ body{
 }
     
 
-
-.service-menu {
-    margin-top: 50px;
-    margin-bottom: 64px;
-    background-color: #F8F8F8;
-
-    @include for-md {
-        overflow-x: scroll;
-        overflow-y: hidden;
-    }
-
-    &__inner {
-        min-height: 80px;
-        display: flex;
-        align-items: center;
-
-        @include for-md {
-            width: 1024px;
-        }
-    }
-
-    &__item {
-        display: flex;
-        align-items: center;
-        color: $blue;
-        transition: $transition;
-
-        &+& {
-            margin-left: 50px;
-
-            @include for-lg {
-                margin-left: 20px;
-            }
-        }
-
-        &:hover {
-            color: $dark_blue;
-
-            .service-menu__img-block {
-                border-color: $dark_blue;
-            }
-
-            .service-menu__icon {
-                fill: $dark_blue;
-            }
-        }
-
-        &:active {
-            color: $purple;
-
-            .service-menu__img-block {
-                border-color: $purple;
-            }
-
-            .service-menu__icon {
-                fill: $purple;
-            }
-        }
-    }
-
-    &__img-block {
-        margin-right: 9px;
-        border-radius: 50%;
-        border: 2px solid $blue;
-        width: 44px;
-        height: 44px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: $transition;
-    }
-
-    &__icon {
-        max-width: 25px;
-        fill: $blue;
-        transition: $transition;
-    }
-}
-
 .methodology-slider {
     &__title {
         margin-right: 118px;
@@ -4292,8 +4219,8 @@ body{
 }
 
 .item-menu {
-    margin-top: 50px;
-    margin-bottom: 64px;
+    margin-top: 35px;
+    margin-bottom: 29px;
     background-color: #F8F8F8;
 
     @include for-md {
@@ -4391,6 +4318,12 @@ body{
 
     .jq-ry-container {
         padding: 0 8px;
+    }
+        
+    .jq-ry-normal-group{
+        svg{
+            fill: $white;
+         }
     }
 
     &__total {
@@ -4765,6 +4698,8 @@ body{
     }
 }
 
+
+
 .video-section{
     .container{
         padding-right: 12px;
@@ -5104,11 +5039,12 @@ body{
 .reviews-page{
     &__title{
         position: relative;
+        margin-bottom: 35px;
     }    
 }
 
 .reviews-menu {
-    margin-top: 50px;
+    margin-top: 35px;
     margin-bottom: 64px;
     background-color: #F8F8F8;
 
@@ -5184,7 +5120,7 @@ body{
     max-width: 754px;
     border-top: 1px dotted $blue;
     &--pb{
-        padding-bottom: 0;
+        padding-bottom: 13px;
     }
     &__info{
         position: relative;
@@ -5420,8 +5356,8 @@ body{
 }
 
 .questions-menu {
-    margin-top: 50px;
-    margin-bottom: 64px;
+    margin-top: 35px;
+    margin-bottom: 28px;
     background-color: #F8F8F8;
 
     @include for-md {
@@ -5497,6 +5433,9 @@ body{
 .questions-page{
     &__dropdown-container{
         margin-top: 40px;
+        @include for-md-mob{
+            margin-top: 30px;
+        }
     }
     &__pagination{
         margin-top: 16.7px;
@@ -5518,6 +5457,7 @@ body{
     background-color: #F8F8F8;
 
     @include for-md {
+        margin-top: 35px;
         overflow-x: scroll;
         overflow-y: hidden;
     }
@@ -5644,7 +5584,7 @@ body{
 }
 
 .news-menu {
-    margin-top: 68px;
+    margin-top: 35px;
     margin-bottom: 25px;
     background-color: #F8F8F8;
 
@@ -5759,7 +5699,7 @@ body{
 }
 
 .glossary-menu {
-    margin-top: 50px;
+    margin-top: 35px;
     margin-bottom: 64px;
     background-color: #F8F8F8;
 
@@ -5854,7 +5794,7 @@ body{
     }
     &__page-title{
         padding: 0 10px;
-        margin: 50px 0 53px;
+        margin: 50px 0 35px;
     }
 }
 .glossary-item{
