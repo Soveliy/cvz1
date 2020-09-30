@@ -193,6 +193,7 @@ a{
 }
 
 .page-title{
+    position: relative;
     font-weight: 700;
     margin-top:30px;
     font-size: 42px;
@@ -205,6 +206,7 @@ a{
         line-height: 22px;
         font-weight: 400;
         margin-left: 100px;
+        top: 5px;
         @include for-lg{
             margin-left: 40px;
         }
@@ -220,7 +222,7 @@ a{
         align-items: center;
     }
     @include for-md-mob{
-        margin-bottom: 90px;
+        margin-bottom: 30px;
         font-size: 34px;
         line-height: 42px;
         font-weight: 400;
@@ -457,9 +459,10 @@ a{
     height: 38px !important;
     margin-top: 0 !important;
     left: 4% !important;
-    background-image: url(../img/icons/gallery-prev.svg) !important;
+    background-image: url(img/icons/gallery-prev.svg) !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
+    opacity: 1 !important;
     &::before{
         display: none !important;
     }
@@ -473,9 +476,10 @@ a{
     height: 38px !important;
     margin-top: 0 !important;
     right: 4% !important;
-    background-image: url(../img/icons/gallery-next.svg) !important;
+    background-image: url(img/icons/gallery-next.svg) !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
+    opacity: 1 !important;
     &::before{
         display: none !important;
     }
