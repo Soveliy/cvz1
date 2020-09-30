@@ -501,6 +501,23 @@ a{
 }
 
 
+.show{
+    display: flex !important;
+}
+.hide{
+    display: none;
+}
+.slide{
+    animation-name: slide;
+    animation-duration: 0.3s;
+}
+
+@keyframes slide{
+    from{height: 0;}
+    to{height: 100%;}
+}
+
+
 // .fader-header{
 //     animation: fade-header;
 // }

@@ -650,7 +650,7 @@ body{
         display: flex;
         align-items: center;
         font-size: 0;
-
+        
         &--main-page{
             margin:  0 0 0 15px;
             @include for-md-mob(){
@@ -1904,7 +1904,7 @@ body{
 
 .service-menu{
     margin-top: 35px;   
-    margin-bottom: 13px;     
+    margin-bottom: 35px;     
     background-color: #F8F8F8;
     @include for-md{
         overflow-x: scroll;
@@ -2141,6 +2141,7 @@ body{
             overflow: visible !important;
         }
     }
+  
     &__table{
         border-spacing: 0;
         border: none;
@@ -2164,15 +2165,18 @@ body{
             flex-wrap: wrap;
         }
         &--mobile{
-            @include for-md{
-                display: none;
+            transition: .3s;
+            @include for-tiny-tablet{                
+                height: 0;
+                opacity: 0; 
+                overflow: hidden;
             }
             &.active{
-                @include for-md{
-                    display: flex;
+                @include for-tiny-tablet{                    
+                    height: calc(100%);
+                    opacity: 1;
                 }
-            }
-            
+            }            
         }
     }
     &__th{
@@ -2362,7 +2366,7 @@ body{
             transform: translateY(-50%);
             z-index: -1;
         }
-        @include for-md{
+        @include for-tiny-tablet{
             display: flex;
         }
     }
@@ -2859,7 +2863,14 @@ body{
     max-width: 754px;
     padding-bottom: 13px;
     border-bottom: 1px dotted $blue;
-    border-bottom: 1px dotted $blue;
+    &--m{
+        @include for-md{
+            padding-top: 13px;
+            margin: 0 10px 13px;
+            border-top: 1px dotted $blue;
+        }
+
+    }
     &__list{
         display: flex;
         align-items: center;
@@ -4320,8 +4331,10 @@ body{
 }
 
 .rate-block {
+    &--mb{
+        margin-bottom: 93.5px;
+    }
     margin-bottom: 21px;
-
     &__inner {
         display: flex;
         align-items: center;
@@ -5151,6 +5164,12 @@ body{
     border-top: 1px dotted $blue;
     &--pb{
         padding-bottom: 13px;
+        @include for-md{
+            .review__info{
+                border-bottom: 0;
+            }
+            margin: 0 10px;           
+        }
     }
     &__info{
         position: relative;
@@ -5192,6 +5211,9 @@ body{
     }
     &__source{
         margin-bottom: 0;
+        @include for-md{
+            flex-wrap: wrap;
+        }
     }
     &__flag{
         width: 16;
