@@ -189,6 +189,15 @@ a{
         background-color: $purple_border;
         color: $white;
         border-color: $purple_border;
+
+        &:hover{
+            background-color: $blue;
+            color: $white;
+        }
+        &:active{
+            background-color: $dark_blue;
+            color: $white;
+        }
     }
 
 }
