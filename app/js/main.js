@@ -241,6 +241,7 @@ $('.content-slider.specialists__slider').each(function(){
     },
     breakpoints: {
       320: {
+        centeredSlides: true,
         slidesPerView: 1,
       },
       1025: {
@@ -490,6 +491,7 @@ $(".mobile-menu__nav > ul > li > span").on('click', function(){
     if(windowSize < 1025){
     if ($(this).hasClass("js-active")) {
         $(this).removeClass("js-active");
+        $(this).parent().removeClass("js-active");
         $(this).next().removeClass("js-active");
         $(this).next().slideToggle();
         
@@ -497,7 +499,8 @@ $(".mobile-menu__nav > ul > li > span").on('click', function(){
       
       $(this).closest(".mobile-menu__nav").find("ul.js-active").slideToggle();
       $(this).closest(".mobile-menu__nav").find("ul.js-active").removeClass("js-active");
-      $(".mobile-menu__nav > ul > li > span").removeClass("js-active");
+      $(".mobile-menu__nav > ul > li > span,.mobile-menu__nav > ul > li").removeClass("js-active");
+      $(this).parent().addClass("js-active");
       $(this).addClass("js-active");
       $(this).next().addClass("js-active");
       $(this).next().slideToggle();

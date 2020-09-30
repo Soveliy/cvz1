@@ -762,6 +762,7 @@ body{
         width: 100%;
         height: 2px;
         background-color: $dark_blue;
+        margin-top: 5px;
         &:before{
             content: '';
             position: absolute;
@@ -841,8 +842,9 @@ body{
         box-sizing: border-box;
         @include for-sm(){
             margin-bottom: 163px;
-
-           
+            
+           width: 100%;
+           padding-right: 0 !important; 
         }
 
 
@@ -857,10 +859,7 @@ body{
                 }
             }
         }
-        @include for-sm(){
-            width: 100%;
-            padding-left: 0;
-        }
+       
         &:nth-child(2n + 1){
             .features-item{
                 &:before{
@@ -1140,7 +1139,12 @@ body{
             font-size: 34px;
             line-height: 40px;
         }
+        @include for-lit-mob(){
+            font-size: 24px;
+            line-height: 27px;
+        }
     }
+    
     .error{
         border-color: $pink;
     }
@@ -1148,7 +1152,13 @@ body{
         display: none !important;
     }
 }
-
+.free-conslut{
+    .form__btn{
+        @include for-lit-mob(){
+            padding: 11px;
+        }
+    }
+}
 .footer-forms{
     padding-bottom: 126px;
     @include for-md(){
@@ -2739,8 +2749,18 @@ body{
         text-align: left;
        > ul > li{
            position: relative;
+           transition: $transition;
+          
 
-           > span, > a{
+           &.js-active{
+               background-color: $blue;
+              >  a{
+                color: $white;
+            }
+           }
+           
+
+            > a{
             position: relative;
              display: block;
              box-sizing: border-box;
@@ -2753,21 +2773,10 @@ body{
              transition: $transition;
 
            }
-           > span.js-active{
-            background-color: $blue;
-            color: $white;
-
-            .mobile-menu__dropdown-icon{
-                transform: rotate(180deg);
-                border-color: transparent;
-
-                svg{
-                    stroke: $white;
-                }
-            }
-           }
+          
             
         }
+        
         > ul > li > ul{
             display: none;
             padding: 12px 34px;
@@ -2794,8 +2803,7 @@ body{
         align-items: center;
         justify-content: center;
         right: 30px;
-        top:50%;
-        margin-top: -13px;
+        top: 7px;
         height: 26px;
         width: 26px;
         border-radius: 50%;
@@ -2804,12 +2812,36 @@ body{
         transition: $transition;
         padding: 5px;
 
+        &:before{
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-top: -20px;
+            margin-left: -20px;
+            height: 40px;
+            width: 40px;
+        }
+
         svg{
             max-width: 100%;
+            max-height: 100%;
+           
 
             stroke: #6F7175;
             transition: $transition;
         }
+
+        &.js-active{
+                transform: rotate(180deg);
+                border-color: transparent;
+                background-color: $blue;
+                svg{
+                    stroke: $white;
+                }
+            }
+           
+           
 
     }
 }
@@ -2950,9 +2982,16 @@ body{
         margin-top: 52px;
         display: flex;
         justify-content: center;
+        @include for-sm(){
+            flex-direction: column;
+            align-items: center;
+        }
     }
     &__btn{
         margin: 0 15px;
+        @include for-sm(){
+            margin: 20px 15px;
+        }
     }
     &__image-container{
         display: flex;
@@ -3075,7 +3114,6 @@ body{
             margin-bottom: 20px;
             padding-bottom: 13px;
             border-bottom: 1px dotted $blue;
-            float: left;
             page-break-inside: avoid;
             break-inside: avoid;
             @include for-sm(){
@@ -3173,11 +3211,21 @@ body{
             font-size: 52px;
             line-height: 62px;
             color: $dark_blue;
+
+            @include for-lit-mob(){
+                font-size: 40px;
+                line-height: 43px;
+            }
         }
         &-text{
             font-size: 22px;
             line-height: 26px;
             color: $blue;
+
+             @include for-lit-mob(){
+                 font-size: 18px;
+                 line-height: 24px;
+             }
         }
    }
 }
@@ -3185,15 +3233,18 @@ body{
 .contacts{
     position: relative;
     overflow: hidden;
-    @include for-md(){
-        padding-top: 35px;
-    }
+    // @include for-md(){
+    //     padding-top: 35px;
+    // }
     &__title{
+        margin-bottom: 50px;
         @include for-md(){
-            margin-bottom: 70px;
+            margin-bottom: 35px;
+
         }
     }
     &__allert{
+        display: block;
         position: relative;
        
         box-sizing: border-box;
@@ -3252,6 +3303,7 @@ body{
             align-items: center;
         }
     }
+
     &__btn{
         margin: 0 16px;
         &.js-active{
@@ -3260,7 +3312,10 @@ body{
         }
         @include for-sm(){
             margin: 0;
-
+            width: 100%;
+            max-width: 273px;
+            text-align: center;
+            padding: 11px 10px;
             & + &{
                 margin-top: 34px;
             }
@@ -3277,8 +3332,8 @@ body{
 .test{
     .page-title{
         @include for-md(){
-            margin-top: 80px;
-            margin-bottom: 90px;
+           
+            margin-bottom: 30px;
         }
     }
     padding-bottom: 80px;
@@ -3373,6 +3428,8 @@ body{
     &__left-side{
         display: flex;
         align-items: center;
+        width: 100%;
+        justify-content: space-between;
         @include for-md(){
             flex-direction: column;
         }
@@ -3395,6 +3452,7 @@ body{
         color: $blue;
         margin-right: 20px;
         flex-shrink: 0;
+        font-weight: 700;
         &-icon{
             height: 30px;
             width: 30px;
@@ -3526,20 +3584,22 @@ body{
         justify-content: space-between;
         padding-left: 20px;
         box-sizing: border-box;
-        padding-bottom: 34px;
+        padding-bottom: 30px;
         margin-bottom: 24px;
         border-bottom: 1px dotted $blue;
+        
 
         @include for-sm(){
             flex-direction: column;
             margin-bottom: 25px;
             padding-bottom: 35px;
             padding-left: 0;
+            
         }
         .contacts__links{
-            margin-right: -15px;
+           margin: 0 -15px 0 0;
             @include for-sm(){
-                margin-right: 0;
+               margin: 34px 0 0 0;
             }
         }
     }
@@ -3586,6 +3646,8 @@ body{
         margin-bottom: 23px;
         box-sizing: border-box;
         padding-left: 33px;
+        page-break-inside: avoid;
+        break-inside: avoid;
         &:before{
             content: '';
             position: absolute;
@@ -3869,6 +3931,12 @@ body{
     .head-block__btn{
         padding: 9.5px 41px;
     }
+    .head-block__title{
+        font-weight: 400;
+        @include for-md(){
+            font-weight: 700;
+        }
+    }
     &__slider {
         margin-top: 60px;
 
@@ -4025,13 +4093,15 @@ body{
         
         @include for-sm {
             margin-top: 45px;
+            padding-right: 30px;
+            box-sizing: border-box;
         }
     }
 
     &__swiper-slide{
         width: 363px !important;
         @include for-md-mob{
-            width:90% !important;    
+            width:100% !important;    
         }
     }
 
@@ -4755,6 +4825,7 @@ body{
         font-size: 32px;
         line-height: 38px;
         // margin-bottom: 55px;
+        margin-bottom: 50px;
         color: $dark_green;
         @include for-md{
             text-align: center;
@@ -4763,6 +4834,8 @@ body{
             font-weight: 700;
             font-size: 24px;
             line-height: 26px;
+            
+            color: $dark_blue;
         }
     }
     &__title{
@@ -5832,6 +5905,9 @@ body{
     }
 }
 .reitings{
+    .head-block__title{
+        font-weight: 700;
+    }
     &__inner{
         display: flex;
         align-items: center;
@@ -5950,9 +6026,10 @@ body{
         @include for-sm(){
             overflow: visible !important;
             margin-top: 33px;
+            padding-right: 30px;
 
             .swiper-slide{
-                width: 230px !important;
+                width: 100% !important;
             }
         }
     }
@@ -6014,7 +6091,7 @@ body{
     .content-block{
         h2{
             @include for-md(){
-                // display: none;
+                display: none;
                 text-align: center;
                 font-size: 28px;
                 line-height: 32px;
@@ -6498,6 +6575,9 @@ body{
 
         &__row{
             margin-top: 120px;
+            @include for-md(){
+                margin-top: 90px;
+            }
         }
     }
 }
