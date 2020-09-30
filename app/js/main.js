@@ -574,13 +574,21 @@ $(".mobile-menu__nav > ul > li > span").on('click', function(){
 // });
 
 
+//Header
+
+
 // let preheaderHeight = +(window.getComputedStyle(document.querySelector('.preheader')).height).replace(/\D/gi, '');
 let lastScrollTop = 0;
 let preheaderHeight = $('.preheader').height(),
     headerHeight = +(window.getComputedStyle(document.querySelector('header')).height).replace(/\D/gi, '');
     $('main').css('margin-top', headerHeight);
-    window.addEventListener(`resize`, event => {
+    window.addEventListener(`resize`, event => {      
       $('main').css('margin-top', headerHeight);
+      if(window.innerWidth < 1024) {
+        $('header').css('top', `0px`);
+      } else{
+        $('header').css('top', `${preheaderHeight}px`);
+      }
     });
     $(window).scroll(function(event){
       let st = $(this).scrollTop();   
@@ -614,6 +622,7 @@ let preheaderHeight = $('.preheader').height(),
   }
    
 });
+
 
 
 var $page = $('html, body');
