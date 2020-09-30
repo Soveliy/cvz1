@@ -7505,6 +7505,9 @@ body.js-hidden {
     text-decoration: underline; }
     .review__source-link--grey {
       color: #D9DADA; }
+      @media (max-width: 768px) {
+        .review__source-link--grey {
+          display: none; } }
   .review__photo {
     position: absolute;
     display: -webkit-box;
@@ -7529,13 +7532,15 @@ body.js-hidden {
     -o-transition: 0.3s;
     transition: 0.3s; }
     .review__photo:hover {
-      border-color: #024B76; }
+      border-color: #007FC2;
+      background-color: #007FC2; }
       .review__photo:hover .review__icon--photo {
-        fill: #024B76; }
+        fill: #fff; }
     .review__photo:active {
-      border-color: #81028E; }
+      border-color: #81028E;
+      background-color: #81028E; }
       .review__photo:active .review__icon--photo {
-        fill: #81028E; }
+        fill: #fff; }
     @media (max-width: 1024px) {
       .review__photo {
         top: calc(50% - 25px); } }
