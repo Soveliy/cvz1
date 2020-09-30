@@ -506,15 +506,16 @@ $(".mobile-menu__nav > ul > li > span").on('click', function(){
   });
 
 
-  $(".callback-js").click(function(){
+  $(".callback-js,.free-conslut .btn").click(function(){
     $("#callback-modal").arcticmodal();
   });
+  
   $(".reception-js,.doc-page__callback-item--appointment").click(function(){
     $("#reception-modal").arcticmodal();
   });
-  $(".free-conslut .btn").click(function(){
-    $("#consult-modal").arcticmodal();
-  });
+  // $(".free-conslut .btn").click(function(){
+  //   $("#consult-modal").arcticmodal();
+  // });
   $(".doc-page__callback-item--review").click(function(){
     $("#review-modal").arcticmodal();
   });
@@ -577,3 +578,22 @@ $('.service-menu__item').click(function() {
     return false;
 });
 
+function resizeMenu() {
+  var windowWidth = $(window).width();
+  if (windowWidth <= 1024) {
+    //for_body
+    if ($(".burger").hasClass("js-active")) {
+      //code
+      $('.burger').removeClass('js-active');
+      $('bode').removeClass('js-hidden');
+      $(".mobile-menu").hide();
+    }
+  } else {
+    //for_body
+   
+  }
+}
+resizeMenu();
+$(window).resize(function () {
+  resizeMenu();
+});

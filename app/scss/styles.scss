@@ -457,7 +457,7 @@ body{
         height: 202px;
         @include for-md-mob(){
             display: block;
-            margin-bottom: 20px;
+            margin-bottom: 32px;
         }
 
 
@@ -498,7 +498,7 @@ body{
 
             @include for-md-mob(){
                 padding-top: 0;
-                padding-bottom: 79px;
+                padding-bottom: 82px;
             }
         }
         &--inside-page{
@@ -551,7 +551,7 @@ body{
         letter-spacing: -2px;
         @include for-md-mob(){
             font-size: 57px;
-            line-height: 77px;
+            line-height: 68px;
         }
     }
     &__stock-text{
@@ -807,6 +807,10 @@ body{
                 &:nth-child(3){
                     margin-top: 29px;
                     margin-bottom: 80px;
+                    .features-item:before{
+                        top: 48%;
+                        left: 32px;
+                    }
                 }
             }
         }
@@ -817,7 +821,7 @@ body{
         margin-top: 64px;
     }
     @include for-md(){
-        padding-top: 25px;
+        padding-top: 31px;
     }
    
     &__row{
@@ -827,7 +831,7 @@ body{
         flex-wrap: wrap;
         @include for-sm(){
             margin-right: 0;
-            margin-top: 112px;
+            margin-top: 99px;
         }
     }
     &__item-container{
@@ -3029,6 +3033,16 @@ body{
             font-weight: 700;
             color: $black;
             margin-bottom: 2px;
+
+            a{
+                transition: $transition;
+                &:hover{
+                    color:$blue;
+                }
+                &:active{
+                    color: $purple;
+                }
+            }
             @include for-sm(){
                 font-weight: 400;
             }
@@ -3044,6 +3058,9 @@ body{
             margin-bottom: 20px;
             padding-bottom: 13px;
             border-bottom: 1px dotted $blue;
+            float: left;
+            page-break-inside: avoid;
+            break-inside: avoid;
             @include for-sm(){
                 margin-bottom: 18px;
                 padding-bottom: 28px;
@@ -3110,6 +3127,10 @@ body{
    &__item{
        position: relative;
        text-align: center;
+       @include for-lit-mob(){
+           box-sizing: border-box;
+           padding: 0 10px;
+       }
         &-icon-container{
             height: 125px;
             width: 125px;
@@ -3121,6 +3142,11 @@ body{
             align-items: center;
             justify-content: center;
             margin: 0 auto 13px;
+            @include for-lit-mob(){
+                height: 100px;
+                width: 100px;
+                padding: 25px;
+            }
 
             img{
                 max-width: 100%;
@@ -6182,7 +6208,7 @@ body{
             flex-wrap: wrap;
         }
         @include for-md(){
-            margin-top: 32px;
+            margin-top: 22px;
         }
     }
     &__container{
@@ -6194,7 +6220,7 @@ body{
         }
         &+&{
             @include for-sm{
-                margin-top: 66px;
+                margin-top: 30px;
             }
         }
     }
@@ -6222,6 +6248,9 @@ body{
     }
     &__rate{
         margin-top: 11px;
+        // @include for-md(){
+        //     margin-top: 0;
+        // }
     }
     .jq-ry-normal-group{
         svg{
@@ -6244,7 +6273,7 @@ body{
         display: none;
         @include for-md(){
             display: block;
-            margin-bottom: 23px;
+            margin-bottom: 16px;
         }
     }
     &--desk{
@@ -6461,6 +6490,9 @@ body{
             padding-right: 65px;
             @include for-sm(){
                 padding-right: 0;
+                br{
+                    display: none;
+                }
             }
         }
     }
@@ -6468,7 +6500,7 @@ body{
         margin-top: 83px;
         text-align: right;
         @include for-md(){
-            margin-top: 20px;
+            margin-top: 37px;
         }
     }
     &__name{
@@ -6756,6 +6788,9 @@ body{
 
 .about-center + .specialists{
     margin-top: 10px;
+    @include for-md(){
+        margin-bottom: 48px;
+    }
 }
 .video-section + .reitings{
     padding-top: 10px;
@@ -6806,6 +6841,15 @@ body{
             visibility: visible;
             transform: translateY(0);
             opacity: 1;
+        }
+    }
+}
+.advantages-page{
+    .features{
+        padding-top: 0;
+
+        &__row{
+            margin-top: 120px;
         }
     }
 }
