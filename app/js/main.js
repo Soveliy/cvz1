@@ -581,7 +581,7 @@ $(".mobile-menu__nav > ul > li > span").on('click', function(){
 
 // let preheaderHeight = +(window.getComputedStyle(document.querySelector('.preheader')).height).replace(/\D/gi, '');
 let lastScrollTop = 0;
-let preheaderHeight = $('.preheader').height(),
+let preheaderHeight = document.querySelector('.preheader').offsetHeight;
     headerHeight = document.querySelector('header').offsetHeight;
     $('main').css('margin-top', headerHeight);
     window.addEventListener(`resize`, event => {  
@@ -596,12 +596,12 @@ let preheaderHeight = $('.preheader').height(),
     $(window).scroll(function(event){
       let st = $(this).scrollTop();   
       const scroll = window.pageYOffset;
-      if (st > lastScrollTop){
+      if (st > preheaderHeight){
         // код для прокрутки вниз
         headerHeight = $('header').height();
-      $('header').css('top', `${scroll}px`);
-       $('header').css('position', `absolute`); 
-       $('header').css('transition', `.3s`); 
+      $('header').css('top', `0px`);
+       $('header').css('position', `fixed`); 
+      //  $('header').css('transition', `.3s`); 
        if(window.innerWidth < 1024) {
         // $('header').css('top', `0`); 
       }
@@ -609,7 +609,7 @@ let preheaderHeight = $('.preheader').height(),
       // код для прокрутки вверх
       $('header').css('top', `${preheaderHeight}px`);
       $('header').css('position', `absolute`);
-      $('header').css('transition', `.3s`); 
+      // $('header').css('transition', `.3s`); 
       if(window.innerWidth < 1024) {
         $('header').css('top', `0`); 
         $('header').css('position', `fixed`); 
