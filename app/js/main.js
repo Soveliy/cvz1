@@ -643,7 +643,7 @@ function resizeMenu() {
     if ($(".burger").hasClass("js-active")) {
       //code
       $('.burger').removeClass('js-active');
-      $('bode').removeClass('js-hidden');
+      $('body').removeClass('js-hidden');
       $(".mobile-menu").hide();
     }
   } else {

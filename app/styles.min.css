@@ -6666,6 +6666,11 @@ body.js-hidden {
 .action {
   padding: 18px 0;
   border-top: 1px dotted #024B76; }
+  @media (max-width: 1024px) {
+    .action {
+      padding: 25px 0; }
+      .action + .action {
+        margin-top: 20px; } }
   .action__inner {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6731,7 +6736,7 @@ body.js-hidden {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        padding-bottom: 106.5px; } }
+        padding-bottom: 20px; } }
   .action__title {
     margin-top: 3px;
     font-size: 28px;
@@ -7013,7 +7018,7 @@ body.js-hidden {
     @media (max-width: 1024px) {
       .doc-page__callback-item + .doc-page__callback-item {
         margin-left: 0;
-        margin-top: 38px; } }
+        margin-top: 20px; } }
   .doc-page__callback-item:hover {
     color: #fff; }
   .doc-page__callback-item--appointment {

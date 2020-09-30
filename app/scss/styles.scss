@@ -4389,6 +4389,13 @@ body{
     padding: 18px 0;
     border-top: 1px dotted $dark_blue;
 
+    @include for-md(){
+        padding: 25px 0;
+        & + &{
+            margin-top: 20px;
+        }
+    }
+
     &__inner {
         display: flex;
         align-items: flex-start;
@@ -4445,7 +4452,7 @@ body{
         @include for-md {
             flex-direction: column-reverse;
             align-items: center;
-            padding-bottom: 106.5px;
+            padding-bottom: 20px;
         }
     }
 
@@ -4703,7 +4710,7 @@ body{
             margin-left: 38px;
             @include for-md{
                 margin-left: 0;
-                margin-top: 38px;
+                margin-top: 20px;
             }
         }
         &:hover{
