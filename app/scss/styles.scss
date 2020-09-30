@@ -66,6 +66,7 @@ body{
     z-index: 100;
     transition: 0s;
     width: 100%;
+    
     @include for-md{
         top: 0;
     }

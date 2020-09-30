@@ -582,12 +582,13 @@ $(".mobile-menu__nav > ul > li > span").on('click', function(){
 // let preheaderHeight = +(window.getComputedStyle(document.querySelector('.preheader')).height).replace(/\D/gi, '');
 let lastScrollTop = 0;
 let preheaderHeight = document.querySelector('.preheader').offsetHeight;
-    headerHeight = document.querySelector('header').offsetHeight;
+    headerHeight =   document.querySelector('header').offsetHeight;
     $('main').css('margin-top', headerHeight);
     window.addEventListener(`resize`, event => {  
       let st = $(this).scrollTop();   
       const scroll = window.pageYOffset;
       headerHeight = document.querySelector('header').offsetHeight;
+      preheaderHeight = document.querySelector('.preheader').offsetHeight;
       if (st > preheaderHeight){
         // код для прокрутки вниз
         headerHeight = $('header').height();
@@ -632,6 +633,37 @@ let preheaderHeight = document.querySelector('.preheader').offsetHeight;
    
 });
 
+// let preheaderHeight = document.querySelector('.preheader').offsetHeight;
+// var m = document.querySelector("main"),
+//     h = document.querySelector("header"),
+//     hHeight;    
+// function setTopPadding() {
+//   hHeight = h.offsetHeight;
+//   m.style.marginTop = hHeight + "px";
+// }
+
+// function onScroll() {
+//   window.addEventListener("scroll", callbackFunc);
+//   function callbackFunc() {
+//     var y = window.pageYOffset;
+//     if (y > preheaderHeight) {
+//       h.classList.add("scroll");
+//     } else {
+//       h.classList.remove("scroll");
+//       m.style.marginTop = 0;   
+//     }
+//   }
+// }
+
+
+// window.onload = function() {
+//   setTopPadding();
+//   onScroll();
+// };
+ 
+// window.onresize = function() {
+//   setTopPadding();
+// };
 
 
 var $page = $('html, body');
