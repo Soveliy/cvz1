@@ -585,13 +585,19 @@ let preheaderHeight = document.querySelector('.preheader').offsetHeight;
     headerHeight = document.querySelector('header').offsetHeight;
     $('main').css('margin-top', headerHeight);
     window.addEventListener(`resize`, event => {  
-      headerHeight = $('.header').height();    
-      $('main').css('margin-top', headerHeight);
-      if(window.innerWidth < 1024) {
-        $('header').css('top', `0px`);
-      } else{
-        $('header').css('top', `${preheaderHeight}px`);
+      let st = $(this).scrollTop();   
+      const scroll = window.pageYOffset;
+      headerHeight = document.querySelector('header').offsetHeight;
+      if (st > preheaderHeight){
+        // код для прокрутки вниз
+        headerHeight = $('header').height();
+      $('header').css('top', `0px`);
+       $('header').css('position', `fixed`); 
+      //  $('header').css('transition', `.3s`); 
+       if(window.innerWidth < 1024) {
+        // $('header').css('top', `0`); 
       }
+   }
     });
     $(window).scroll(function(event){
       let st = $(this).scrollTop();   
