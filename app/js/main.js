@@ -582,7 +582,7 @@ $(".mobile-menu__nav > ul > li > span").on('click', function(){
 // let preheaderHeight = +(window.getComputedStyle(document.querySelector('.preheader')).height).replace(/\D/gi, '');
 let lastScrollTop = 0;
 let preheaderHeight = $('.preheader').height(),
-    headerHeight = $('.header').height();
+    headerHeight = document.querySelector('header').offsetHeight;
     $('main').css('margin-top', headerHeight);
     window.addEventListener(`resize`, event => {  
       headerHeight = $('.header').height();    
@@ -598,7 +598,7 @@ let preheaderHeight = $('.preheader').height(),
       const scroll = window.pageYOffset;
       if (st > lastScrollTop){
         // код для прокрутки вниз
-    headerHeight = $('header').height();
+        headerHeight = $('header').height();
       $('header').css('top', `${scroll}px`);
        $('header').css('position', `absolute`); 
        $('header').css('transition', `.3s`); 
