@@ -5136,6 +5136,7 @@ body{
     }
     &__icon{
         margin-right: 6.7px;
+        transition: $transition;
         &--user{
             width: 14px;
             height: 14px;
@@ -5185,6 +5186,19 @@ body{
         right: 0;
         top: 50%;
         transform: translateY(-50%);
+        transition: $transition;
+        &:hover{
+            border-color: $dark_blue;
+            .review__icon--photo{
+                fill: $dark_blue;
+            }
+        }
+        &:active{
+            border-color: $purple;
+            .review__icon--photo{
+                fill: $purple;
+            }
+        }
         @include for-md{
             top: calc(50% - 25px);
         }

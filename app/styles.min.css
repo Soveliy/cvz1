@@ -7446,7 +7446,10 @@ body.js-hidden {
             align-items: center;
     color: #868786; }
   .review__icon {
-    margin-right: 6.7px; }
+    margin-right: 6.7px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
     .review__icon--user {
       width: 14px;
       height: 14px;
@@ -7494,7 +7497,18 @@ body.js-hidden {
     top: 50%;
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
-            transform: translateY(-50%); }
+            transform: translateY(-50%);
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
+    .review__photo:hover {
+      border-color: #024B76; }
+      .review__photo:hover .review__icon--photo {
+        fill: #024B76; }
+    .review__photo:active {
+      border-color: #81028E; }
+      .review__photo:active .review__icon--photo {
+        fill: #81028E; }
     @media (max-width: 1024px) {
       .review__photo {
         top: calc(50% - 25px); } }
