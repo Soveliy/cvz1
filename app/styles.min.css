@@ -38,9 +38,6 @@ header {
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
   margin-top: 76px; }
-  @media (max-width: 1024px) {
-    .main {
-      margin-top: 68px; } }
 
 .bottom-blocks {
   /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
