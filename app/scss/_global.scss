@@ -34,7 +34,6 @@ header{
  .main{
     /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
     flex: 1 0 auto;
-    margin-top: 76px;
     // @include for-md{
     //     margin-top: 68px;
     // }
@@ -131,8 +130,8 @@ a{
     &--transparent{
 
         background-color: transparent;
-        color: $blue;
-        border: 1px solid $blue;
+        color: $dark_blue;
+        border: 1px solid $dark_blue;
         padding: 11px 40px;
         border-radius: 25px;
         &:hover{
@@ -312,6 +311,7 @@ a{
         text-decoration: none !important;
         padding: 11px 40px;
         border-radius: 25px;
+        border-width: 2.25px;
         
     }
 }
@@ -450,6 +450,10 @@ a{
         width: 20px;
         height: 20px;
         fill: #999999;
+        &--calendar{
+            width: 18px;
+            height: 18ppx;
+        }
     }
 }
 

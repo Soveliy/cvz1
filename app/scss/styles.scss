@@ -36,9 +36,22 @@ a{
     }
 }
 body{
+    @include for-md(){
+        padding-top: 68px;
+    }
+    @include for-lit-mob(){
+        padding-top: 63px;
+    }
     &.js-hidden{
         position: relative;
         overflow: hidden;
+    }
+
+    &.fixed-header{
+        padding-top: 55px;
+        @include for-md(){
+            padding-top: 68px;
+        }
     }
 }
 .logo {
@@ -55,20 +68,18 @@ body{
 }
 
 .header{
-    position: absolute;
+    position: relative;
     box-sizing: border-box;
     padding: 11px 0;
     box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.16);
-    top: 55px;
-    left: 50%;
-    transform: translateX(-50%);
     background-color: $white;
     z-index: 100;
-    transition: 0s;
-    width: 100%;
-    
-    @include for-md{
+    transition: .3s;
+    @include for-md(){
         top: 0;
+        width: 100%;
+        position: fixed;
+        z-index: 6000;
     }
     &__logo{
       
@@ -76,6 +87,7 @@ body{
             margin-right: auto;
             width: 177px;
             height: 41px;
+            
         }
         @include for-lit-mob(){
             width: 150px;
@@ -815,6 +827,7 @@ body{
                     .features-item:before{
                         top: 48%;
                         left: 32px;
+                       
                     }
                 }
             }
@@ -875,6 +888,11 @@ body{
                     width: 283px;
                     height: 287px;
                     background-image: url(img/features/features-before-pink.svg);
+
+
+                    @include for-sm(){
+                        top: 50%;
+                    }
                 }
 
                 &__icon-container{
@@ -895,7 +913,7 @@ body{
                     background-image: url(img/features/features-before-blue-1.svg);
 
                     @include for-sm(){
-                        top: 75%;
+                        top: 50%;
                     }
                 }
 
@@ -915,6 +933,10 @@ body{
                     width: 280px;
                     height: 280px;
                     background-image: url(img/features/features-before-blue-2.svg);
+
+                    @include for-sm(){
+                        top: 50%;
+                    }
                 }
 
                 &__icon-container{
@@ -1189,6 +1211,7 @@ body{
             content: '';
             position: absolute;
             background-size: contain;
+            z-index: -1;
         }
         &--purple{
             .form{
@@ -1905,9 +1928,10 @@ body{
 
 .service-menu{
     margin-top: 35px;   
-    margin-bottom: 35px;     
+    margin-bottom: 64px;     
     background-color: #F8F8F8;
     @include for-md{
+        margin-bottom: 30px;
         overflow-x: scroll;
         overflow-y: hidden;
     }  
@@ -2115,31 +2139,41 @@ body{
 }
 
 .price{
-    // .content-slider__arrows{
-    //     position: relative;
-    // }
-    // .content-slider__arrow {
-    //     position: static;
-    // }
-    // .content-slider__arrow .icon{
-    //     display: none;
-    // }
-    // .content-slider__arrow-left::before{
-    //     width: 100% ;
-    //     left: 0;
-    // }
-    // .content-slider__arrow-right::before{
-    //     width: 100% ;
-    //     left: 0;
-    // }
+    .content-slider__arrows{
+        @include for-tiny-tablet{
+            position: relative;            
+        }
+    }
+    .content-slider__arrow {
+        @include for-tiny-tablet{
+            position: static;            
+        }
+    }
+    .content-slider__arrow .icon{
+        @include for-tiny-tablet{
+            display: none;            
+        }
+    }
+    .content-slider__arrow-left::before{
+        @include for-tiny-tablet{
+            width: 100% ;           
+            left: 0;
+        }
+    }
+    .content-slider__arrow-right::before{
+        @include for-tiny-tablet{
+            width: 100% ;           
+            left: 0;
+        }
+    }
    
     &__slider{
         margin-top: 62px;
+        padding-bottom: 10px;
         overflow: hidden !important;
-        padding-bottom: 34px;
         @include for-tiny-tablet{
             margin-top: 34px;
-            overflow: visible !important;
+            padding-bottom: 35px;
         }
     }
   
@@ -2159,6 +2193,27 @@ body{
             .price__td{
                 background-color: #F3F3F3;
             }
+        }
+
+        &:nth-child(5){
+            @include for-tiny-tablet{
+                .price__tip{
+                    top: auto;
+                    bottom: 25px;
+                    &::before{
+                        bottom: -20px;
+                        left: 5px;
+                        top: auto;
+                        transform: rotate(180deg);
+                        transform-origin: center;
+                        
+                    }
+                }
+            }
+        }
+
+        &:last-child{
+            
         }
         
         @include for-tiny-tablet{
@@ -2325,7 +2380,7 @@ body{
         }
     }
     &__footnote{
-        margin-top: -60px;
+        margin-top: -5px;
         font-size: 12px;
         line-height: 14px;
         color: #181716;
@@ -2336,7 +2391,12 @@ body{
     &__more{
         display: flex;
         align-items: center;
-        padding: 5px 14px;
+        padding: 5px 8px 5px 25px;
+        color: $dark_blue;
+
+        .price__more-icon{
+            transition: $transition
+        }
         &:hover{
             .price__more-icon-container{
                 border-color: $white;                
@@ -2390,6 +2450,17 @@ body{
         height: 18px;
         stroke: $dark_blue;
         transition: $transition;
+    }
+    &__head-btn{
+        padding: 9.5px 48px;
+        max-width: 166px;
+        width: 100%;
+    }
+    &__btn-mobile{
+        @include for-tiny-tablet{
+            min-height: 40px;
+            padding: 9.5px 48px;
+        }
     }
 }
 
@@ -2492,6 +2563,18 @@ body{
         border-radius: 15px;
 
     }
+    &__video-btn{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: url(img/icons/video-btn.svg) no-repeat center center;
+        transition: .3s;
+        border-radius: 15px;
+        &:hover{
+            background-color: rgba(0, 127, 194, 0.6);;
+        }
+    }
+    
 }
 
 .questions{
@@ -2521,6 +2604,10 @@ body{
             .questions-dropdown__title-block{
                 border-top: 1px solid #D9DADA;
             }
+            .questions-dropdown__arrow-icon{
+                transform: rotate(180deg);
+                margin-top: 0;
+            }
         }
         @include for-sm{
             padding: 0 15px;
@@ -2541,9 +2628,6 @@ body{
         flex-shrink: 0;
         @include for-sm{
             margin-right: 17px;
-        }
-        @include for-md-mob{
-            display: none;
         }
     }
     &__icon{
@@ -2567,14 +2651,12 @@ body{
         flex-shrink: 0;
     }
     &__arrow-icon{
+        margin-top: 3px;
         width: 12px;
         height: 12px;
         stroke: $dark_blue;
         transition: $transition;
-        
-        &.active{
-            transform: rotate(180deg);
-        }
+        transform-origin: center;
     }
     &__body{
         display: none;
@@ -2594,8 +2676,14 @@ body{
     }
     &__btn{
         margin-left: auto;
+        border-width: 2.25px;
         @include for-sm{
             margin: 18px auto 0;
+        }
+    }
+    &__text{
+        @include for-tiny-tablet{
+            padding-right: 30px;
         }
     }
 }
@@ -2616,7 +2704,7 @@ body{
 
 .specialist-item{
     max-width: 557px;
-    border-radius: 15px;
+    border-radius: 18px;
     border: 1px solid $dark_blue;
     overflow: hidden;
     @include for-tiny-tablet{
@@ -2649,7 +2737,7 @@ body{
     &__text-block{
         margin-left: -26px;
         padding: 21px 27px 30px 41px;
-        border-radius: 15px 0 0 15px;
+        border-radius: 18px 0 0 18px;
         background-color: #F9F9F9;
         font-size: 16px;
         line-height: 22px;
@@ -2658,7 +2746,7 @@ body{
             margin-top: -20px;
             margin-left: 0;
             padding: 14.4px 18.5px 27.2px;    
-            border-radius: 15px 15px 0 0;
+            border-radius: 18px 18px 0 0;
         }
     }
     &__text-item{
@@ -2720,6 +2808,10 @@ body{
     z-index: 5000;
     padding-bottom: 20px;
     box-sizing: border-box;
+
+    @include for-lit-mob(){
+        height: calc(100vh - 63px);
+    }
     .options-buttons__icon,.messangeres__icon,.social__link {
         height: 46px;
         width: 46px;
@@ -2902,6 +2994,10 @@ body{
             background-color: $dark_blue;
             color: $white;
             border-color: $dark_blue;
+            svg{
+                stroke: $white;
+
+            }
         }
     }
     &__list-item{
@@ -2913,7 +3009,7 @@ body{
         &+&{
             margin-left: 5px;
             @include for-md-mob{
-                margin-left: 3px;
+                margin-left: 10px;
             }
         }
     }
@@ -2976,7 +3072,7 @@ body{
         color: $black;
     }
     a{
-        color: $blue;
+        color: $dark_blue;
         text-decoration: underline;
     }
 }
@@ -4044,6 +4140,7 @@ body{
         width: 100%;
         height: 100%;
         text-align: center;
+        line-height: 24px;
         color: $white;
         background-color: rgba($color: $blue, $alpha: .6);
         border-radius: 20px;
@@ -4055,26 +4152,33 @@ body{
     &__info-link {
         color: $white;
         border-color: $white;
+        &:hover{
+            background-color: transparent;
+        }
     }
 }
 
 .specialists {
     &__slider {
-        margin-top: 62px;
-        
+        margin-top: 62px;       
         @include for-sm {
             margin-top: 45px;
             padding-right: 30px;
             box-sizing: border-box;
         }
-    }
-
-    &__swiper-slide{
-        width: 363px !important;
-        @include for-md-mob{
-            width:100% !important;    
+        &--horizontal{
+            @include for-sm {
+                padding-right: 0;
+            }
         }
     }
+
+    // &__swiper-slide{
+    //     width: 363px !important;
+    //     @include for-md-mob{
+    //         width:100% !important;    
+    //     }
+    // }
 
     &__container {
         display: flex;
@@ -4091,7 +4195,7 @@ body{
 
 .specialist-item {
     max-width: 557px;
-    border-radius: 15px;
+    border-radius: 18px;
     border: 1px solid $dark_blue;
     overflow: hidden;
     &--vertiacal{
@@ -4111,7 +4215,7 @@ body{
             margin-top: -50px;
             margin-left: 0;
             padding: 20px 18.5px 27.2px;
-            border-radius: 15px 15px 0 0;
+            border-radius: 18px 18px 0 0;
         }
         .specialist-item__text-item{
             padding-bottom: 11px;
@@ -4132,7 +4236,6 @@ body{
         .specialist-item__btn{
             padding: 11px 39px;
             border-radius: 33px;
-
         }
     }
    
@@ -4261,10 +4364,11 @@ body{
 
 .item-menu {
     margin-top: 35px;
-    margin-bottom: 29px;
+    margin-bottom: 57px;
     background-color: #F8F8F8;
 
     @include for-md {
+        margin-bottom: 29.6px;
         overflow-x: scroll;
         overflow-y: hidden;
     }
@@ -4817,6 +4921,7 @@ body{
         color: $dark_green;
         @include for-md{
             text-align: center;
+            margin-bottom: 20px;
         }
         @include for-sm{
             font-weight: 700;
@@ -5033,7 +5138,7 @@ body{
     }
     &__question-mark-container{
         display: flex;
-        margin-right: 17px;
+        margin-right: 10px;
         align-items: center;
         justify-content: center;
         width: 34.32px;
@@ -5051,7 +5156,7 @@ body{
         fill: $white;
     }
     &__title{
-        margin-right: 16px;
+        margin-right: 20px;
         font-size: 24px;
         line-height: 28px;
         color: $white;
@@ -5194,27 +5299,34 @@ body{
         margin-right: 6.7px;
         transition: $transition;
         &--user{
+            margin-right: 9.6px;
+            margin-left: 2.5px;
             width: 14px;
             height: 14px;
             fill: $dark_blue;
         }
         &--calendar{
-            width: 17.62px;
-            height: 16.5px;
+            width: 18px;
+            height: 18px;
             fill: $dark_blue
         }
         &--flag{
-            width: 16.62px;
-            height: 17px;
+            margin-right: 6.9px;
+            width: 18px;
+            height: 18px;
             stroke: $dark_blue;
             fill: $dark_blue;
         }
         &--photo{
             margin-right: 0;
+            // margin-left: 2px;
             width: 23px;
             height: 18px;
             fill: $blue;
         }
+    }
+    .date__icon--calendar{
+        fill: $dark_blue;
     }
     &__source{
         margin-bottom: 0;
@@ -5245,7 +5357,7 @@ body{
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        border: 1px solid $blue;
+        border: 2.25px solid $blue;
         right: 0;
         top: 50%;
         transform: translateY(-50%);
@@ -5304,7 +5416,7 @@ body{
     &__title{
         margin-bottom: 8px;
         @include for-md{
-            padding-left: 77.5px;
+            padding-left: 88.5px;
             margin-bottom: 46px;
         }
     }
@@ -5383,8 +5495,12 @@ body{
             border-color: $blue; 
         }
         &:after{
-            width: 10px;
-            height: 10px;
+            margin-top: 0;
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+            transform-origin: center;
+            width: 12px;
+            height: 12px;
             border-color: $blue;
             right: 19px;
         } 
@@ -5411,9 +5527,9 @@ body{
     }
     &__submit{
         border: none;
-        padding: 10px 20px;
+        padding: 10px 30px;
         margin-bottom: 29.5px;
-        border-radius: 20px;
+        border-radius: 25px;
         font-size: 20px;
         line-height: 24px;
     }
@@ -5422,6 +5538,17 @@ body{
         line-height: 14px;
         color: $politics_color;
         text-align: center;
+
+        a{
+            text-decoration: underline;
+            transition: $transition;
+            &:hover{
+                color: $blue;
+            }
+            &:active{
+                color: $purple;
+            }
+        }
     }
     .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus{
         background-color: #D4EDFC;
@@ -6033,6 +6160,8 @@ body{
         flex-shrink: 0;
         padding: 11px 23px;
         border-radius: 24px;
+        color: $blue;
+        border-color: $blue;
     }
 }
 
@@ -6158,6 +6287,7 @@ body{
         padding: 10px 43px;
         text-decoration: none;
         border-radius: 30px;
+        border-width: 2.25px;
     }
 }
 
@@ -6563,9 +6693,7 @@ body{
         display: block;
     }
 }
-.services-main--mob{
 
-}
 .services-slider-main{
     margin-top: 27px;
     .swiper-slide{
@@ -6577,7 +6705,7 @@ body{
 
 .sticky{
     position: fixed;
-    background-color: $white;
+
     width: 100%;
     z-index: 100;
     top: 0;
@@ -6614,5 +6742,21 @@ body{
                 margin-top: 105px;
             }
         }
+
+        &__item-container{
+            &:nth-child(n + 4){
+                margin-bottom: 130px;
+            }
+            &:nth-child(n + 7){
+                display: none;
+            }
+        }
+    }
+}
+
+.review + .section-page{
+    margin-top: 50px;
+    @include for-md(){
+        margin-top: 35px;
     }
 }
