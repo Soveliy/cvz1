@@ -36,9 +36,22 @@ a{
     }
 }
 body{
+    @include for-md(){
+        padding-top: 68px;
+    }
+    @include for-lit-mob(){
+        padding-top: 63px;
+    }
     &.js-hidden{
         position: relative;
         overflow: hidden;
+    }
+
+    &.fixed-header{
+        padding-top: 55px;
+        @include for-md(){
+            padding-top: 68px;
+        }
     }
 }
 .logo {
@@ -55,19 +68,18 @@ body{
 }
 
 .header{
-    position: absolute;
+    position: relative;
     box-sizing: border-box;
     padding: 11px 0;
     box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.16);
-    top: 55px;
-    left: 50%;
-    transform: translateX(-50%);
     background-color: $white;
     z-index: 100;
-    transition: 0s;
-    width: 100%;
-    @include for-md{
+    transition: .3s;
+    @include for-md(){
         top: 0;
+        width: 100%;
+        position: fixed;
+        z-index: 6000;
     }
     &__logo{
       
@@ -75,6 +87,7 @@ body{
             margin-right: auto;
             width: 177px;
             height: 41px;
+            
         }
         @include for-lit-mob(){
             width: 150px;
@@ -348,8 +361,34 @@ body{
     > ul > li{
         margin: 5px 14px;
         
-
+        span{
+            position: relative;
+            &.js-active{
+                &:after{
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    margin-left: -10px;
+                    top: 100%;
+                    margin-top: 8px;
+                    border: 10px solid transparent;
+                    border-bottom: 10px solid #EBEBEB;
+                    opacity: 0;
+                    // transform: translateY(20px);
+                    transition: $transition
+                }
+            }
+        }
         &:hover{
+            a{
+                color: $blue;
+            }
+
+            span{
+                &:after{
+                    opacity: 1;
+                }
+            }
             .submenu-container{
                 visibility: visible;
                 transform: translateY(0);
@@ -384,7 +423,7 @@ body{
         background-color: #EBEBEB;
         visibility: hidden;
         opacity: 0;
-        transform: translateY(-10px);
+        // transform: translateY(-10px);
         transition: all .3s ease;
         ul {
             max-width: 1230px;
@@ -393,17 +432,7 @@ body{
             margin: 0 auto;
             columns: 3;
 
-            &:before{
-                content: '';
-                position: absolute;
-                border: 15px solid transparent;
-                border-bottom: 15px solid #EBEBEB;
-                top: -25px;
-                left: 50%;
-                margin-left: -160px;
-                transform: translateX(-50%);
-                z-index: -1;
-            }
+           
             &:after{
                 content: '';
                 position: absolute;
@@ -660,9 +689,7 @@ body{
         > span{
             font-size: 16px;
             line-height: 20px;
-            &:before{
-                content: '0';
-            }
+           
             @include for-sm(){
                 font-size: 24px;
                 line-height: 27px;
@@ -814,16 +841,19 @@ body{
                     .features-item:before{
                         top: 48%;
                         left: 32px;
+                       
                     }
                 }
             }
         }
+
+        .about-center__btn-container{
+           margin: 50px 0 90px;
+        }
     }
     padding: 60px 0 0;
 
-    .about-center__btn-container{
-        margin-top: 64px;
-    }
+  
     @include for-md(){
         padding-top: 31px;
     }
@@ -874,6 +904,11 @@ body{
                     width: 283px;
                     height: 287px;
                     background-image: url(img/features/features-before-pink.svg);
+
+
+                    @include for-sm(){
+                        top: 50%;
+                    }
                 }
 
                 &__icon-container{
@@ -894,7 +929,7 @@ body{
                     background-image: url(img/features/features-before-blue-1.svg);
 
                     @include for-sm(){
-                        top: 75%;
+                        top: 50%;
                     }
                 }
 
@@ -914,6 +949,10 @@ body{
                     width: 280px;
                     height: 280px;
                     background-image: url(img/features/features-before-blue-2.svg);
+
+                    @include for-sm(){
+                        top: 50%;
+                    }
                 }
 
                 &__icon-container{
@@ -1003,6 +1042,7 @@ body{
         @include for-md(){
             font-size: 28px;
             line-height: 33px;
+            font-weight: 500;
         }
         @include for-sm(){
             padding: 0 10px;
@@ -1188,6 +1228,7 @@ body{
             content: '';
             position: absolute;
             background-size: contain;
+            z-index: -1;
         }
         &--purple{
             .form{
@@ -1243,7 +1284,7 @@ body{
         color: $dark_blue;
         @include for-md(){
             font-size: 16px;
-            line-height: 20px;
+            line-height: 22px;
         }
       
     }
@@ -1441,6 +1482,15 @@ body{
         &:last-child{
             margin-left: 18px;
             margin-right: 0;
+            @include for-md(){
+                margin-left: 0;
+            }
+            
+        }
+        br{
+            @include for-md(){
+                display: none;
+            }
         }
     }
     &__icon{
@@ -1491,7 +1541,7 @@ body{
         &--lit{
             font-size: 20px;
             line-height: 23px;
-            color: $grey2;
+            color: $black;
             font-weight: 700;
         }
     }
@@ -1510,6 +1560,9 @@ body{
         &:active{
             border-color: $purple;
             color: $purple;
+        }
+        @include for-md(){
+            margin-top: 0;
         }
     }
     
@@ -2402,9 +2455,11 @@ body{
     @include for-md{
         max-width: 345px;
         margin: 0 auto;
+        height: 100%;
     }
     &__inner{
         min-height: 249px;
+        height: 100%;
         padding: 18px 18px 37px 22px;
         border-radius: 15px;
         border: 1px solid $dark_blue;
@@ -2495,6 +2550,18 @@ body{
         border-radius: 15px;
 
     }
+    &__video-btn{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: url(img/icons/video-btn.svg) no-repeat center center;
+        transition: .3s;
+        border-radius: 15px;
+        &:hover{
+            background-color: rgba(0, 127, 194, 0.6);;
+        }
+    }
+    
 }
 
 .questions{
@@ -2723,6 +2790,10 @@ body{
     z-index: 5000;
     padding-bottom: 20px;
     box-sizing: border-box;
+
+    @include for-lit-mob(){
+        height: calc(100vh - 63px);
+    }
     .options-buttons__icon,.messangeres__icon,.social__link {
         height: 46px;
         width: 46px;
@@ -2905,6 +2976,10 @@ body{
             background-color: $dark_blue;
             color: $white;
             border-color: $dark_blue;
+            svg{
+                stroke: $white;
+
+            }
         }
     }
     &__list-item{
@@ -2978,9 +3053,16 @@ body{
         line-height: 22px;
         color: $black;
     }
-    a{
+    a:not(.btn){
         color: $blue;
         text-decoration: underline;
+        transition: $transition;
+        &:hover{
+            color: $dark_blue;
+        }
+        &:active{
+            color: $purple;
+        }
     }
 }
 .test-page{
@@ -3212,8 +3294,7 @@ body{
         &-icon-container{
             height: 125px;
             width: 125px;
-            border-radius: 2.5px;
-            border: 1px solid $blue;
+            border:2.25px solid $blue;
             box-sizing: border-box;
             border-radius: 50%;
             display: flex;
@@ -3923,9 +4004,13 @@ body{
             margin-top: 43px;
         }
     }
+    .swiper-slide{
+        height: auto;
+    }
 }
 
 .reviews-item {
+    height: 100%;
     @include for-md {
         max-width: 345px;
         margin: 0 auto;
@@ -3933,6 +4018,7 @@ body{
 
     &__inner {
         min-height: 249px;
+        height: 100%;
         padding: 18px 18px 37px 22px;
         border-radius: 15px;
         border: 1px solid $dark_blue;
@@ -4088,7 +4174,7 @@ body{
         }
     }
     .head-block__btn{
-        padding: 9.5px 19px;
+        padding: 10.5px 19px;
     }
 }
 
@@ -4133,7 +4219,7 @@ body{
             justify-content: center;
         }
         .specialist-item__btn{
-            padding: 11px 39px;
+            padding: 12px 39px;
             border-radius: 33px;
 
         }
@@ -4820,6 +4906,7 @@ body{
         color: $dark_green;
         @include for-md{
             text-align: center;
+            margin-bottom: 20px;
         }
         @include for-sm{
             font-weight: 700;
@@ -5036,7 +5123,7 @@ body{
     }
     &__question-mark-container{
         display: flex;
-        margin-right: 17px;
+        margin-right: 10px;
         align-items: center;
         justify-content: center;
         width: 34.32px;
@@ -5054,7 +5141,7 @@ body{
         fill: $white;
     }
     &__title{
-        margin-right: 16px;
+        margin-right: 20px;
         font-size: 24px;
         line-height: 28px;
         color: $white;
@@ -5425,6 +5512,17 @@ body{
         line-height: 14px;
         color: $politics_color;
         text-align: center;
+
+        a{
+            text-decoration: underline;
+            transition: $transition;
+            &:hover{
+                color: $blue;
+            }
+            &:active{
+                color: $purple;
+            }
+        }
     }
     .nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus{
         background-color: #D4EDFC;
@@ -6036,6 +6134,9 @@ body{
         flex-shrink: 0;
         padding: 11px 23px;
         border-radius: 24px;
+        @include for-md(){
+            margin-right: 0;
+        }
     }
 }
 
@@ -6048,7 +6149,7 @@ body{
         margin-top: 50px;
     }
     .head-block__btn{
-        padding: 9.5px 38px;
+        padding: 10.5px 38px;
     }
     .content-slider{
         overflow: hidden !important;
@@ -6067,7 +6168,7 @@ body{
             margin-top: 35px;
 
             .btn{
-                padding: 8px 30px;
+                padding: 9px 30px;
             }
         }
 
@@ -6158,7 +6259,7 @@ body{
         text-decoration: none;
     }
     &__btn{
-        padding: 10px 43px;
+        padding: 11px 43px;
         text-decoration: none;
         border-radius: 30px;
     }
@@ -6176,7 +6277,7 @@ body{
         padding-top: 32px;
 
         .content-slider__arrows .btn {
-            padding: 8px 30px;
+            padding: 9px 30px;
         } 
     }
     &__row{
@@ -6273,7 +6374,7 @@ body{
     }
 
     .head-block__btn{
-        padding: 9.5px 41px;
+        padding: 10.5px 41px;
     }
     &--title{
         @include for-md(){
@@ -6566,9 +6667,7 @@ body{
         display: block;
     }
 }
-.services-main--mob{
 
-}
 .services-slider-main{
     margin-top: 27px;
     .swiper-slide{
@@ -6580,7 +6679,7 @@ body{
 
 .sticky{
     position: fixed;
-    background-color: $white;
+
     width: 100%;
     z-index: 100;
     top: 0;
@@ -6617,5 +6716,21 @@ body{
                 margin-top: 105px;
             }
         }
+
+        &__item-container{
+            &:nth-child(n + 4){
+                margin-bottom: 130px;
+            }
+            &:nth-child(n + 7){
+                display: none;
+            }
+        }
+    }
+}
+
+.review + .section-page{
+    margin-top: 50px;
+    @include for-md(){
+        margin-top: 35px;
     }
 }
