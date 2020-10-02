@@ -149,17 +149,6 @@ a {
     font-weight: 500; }
   .btn--bold {
     font-weight: 700; }
-  .btn--transparent {
-    background-color: transparent;
-    color: #007FC2;
-    border: 1px solid #007FC2; }
-    .btn--transparent:hover {
-      background-color: #007FC2;
-      color: #fff; }
-    .btn--transparent:active {
-      background-color: #81028E;
-      color: #fff;
-      border-color: #81028E; }
   .btn--purple {
     background-color: #AE44B9;
     color: #fff;
@@ -5031,7 +5020,9 @@ body.fixed-header {
 
 .questions-dropdown__btn {
   margin-left: auto;
-  border-width: 2.25px; }
+  border-width: 2.25px;
+  border-color: #007FC2;
+  color: #007FC2; }
   @media (max-width: 768px) {
     .questions-dropdown__btn {
       margin: 18px auto 0; } }
@@ -7336,6 +7327,7 @@ body.fixed-header {
       flex-shrink: 0; }
 
 .price-page__arrow-icon {
+  margin-top: 2px;
   width: 12px;
   height: 12px;
   stroke: #024B76;
@@ -7407,7 +7399,8 @@ body.fixed-header {
 .price-page__btn {
   position: absolute;
   right: 20px;
-  bottom: 27.6px; }
+  bottom: 27.6px;
+  border-width: 2.25px; }
   @media (max-width: 550px) {
     .price-page__btn {
       position: relative;

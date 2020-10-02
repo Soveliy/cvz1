@@ -2677,6 +2677,8 @@ body{
     &__btn{
         margin-left: auto;
         border-width: 2.25px;
+        border-color: $blue;
+        color: $blue;
         @include for-sm{
             margin: 18px auto 0;
         }
@@ -5037,6 +5039,7 @@ body{
         flex-shrink: 0;
     }
     &__arrow-icon{
+        margin-top: 2px;
         width: 12px;
         height: 12px;
         stroke: #024B76;
@@ -5111,6 +5114,7 @@ body{
         position: absolute;
         right: 20px;
         bottom: 27.6px;
+        border-width: 2.25px;
         @include for-md-mob{
             position: relative;
             right: auto;
