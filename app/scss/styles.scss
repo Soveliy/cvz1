@@ -1957,9 +1957,10 @@ body{
 
 .service-menu{
     margin-top: 35px;   
-    margin-bottom: 35px;     
+    margin-bottom: 64px;     
     background-color: #F8F8F8;
     @include for-md{
+        margin-bottom: 30px;
         overflow-x: scroll;
         overflow-y: hidden;
     }  
@@ -2167,31 +2168,41 @@ body{
 }
 
 .price{
-    // .content-slider__arrows{
-    //     position: relative;
-    // }
-    // .content-slider__arrow {
-    //     position: static;
-    // }
-    // .content-slider__arrow .icon{
-    //     display: none;
-    // }
-    // .content-slider__arrow-left::before{
-    //     width: 100% ;
-    //     left: 0;
-    // }
-    // .content-slider__arrow-right::before{
-    //     width: 100% ;
-    //     left: 0;
-    // }
+    .content-slider__arrows{
+        @include for-tiny-tablet{
+            position: relative;            
+        }
+    }
+    .content-slider__arrow {
+        @include for-tiny-tablet{
+            position: static;            
+        }
+    }
+    .content-slider__arrow .icon{
+        @include for-tiny-tablet{
+            display: none;            
+        }
+    }
+    .content-slider__arrow-left::before{
+        @include for-tiny-tablet{
+            width: 100% ;           
+            left: 0;
+        }
+    }
+    .content-slider__arrow-right::before{
+        @include for-tiny-tablet{
+            width: 100% ;           
+            left: 0;
+        }
+    }
    
     &__slider{
         margin-top: 62px;
+        padding-bottom: 10px;
         overflow: hidden !important;
-        padding-bottom: 34px;
         @include for-tiny-tablet{
             margin-top: 34px;
-            overflow: visible !important;
+            padding-bottom: 35px;
         }
     }
   
@@ -2211,6 +2222,27 @@ body{
             .price__td{
                 background-color: #F3F3F3;
             }
+        }
+
+        &:nth-child(5){
+            @include for-tiny-tablet{
+                .price__tip{
+                    top: auto;
+                    bottom: 25px;
+                    &::before{
+                        bottom: -20px;
+                        left: 5px;
+                        top: auto;
+                        transform: rotate(180deg);
+                        transform-origin: center;
+                        
+                    }
+                }
+            }
+        }
+
+        &:last-child{
+            
         }
         
         @include for-tiny-tablet{
@@ -2377,7 +2409,7 @@ body{
         }
     }
     &__footnote{
-        margin-top: -60px;
+        margin-top: -5px;
         font-size: 12px;
         line-height: 14px;
         color: #181716;
@@ -2388,7 +2420,8 @@ body{
     &__more{
         display: flex;
         align-items: center;
-        padding: 5px 14px;
+        padding: 5px 8px 5px 25px;
+        color: $dark_blue;
 
         .price__more-icon{
             transition: $transition
@@ -2446,6 +2479,17 @@ body{
         height: 18px;
         stroke: $dark_blue;
         transition: $transition;
+    }
+    &__head-btn{
+        padding: 9.5px 48px;
+        max-width: 166px;
+        width: 100%;
+    }
+    &__btn-mobile{
+        @include for-tiny-tablet{
+            min-height: 40px;
+            padding: 9.5px 48px;
+        }
     }
 }
 
@@ -2591,6 +2635,10 @@ body{
             .questions-dropdown__title-block{
                 border-top: 1px solid #D9DADA;
             }
+            .questions-dropdown__arrow-icon{
+                transform: rotate(180deg);
+                margin-top: 0;
+            }
         }
         @include for-sm{
             padding: 0 15px;
@@ -2611,9 +2659,6 @@ body{
         flex-shrink: 0;
         @include for-sm{
             margin-right: 17px;
-        }
-        @include for-md-mob{
-            display: none;
         }
     }
     &__icon{
@@ -2637,14 +2682,12 @@ body{
         flex-shrink: 0;
     }
     &__arrow-icon{
+        margin-top: 3px;
         width: 12px;
         height: 12px;
         stroke: $dark_blue;
         transition: $transition;
-        
-        &.active{
-            transform: rotate(180deg);
-        }
+        transform-origin: center;
     }
     &__body{
         display: none;
@@ -2664,8 +2707,16 @@ body{
     }
     &__btn{
         margin-left: auto;
+        border-width: 2.25px;
+        border-color: $blue;
+        color: $blue;
         @include for-sm{
             margin: 18px auto 0;
+        }
+    }
+    &__text{
+        @include for-tiny-tablet{
+            padding-right: 30px;
         }
     }
 }
@@ -2686,7 +2737,7 @@ body{
 
 .specialist-item{
     max-width: 557px;
-    border-radius: 15px;
+    border-radius: 18px;
     border: 1px solid $dark_blue;
     overflow: hidden;
     @include for-tiny-tablet{
@@ -2719,7 +2770,7 @@ body{
     &__text-block{
         margin-left: -26px;
         padding: 21px 27px 30px 41px;
-        border-radius: 15px 0 0 15px;
+        border-radius: 18px 0 0 18px;
         background-color: #F9F9F9;
         font-size: 16px;
         line-height: 22px;
@@ -2728,7 +2779,7 @@ body{
             margin-top: -20px;
             margin-left: 0;
             padding: 14.4px 18.5px 27.2px;    
-            border-radius: 15px 15px 0 0;
+            border-radius: 18px 18px 0 0;
         }
     }
     &__text-item{
@@ -2991,7 +3042,7 @@ body{
         &+&{
             margin-left: 5px;
             @include for-md-mob{
-                margin-left: 3px;
+                margin-left: 10px;
             }
         }
     }
@@ -4133,6 +4184,7 @@ body{
         width: 100%;
         height: 100%;
         text-align: center;
+        line-height: 24px;
         color: $white;
         background-color: rgba($color: $blue, $alpha: .6);
         border-radius: 20px;
@@ -4144,26 +4196,33 @@ body{
     &__info-link {
         color: $white;
         border-color: $white;
+        &:hover{
+            background-color: transparent;
+        }
     }
 }
 
 .specialists {
     &__slider {
-        margin-top: 62px;
-        
+        margin-top: 62px;       
         @include for-sm {
             margin-top: 45px;
             padding-right: 30px;
             box-sizing: border-box;
         }
-    }
-
-    &__swiper-slide{
-        width: 363px !important;
-        @include for-md-mob{
-            width:100% !important;    
+        &--horizontal{
+            @include for-sm {
+                padding-right: 0;
+            }
         }
     }
+
+    // &__swiper-slide{
+    //     width: 363px !important;
+    //     @include for-md-mob{
+    //         width:100% !important;    
+    //     }
+    // }
 
     &__container {
         display: flex;
@@ -4180,7 +4239,7 @@ body{
 
 .specialist-item {
     max-width: 557px;
-    border-radius: 15px;
+    border-radius: 18px;
     border: 1px solid $dark_blue;
     overflow: hidden;
     &--vertiacal{
@@ -4200,7 +4259,7 @@ body{
             margin-top: -50px;
             margin-left: 0;
             padding: 20px 18.5px 27.2px;
-            border-radius: 15px 15px 0 0;
+            border-radius: 18px 18px 0 0;
         }
         .specialist-item__text-item{
             padding-bottom: 11px;
@@ -4221,7 +4280,6 @@ body{
         .specialist-item__btn{
             padding: 12px 39px;
             border-radius: 33px;
-
         }
     }
    
@@ -4350,10 +4408,11 @@ body{
 
 .item-menu {
     margin-top: 35px;
-    margin-bottom: 29px;
+    margin-bottom: 57px;
     background-color: #F8F8F8;
 
     @include for-md {
+        margin-bottom: 29.6px;
         overflow-x: scroll;
         overflow-y: hidden;
     }
@@ -5022,6 +5081,7 @@ body{
         flex-shrink: 0;
     }
     &__arrow-icon{
+        margin-top: 2px;
         width: 12px;
         height: 12px;
         stroke: #024B76;
@@ -5096,6 +5156,7 @@ body{
         position: absolute;
         right: 20px;
         bottom: 27.6px;
+        border-width: 2.25px;
         @include for-md-mob{
             position: relative;
             right: auto;
@@ -5284,27 +5345,34 @@ body{
         margin-right: 6.7px;
         transition: $transition;
         &--user{
+            margin-right: 9.6px;
+            margin-left: 2.5px;
             width: 14px;
             height: 14px;
             fill: $dark_blue;
         }
         &--calendar{
-            width: 17.62px;
-            height: 16.5px;
+            width: 18px;
+            height: 18px;
             fill: $dark_blue
         }
         &--flag{
-            width: 16.62px;
-            height: 17px;
+            margin-right: 6.9px;
+            width: 18px;
+            height: 18px;
             stroke: $dark_blue;
             fill: $dark_blue;
         }
         &--photo{
             margin-right: 0;
+            // margin-left: 2px;
             width: 23px;
             height: 18px;
             fill: $blue;
         }
+    }
+    .date__icon--calendar{
+        fill: $dark_blue;
     }
     &__source{
         margin-bottom: 0;
@@ -5335,7 +5403,7 @@ body{
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        border: 1px solid $blue;
+        border: 2.25px solid $blue;
         right: 0;
         top: 50%;
         transform: translateY(-50%);
@@ -5394,7 +5462,7 @@ body{
     &__title{
         margin-bottom: 8px;
         @include for-md{
-            padding-left: 77.5px;
+            padding-left: 88.5px;
             margin-bottom: 46px;
         }
     }
@@ -5473,8 +5541,12 @@ body{
             border-color: $blue; 
         }
         &:after{
-            width: 10px;
-            height: 10px;
+            margin-top: 0;
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+            transform-origin: center;
+            width: 12px;
+            height: 12px;
             border-color: $blue;
             right: 19px;
         } 
@@ -5501,9 +5573,9 @@ body{
     }
     &__submit{
         border: none;
-        padding: 10px 20px;
+        padding: 10px 30px;
         margin-bottom: 29.5px;
-        border-radius: 20px;
+        border-radius: 25px;
         font-size: 20px;
         line-height: 24px;
     }
@@ -6262,6 +6334,7 @@ body{
         padding: 11px 43px;
         text-decoration: none;
         border-radius: 30px;
+        border-width: 2.25px;
     }
 }
 
