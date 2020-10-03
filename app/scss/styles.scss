@@ -361,8 +361,34 @@ body{
     > ul > li{
         margin: 5px 14px;
         
-
+        span{
+            position: relative;
+            &.js-active{
+                &:after{
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    margin-left: -10px;
+                    top: 100%;
+                    margin-top: 8px;
+                    border: 10px solid transparent;
+                    border-bottom: 10px solid #EBEBEB;
+                    opacity: 0;
+                    // transform: translateY(20px);
+                    transition: $transition
+                }
+            }
+        }
         &:hover{
+            a{
+                color: $blue;
+            }
+
+            span{
+                &:after{
+                    opacity: 1;
+                }
+            }
             .submenu-container{
                 visibility: visible;
                 transform: translateY(0);
@@ -397,7 +423,7 @@ body{
         background-color: #EBEBEB;
         visibility: hidden;
         opacity: 0;
-        transform: translateY(-10px);
+        // transform: translateY(-10px);
         transition: all .3s ease;
         ul {
             max-width: 1230px;
@@ -406,17 +432,7 @@ body{
             margin: 0 auto;
             columns: 3;
 
-            &:before{
-                content: '';
-                position: absolute;
-                border: 15px solid transparent;
-                border-bottom: 15px solid #EBEBEB;
-                top: -25px;
-                left: 50%;
-                margin-left: -160px;
-                transform: translateX(-50%);
-                z-index: -1;
-            }
+           
             &:after{
                 content: '';
                 position: absolute;
@@ -673,9 +689,7 @@ body{
         > span{
             font-size: 16px;
             line-height: 20px;
-            &:before{
-                content: '0';
-            }
+           
             @include for-sm(){
                 font-size: 24px;
                 line-height: 27px;
@@ -832,12 +846,14 @@ body{
                 }
             }
         }
+
+        .about-center__btn-container{
+           margin: 50px 0 90px;
+        }
     }
     padding: 60px 0 0;
 
-    .about-center__btn-container{
-        margin-top: 64px;
-    }
+  
     @include for-md(){
         padding-top: 31px;
     }
@@ -1026,6 +1042,7 @@ body{
         @include for-md(){
             font-size: 28px;
             line-height: 33px;
+            font-weight: 500;
         }
         @include for-sm(){
             padding: 0 10px;
@@ -1267,7 +1284,7 @@ body{
         color: $dark_blue;
         @include for-md(){
             font-size: 16px;
-            line-height: 20px;
+            line-height: 22px;
         }
       
     }
@@ -1465,6 +1482,15 @@ body{
         &:last-child{
             margin-left: 18px;
             margin-right: 0;
+            @include for-md(){
+                margin-left: 0;
+            }
+            
+        }
+        br{
+            @include for-md(){
+                display: none;
+            }
         }
     }
     &__icon{
@@ -1515,7 +1541,7 @@ body{
         &--lit{
             font-size: 20px;
             line-height: 23px;
-            color: $grey2;
+            color: $black;
             font-weight: 700;
         }
     }
@@ -1534,6 +1560,9 @@ body{
         &:active{
             border-color: $purple;
             color: $purple;
+        }
+        @include for-md(){
+            margin-top: 0;
         }
     }
     
@@ -2470,9 +2499,11 @@ body{
     @include for-md{
         max-width: 345px;
         margin: 0 auto;
+        height: 100%;
     }
     &__inner{
         min-height: 249px;
+        height: 100%;
         padding: 18px 18px 37px 22px;
         border-radius: 15px;
         border: 1px solid $dark_blue;
@@ -3073,9 +3104,16 @@ body{
         line-height: 22px;
         color: $black;
     }
-    a{
-        color: $dark_blue;
+    a:not(.btn){
+        color: $blue;
         text-decoration: underline;
+        transition: $transition;
+        &:hover{
+            color: $dark_blue;
+        }
+        &:active{
+            color: $purple;
+        }
     }
 }
 .test-page{
@@ -3307,8 +3345,7 @@ body{
         &-icon-container{
             height: 125px;
             width: 125px;
-            border-radius: 2.5px;
-            border: 1px solid $blue;
+            border:2.25px solid $blue;
             box-sizing: border-box;
             border-radius: 50%;
             display: flex;
@@ -4018,9 +4055,13 @@ body{
             margin-top: 43px;
         }
     }
+    .swiper-slide{
+        height: auto;
+    }
 }
 
 .reviews-item {
+    height: 100%;
     @include for-md {
         max-width: 345px;
         margin: 0 auto;
@@ -4028,6 +4069,7 @@ body{
 
     &__inner {
         min-height: 249px;
+        height: 100%;
         padding: 18px 18px 37px 22px;
         border-radius: 15px;
         border: 1px solid $dark_blue;
@@ -4191,7 +4233,7 @@ body{
         }
     }
     .head-block__btn{
-        padding: 9.5px 19px;
+        padding: 10.5px 19px;
     }
 }
 
@@ -4236,7 +4278,7 @@ body{
             justify-content: center;
         }
         .specialist-item__btn{
-            padding: 11px 39px;
+            padding: 12px 39px;
             border-radius: 33px;
         }
     }
@@ -6169,8 +6211,9 @@ body{
         flex-shrink: 0;
         padding: 11px 23px;
         border-radius: 24px;
-        color: $blue;
-        border-color: $blue;
+        @include for-md(){
+            margin-right: 0;
+        }
     }
 }
 
@@ -6183,7 +6226,7 @@ body{
         margin-top: 50px;
     }
     .head-block__btn{
-        padding: 9.5px 38px;
+        padding: 10.5px 38px;
     }
     .content-slider{
         overflow: hidden !important;
@@ -6202,7 +6245,7 @@ body{
             margin-top: 35px;
 
             .btn{
-                padding: 8px 30px;
+                padding: 9px 30px;
             }
         }
 
@@ -6293,7 +6336,7 @@ body{
         text-decoration: none;
     }
     &__btn{
-        padding: 10px 43px;
+        padding: 11px 43px;
         text-decoration: none;
         border-radius: 30px;
         border-width: 2.25px;
@@ -6312,7 +6355,7 @@ body{
         padding-top: 32px;
 
         .content-slider__arrows .btn {
-            padding: 8px 30px;
+            padding: 9px 30px;
         } 
     }
     &__row{
@@ -6409,7 +6452,7 @@ body{
     }
 
     .head-block__btn{
-        padding: 9.5px 41px;
+        padding: 10.5px 41px;
     }
     &--title{
         @include for-md(){

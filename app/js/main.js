@@ -28,6 +28,19 @@ $('.main-slider .swiper-container').each(function(){
     pagination: {
       el: $(this).next().find('.swiper-pagination')[0],
       type: 'fraction',
+
+      formatFractionCurrent: function(number) {
+        if (number < 10) {
+        number = '0' + number;
+        }
+        return number;
+        },
+        formatFractionTotal: function(number) {
+          if (number < 10) {
+          number = '0' + number;
+          }
+          return number;
+          },
     },
     navigation: {
       nextEl: $(this).next().find('.swiper-button-next')[0],
@@ -612,7 +625,7 @@ $(".mobile-menu__nav > ul > li > span").on('click', function(){
   $('.options-buttons__search-btn').click(function(){
     $(this).next().toggleClass('js-active');
   });
-  $(".numbox").mask("+7 (999) 999-99-99");
+  $(".numbox").mask("8 (999) 999-99-99");
   $(document).click( function(e){
     if ( $(e.target).closest('.options-buttons__search-btn').length || $(e.target).closest('.search__input-container').length) {
         // клик внутри элемента 
@@ -788,3 +801,6 @@ $('.price__more').on('click', function(){
   }
 });
 
+if($(".main-menu ul li > div").hasClass("submenu-container")){
+  $(".main-menu ul li > div.submenu-container").closest("li").find("span").addClass("js-active")
+}

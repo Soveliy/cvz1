@@ -80,18 +80,22 @@ a{
     padding: 0 15px;
     margin: 0 auto;
     max-width: 1230px;
-    // max-width: 1175px;
+    max-width: 1180px;
     box-sizing: border-box;
     font-size: 16px;
     line-height: 21px;
     // color: $white;
 }
 .btn{
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content:center;
     border-radius: 18px;
     box-sizing: border-box;
-    padding: 7.5px 20px;
+    padding: 8.5px 20px;
     transition: $transition;
+    font-size: 16px;
+    line-height: 19px;
     cursor: pointer;
     &--upper{
         text-transform: uppercase;
@@ -170,7 +174,38 @@ a{
     &--bold{
         font-weight: 700;
     }
-    
+    &--transparent{
+        background-color: transparent;
+        color: $blue;
+        border: 1px solid $blue;
+        &:hover{
+            background-color: $blue;
+            color: $white;
+        }
+        &:active{
+            background-color: $purple;
+            color: $white;
+            border-color: $purple;
+        }
+    }
+    &--border-dark-blue{
+        background-color: transparent;
+        color: $dark_blue;
+        border: 1px solid $dark_blue;
+        padding: 11px 40px;
+        color: $dark_blue;
+        border-radius: 25px;
+        &:hover{
+        background-color: $blue;
+        color: $white;
+        border-color: $blue;
+        }
+        &:active{
+        background-color: $purple;
+        color: $white;
+        border-color: $purple;
+        }
+    }
     &--purple{
         background-color: $purple_border;
         color: $white;
@@ -296,7 +331,7 @@ a{
     }
     &__btn{
         text-decoration: none !important;
-        padding: 11px 40px;
+        padding: 12px 40px;
         border-radius: 25px;
         border-width: 2.25px;
         
