@@ -3194,7 +3194,10 @@ body.fixed-header {
       .head-block__btn-mobile-block {
         display: block;
         padding: 0 5px;
-        background-color: #fff; } }
+        background-color: #fff; }
+        .head-block__btn-mobile-block .btn {
+          padding: 11px 30px;
+          border-radius: 30px; } }
 
 .features {
   padding: 60px 0 0; }
@@ -3208,7 +3211,7 @@ body.fixed-header {
         top: 48%;
         left: 32px; } }
   .features.features--main-page .about-center__btn-container {
-    margin: 50px 0 90px; }
+    margin: 50px 0 30px; }
   @media (max-width: 1024px) {
     .features {
       padding-top: 31px; } }
@@ -3799,6 +3802,9 @@ body.fixed-header {
     @media (max-width: 768px) {
       .footer__social {
         margin-bottom: 35px; } }
+    @media (max-width: 1024px) {
+      .footer__social .social__link {
+        padding: 7px; } }
   .footer__menu-container {
     display: -webkit-box;
     display: -ms-flexbox;

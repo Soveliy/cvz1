@@ -783,7 +783,7 @@ $('.price__more').on('click', function(){
     Развернуть
     <div class="price__more-icon-container">
         <svg class="price__more-icon">
-            <use xlink:href="img/sprite.svg#arrow-down"></use>
+            <use xlink:href="#arrow-down"></use>
         </svg>
     </div> 
     `);
@@ -794,7 +794,7 @@ $('.price__more').on('click', function(){
     Свернуть
     <div class="price__more-icon-container">
         <svg class="price__more-icon">
-            <use xlink:href="img/sprite.svg#arrow-down"></use>
+            <use xlink:href="#arrow-down"></use>
         </svg>
     </div> 
     `);

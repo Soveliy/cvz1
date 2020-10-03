@@ -814,6 +814,7 @@ body{
         margin-left: 29px;
         padding: 9.5px 25px;
         border-radius: 40px;
+        
         @include for-md{
             display: none;
         }
@@ -824,6 +825,10 @@ body{
             display: block;
             padding: 0 5px;
             background-color: $white;
+            .btn{
+                padding: 11px 30px;
+                border-radius: 30px;
+            }
         }
     }
 }
@@ -848,7 +853,7 @@ body{
         }
 
         .about-center__btn-container{
-           margin: 50px 0 90px;
+           margin: 50px 0 30px;
         }
     }
     padding: 60px 0 0;
@@ -1456,6 +1461,12 @@ body{
         margin-bottom: 27px;
         @include for-sm(){
             margin-bottom: 35px;
+        }
+
+        .social__link{
+            @include for-md(){
+                padding:7px;
+            }
         }
     }
     &__menu-container{
