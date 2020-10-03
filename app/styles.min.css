@@ -3837,6 +3837,11 @@ body.fixed-header {
       .messangeres__item:last-child {
         margin-left: 0; } }
   @media (max-width: 1024px) {
+    .messangeres__item {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
+  @media (max-width: 1024px) {
     .messangeres__item br {
       display: none; } }
 
@@ -3894,6 +3899,11 @@ body.fixed-header {
     line-height: 23px;
     color: #565655;
     font-weight: 700; }
+    @media (max-width: 1024px) {
+      .messangeres__phone--lit {
+        font-size: 28px;
+        line-height: 31px;
+        color: #595B60; } }
 
 .messangeres__callback {
   margin-top: -3px;
@@ -3970,6 +3980,9 @@ body.fixed-header {
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s; }
+    @media (max-width: 1024px) {
+      .social__link svg {
+        max-height: 100%; } }
 
 .adress {
   position: relative;
@@ -4212,8 +4225,8 @@ body.fixed-header {
         height: 46px;
         width: 46px; }
         .search__button svg {
-          height: 15px;
-          width: 15px; } }
+          height: 22px;
+          width: 22px; } }
 
 .preheader {
   background-color: #ECECEC; }
@@ -5235,6 +5248,14 @@ body.fixed-header {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
+    .mobile-menu__social .social__link {
+      border-color: #007FC2; }
+      .mobile-menu__social .social__link svg {
+        fill: #007FC2; }
+      .mobile-menu__social .social__link:active, .mobile-menu__social .social__link:hover {
+        background-color: #007FC2; }
+        .mobile-menu__social .social__link:active svg, .mobile-menu__social .social__link:hover svg {
+          fill: #fff; }
   .mobile-menu__btn-container {
     position: relative;
     overflow: hidden;
@@ -5316,11 +5337,11 @@ body.fixed-header {
     border-radius: 50%;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    border: 1px solid #6F7175;
+    border: 2px solid #6F7175;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
-    padding: 5px; }
+    padding: 5px 3px 3px 3px; }
     .mobile-menu__dropdown-icon:before {
       content: '';
       position: absolute;
@@ -8693,7 +8714,7 @@ body.fixed-header {
 .stars {
   margin-bottom: 16px; }
   @media (max-width: 1024px) {
-    .stars .head-block__title--black {
+    .stars .head-block__title {
       font-weight: bold; } }
   @media (max-width: 768px) {
     .stars {
