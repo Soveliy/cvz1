@@ -1487,6 +1487,9 @@ body{
             }
             
         }
+        @include for-md(){
+            align-items: center;
+        }
         br{
             @include for-md(){
                 display: none;
@@ -1543,6 +1546,12 @@ body{
             line-height: 23px;
             color: $black;
             font-weight: 700;
+
+            @include for-md(){
+                font-size: 28px;
+                line-height: 31px;
+                color: #595B60;
+            }
         }
     }
     &__callback{
@@ -1625,6 +1634,9 @@ body{
             max-width: 100%;
             fill: $dark_blue;
             transition: $transition;
+            @include for-md(){
+                max-height:100%;
+            }
         }
     }
 }
@@ -1877,8 +1889,8 @@ body{
             height: 46px;
             width: 46px;
             svg{
-                height: 15px;   
-                width: 15px;
+                height: 22px;   
+                width: 22px;
             }
         }
     }
@@ -2863,6 +2875,20 @@ body{
         padding-top: 12px;
         display: flex;
         justify-content: center;
+
+        .social__link{
+            border-color: $blue;
+            svg{
+                fill:$blue;
+            }
+            &:active,&:hover{
+                background-color:$blue;
+                svg{
+                    fill:$white;
+
+                }
+            }
+        }
     }
     &__btn-container{
         position: relative;
@@ -2946,9 +2972,9 @@ body{
         width: 26px;
         border-radius: 50%;
         box-sizing: border-box;
-        border: 1px solid #6F7175;
+        border: 2px solid #6F7175;
         transition: $transition;
-        padding: 5px;
+        padding:5px 3px 3px 3px;
 
         &:before{
             content: '';
@@ -6340,7 +6366,7 @@ body{
 
 .stars{
 
-    .head-block__title--black{
+    .head-block__title{
         @include for-md(){
             font-weight: bold;
         }
