@@ -4637,7 +4637,7 @@ body{
         @include for-md {
             flex-direction: column-reverse;
             align-items: center;
-            padding-bottom: 20px;
+            padding-bottom: 106.5px;
         }
     }
 
@@ -4661,11 +4661,13 @@ body{
         color: $white;
         background-color: $pink;
         border-radius: 15px;
-
+        min-width: 166px;
+        text-align: center;
         @include for-md {
             padding: 0 31px;
             font-size: 35px;
             line-height: 42px;
+            min-width: 157.5px;
         }
     }
 
@@ -4736,7 +4738,7 @@ body{
     &__btn {
         margin-top: 20px;
         align-self: flex-end;
-
+        border-width: 2px;
         @include for-md {
             align-self: center;
         }
@@ -5610,7 +5612,7 @@ body{
     }
     &__submit{
         border: none;
-        padding: 10px 30px;
+        padding: 10px 31px;
         margin-bottom: 29.5px;
         border-radius: 25px;
         font-size: 20px;
@@ -5848,6 +5850,9 @@ body{
         height: 100%;
         border-radius: 12px;
         object-fit: cover;   
+        @include for-tiny-tablet{
+            object-position: top;
+        }
     }
     &__text-block{
         display: flex;
