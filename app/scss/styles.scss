@@ -3088,9 +3088,9 @@ body{
             }
         }
         &+&{
-            margin-left: 5px;
+            margin-left: 7px;
             @include for-md-mob{
-                margin-left: 10px;
+                margin-left: 9px;
             }
         }
     }
@@ -5602,12 +5602,23 @@ body{
             height: 12px;
             border-color: $blue;
             right: 19px;
+            @include for-md{
+                border-color: $dark_blue;
+            }
         } 
         .list{
             width: 100%;
             border-radius: 20px;
         }
+        @include for-md{
+            border-color: $dark_blue !important;
+        }
         
+    }
+    &__input{
+        @include for-md{
+            border-color: $dark_blue;
+        }
     }
     &__textarea{
         height: 100%;
@@ -5615,6 +5626,7 @@ body{
         @include for-md{
             margin-top: 40px;
             min-height: 255px;
+            border-color: $dark_blue;
         }
     }
     &__bottom{

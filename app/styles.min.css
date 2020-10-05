@@ -5424,10 +5424,10 @@ body.fixed-header {
     .pagination__list-item--dn-mobile {
       display: none; } }
   .pagination__list-item + .pagination__list-item {
-    margin-left: 5px; }
+    margin-left: 7px; }
     @media (max-width: 550px) {
       .pagination__list-item + .pagination__list-item {
-        margin-left: 10px; } }
+        margin-left: 9px; } }
   .pagination__icon {
     width: 10px;
     height: 10px;
@@ -7891,16 +7891,26 @@ body.fixed-header {
       height: 12px;
       border-color: #007FC2;
       right: 19px; }
+      @media (max-width: 1024px) {
+        .review-post__select:after {
+          border-color: #024B76; } }
     .review-post__select .list {
       width: 100%;
       border-radius: 20px; }
+    @media (max-width: 1024px) {
+      .review-post__select {
+        border-color: #024B76 !important; } }
+  @media (max-width: 1024px) {
+    .review-post__input {
+      border-color: #024B76; } }
   .review-post__textarea {
     height: 100%;
     color: #007FC2; }
     @media (max-width: 1024px) {
       .review-post__textarea {
         margin-top: 40px;
-        min-height: 255px; } }
+        min-height: 255px;
+        border-color: #024B76; } }
   .review-post__bottom {
     display: -webkit-box;
     display: -ms-flexbox;
