@@ -5872,7 +5872,7 @@ body.fixed-header {
         text-align: center;
         padding: 11px 10px; }
         .contacts__btn + .contacts__btn {
-          margin-top: 15px; } }
+          margin-top: 32px; } }
 
 .operating__title {
   font-size: 16px;
@@ -5893,7 +5893,7 @@ body.fixed-header {
     margin-bottom: 0; }
 
 .test-item {
-  padding-bottom: 42px;
+  padding-bottom: 30px;
   margin-bottom: 22px;
   border-bottom: 1px dotted #007FC2; }
   .test-item:last-child {
