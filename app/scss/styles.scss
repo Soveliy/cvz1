@@ -6901,3 +6901,11 @@ body{
         margin-top: 35px;
     }
 }
+.main{
+    .video-section:last-child{
+        margin-bottom: 140px;
+        @include for-md(){
+            margin-bottom: 60px;
+        }
+    }
+}

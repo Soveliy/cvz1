@@ -9180,3 +9180,9 @@ body.fixed-header {
   @media (max-width: 1024px) {
     .review + .section-page {
       margin-top: 35px; } }
+
+.main .video-section:last-child {
+  margin-bottom: 140px; }
+  @media (max-width: 1024px) {
+    .main .video-section:last-child {
+      margin-bottom: 60px; } }
