@@ -728,10 +728,17 @@ $(window).scroll(function() {
 var $page = $('html, body');
 $('.service-menu__item').click(function() {
     $page.animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
+        scrollTop: $($.attr(this, 'href')).offset().top - 100
     }, 400);
     return false;
 });
+$('.glossary-menu__item').click(function() {
+  $page.animate({
+      scrollTop: $($.attr(this, 'href')).offset().top - 75
+  }, 400);
+  return false;
+});
+
 
 function resizeMenu() {
   var windowWidth = $(window).width();
