@@ -745,14 +745,6 @@ $('.service-menu__item').click(function() {
     return false;
 });
 
-var $page = $('html, body');
-$('.glossary-menu__item').click(function() {
-    $page.animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 400);
-    return false;
-});
-
 function resizeMenu() {
   var windowWidth = $(window).width();
   if (windowWidth <= 1024) {

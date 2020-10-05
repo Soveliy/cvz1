@@ -5562,6 +5562,14 @@ body.fixed-header {
     .test-page__image-container img {
       max-width: 100%;
       border-radius: 20px; }
+  .test-page__title + .test-page__content-block {
+    text-align: center; }
+  .test-page__btn {
+    min-width: 165px; }
+    @media (max-width: 1024px) {
+      .test-page__btn {
+        padding-left: 10px;
+        padding-right: 10px; } }
 
 .variantes {
   display: grid;
@@ -5979,6 +5987,9 @@ body.fixed-header {
         border-left: 0;
         border-right: 0;
         padding: 0; } }
+    @media (max-width: 1024px) {
+      .contacts-top-info__social .social__link {
+        padding: 7px; } }
   .contacts-top-info__left-side {
     display: -webkit-box;
     display: -ms-flexbox;

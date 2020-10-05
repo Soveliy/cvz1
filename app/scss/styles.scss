@@ -3211,6 +3211,16 @@ body{
             border-radius: 20px;
         }
     }
+    &__title + .test-page__content-block{
+        text-align: center;
+    }
+    &__btn{
+        min-width: 165px;
+        @include for-md(){
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
 }
 
 .variantes{
@@ -3654,6 +3664,11 @@ body{
             border-left:0;
             border-right:0;
            padding: 0;
+        }
+        .social__link{
+            @include for-md(){
+                padding: 7px;
+            }
         }
     }
     &__left-side{
