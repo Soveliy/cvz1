@@ -80,7 +80,7 @@ $('.main-slider .swiper-container').each(function(){
 // Price slider
 
 $('.content-slider.price__slider').each(function(){
-  if(window.width < 650){
+  if(window.innerWidth > 650){
     var contentSlider = new Swiper(this, {
       spaceBetween: 60,
       slidesPerView: 1,
@@ -88,20 +88,7 @@ $('.content-slider.price__slider').each(function(){
         nextEl: $(this).prev().find('.content-slider__arrow-right')[0],
         prevEl: $(this).prev().find('.content-slider__arrow-left')[0],
       },
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          spaceBetween: 20
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 0
-        },
-        1025: {
-          slidesPerView: 3,
-          spaceBetween: 40
-        }
-      },
+     
       observer: true,  
       observeParents: true,
     });
@@ -410,7 +397,7 @@ $('.rate').each(function () {
       ratedFill: "#DF7EB1",
       fullStar: true,
       spacing: "3.3px",
-      starWidth: "26px",
+      starWidth: "24px",
       starSvg: `    
       <svg xmlns="http://www.w3.org/2000/svg" width="24.795" height="23.582" viewBox="0 0 24.795 23.582">
         <path id="Path_460" data-name="Path 460" d="M1190.379,937.887l-2.678,7.808-8.254.135,6.6,4.96-2.422,7.891,6.756-4.743,6.756,4.743-2.422-7.891,6.6-4.96-8.254-.135Z" transform="translate(-1177.981 -936.346)" fill="" stroke="#df7eb1" stroke-width="1"/>
@@ -421,6 +408,7 @@ $('.rate').each(function () {
     $(this).rateYo({
       ratedFill: "#DF7EB1",
       fullStar: true,
+      spacing: "3.3px",
       starWidth: "22px",
       starSvg: `    
       <svg xmlns="http://www.w3.org/2000/svg" width="24.795" height="23.582" viewBox="0 0 24.795 23.582">

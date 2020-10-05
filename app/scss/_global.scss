@@ -134,8 +134,8 @@ a{
     &--transparent{
 
         background-color: transparent;
-        color: $dark_blue;
-        border: 1px solid $dark_blue;
+        color: $blue;
+        border: 1px solid $blue;
         padding: 11px 40px;
         border-radius: 25px;
         &:hover{
@@ -319,7 +319,6 @@ a{
         text-decoration: none !important;
         padding: 12px 40px;
         border-radius: 25px;
-        border-width: 2.25px;
         
     }
 }

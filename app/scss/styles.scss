@@ -702,7 +702,7 @@ body{
                 vertical-align: middle;
                 width: 23px;
                 height: 1px;
-                margin: 0 10px;
+                margin: 0 10px 1px;
                 background-color: $white;
                 @include for-sm(){
                     width: 34px;
@@ -823,7 +823,7 @@ body{
         display: none;
         @include for-md{
             display: block;
-            padding: 0 5px;
+            padding: 0 14.5px;
             background-color: $white;
             .btn{
                 padding: 11px 30px;
@@ -1983,7 +1983,7 @@ body{
     margin-bottom: 64px;     
     background-color: #F8F8F8;
     @include for-md{
-        margin-bottom: 30px;
+        margin-bottom: 12.6px;
         overflow-x: scroll;
         overflow-y: hidden;
     }  
@@ -2176,13 +2176,13 @@ body{
         // position: absolute;
         margin-top: 14px;
         margin-left: auto;
-        border-color: $dark_blue;
-        color: $dark_blue;
+        // border-color: $dark_blue;
+        // color: $dark_blue;
         // bottom: 25px;
         // right: 18px;
         &:hover{
-            background-color: $dark_blue;
-            border-color: $dark_blue;
+            // background-color: $dark_blue;
+            // border-color: $dark_blue;
         }
         @include for-md{
             margin-top: 0;
@@ -2249,8 +2249,7 @@ body{
         }
         
 
-        &:nth-child(5){
-            
+        &:nth-child(5){            
             @include for-tiny-tablet{
                 .price__tip{
                     top: auto;
@@ -2271,7 +2270,8 @@ body{
                 top: auto;
                 bottom: 25px;
                 &::before{
-                    bottom: -20px;   
+                    bottom: -20px;
+                    left: 15px;
                     top: auto;
                     transform: rotate(180deg) translateX(50%);
                     transform-origin: center;
@@ -2289,7 +2289,6 @@ body{
             @include for-tiny-tablet{                
                 height: 0;
                 opacity: 0; 
-                overflow: hidden;
             }
             &.active{
                 @include for-tiny-tablet{                    
@@ -2455,7 +2454,7 @@ body{
     &__more{
         display: flex;
         align-items: center;
-        padding: 5px 8px 5px 25px;
+        padding: 5px 8px 5px 22px;
         color: $dark_blue;
 
         .price__more-icon{
@@ -2516,13 +2515,14 @@ body{
         transition: $transition;
     }
     &__head-btn{
-        padding: 9.5px 48px;
+        padding: 10.5px 48px;
         max-width: 166px;
         width: 100%;
     }
     &__btn-mobile{
         @include for-tiny-tablet{
             min-height: 40px;
+            min-width: 165px;
             padding: 9.5px 48px;
         }
     }
@@ -2712,13 +2712,12 @@ body{
         width: 24px;
         height: 24px;
         border-radius: 50%;
-        border: 2px solid $dark_blue;
+        border: 1px solid $dark_blue;
         margin-left: auto;
         flex-shrink: 0;
     }
     &__arrow-icon{
-        margin-top: 3px;
-        margin-left: 2px;
+        margin-top: 2px;
         width: 12px;
         height: 12px;
         stroke: $dark_blue;
@@ -2743,9 +2742,8 @@ body{
     }
     &__btn{
         margin-left: auto;
-        border-width: 2.25px;
-        border-color: $blue;
-        color: $blue;
+        // border-color: $blue;
+        // color: $blue;
         @include for-sm{
             margin: 18px auto 0;
         }
@@ -4065,14 +4063,14 @@ body{
         // position: absolute;
         margin-top: 14px;
         margin-left: auto;
-        border-color: $dark_blue;
-        color: $dark_blue;
+        // border-color: $dark_blue;
+        // color: $dark_blue;
 
         // bottom: 25px;
         // right: 18px;
         &:hover {
-            background-color: $dark_blue;
-            border-color: $dark_blue;
+            // background-color: $dark_blue;
+            // border-color: $dark_blue;
         }
 
         @include for-md {
@@ -4331,6 +4329,9 @@ body{
             padding: 12px 39px;
             border-radius: 33px;
         }
+        .specialist-item__position{
+            padding-left: 30px;
+        }
     }
    
     @include for-tiny-tablet {
@@ -4419,7 +4420,7 @@ body{
         }
     }
     &__position{
-        padding: 0 30px 8px;
+        padding: 0 30px 8px 0;
     }
 }
 
@@ -4749,7 +4750,6 @@ body{
     &__btn {
         margin-top: 20px;
         align-self: flex-end;
-        border-width: 2px;
         @include for-md {
             align-self: center;
         }
@@ -5126,7 +5126,7 @@ body{
         width: 29px;
         height: 29px;
         border-radius: 50%;
-        border: 2px solid #024B76;
+        border: 0.8px solid #024B76;
         margin-left: auto;
         flex-shrink: 0;
     }
@@ -5206,7 +5206,6 @@ body{
         position: absolute;
         right: 20px;
         bottom: 27.6px;
-        border-width: 2.25px;
         @include for-md-mob{
             position: relative;
             right: auto;
@@ -5400,6 +5399,9 @@ body{
             width: 14px;
             height: 14px;
             fill: $dark_blue;
+            // @include for-md{
+            //     margin-left: 1.5px;
+            // }
         }
         &--calendar{
             width: 18px;
@@ -6153,6 +6155,9 @@ body{
         color: $blue;
         text-decoration: underline;
     }
+    &__arrow{
+        border-width: 0.8px;
+    }
 }
 .reitings{
     .head-block__title{
@@ -6389,7 +6394,6 @@ body{
         padding: 11px 43px;
         text-decoration: none;
         border-radius: 30px;
-        border-width: 2.25px;
     }
 }
 
