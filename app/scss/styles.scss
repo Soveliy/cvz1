@@ -4268,6 +4268,11 @@ body{
 }
 
 .specialists {
+    &--horizontal{
+        .content-slider{
+            overflow: hidden !important;
+        }
+    }
     &__slider {
         margin-top: 62px;       
         @include for-sm {
@@ -4497,18 +4502,19 @@ body{
             // width: 1024px;
             flex-wrap: nowrap;
             justify-content: flex-start;
+            padding: 24px 14.5px;
+            min-height: 0;
         }
 
         @include for-sm {
-            padding: 24px 14.5px;
-            min-height: 0;
+            
         }
     }
 
     &__item {
         display: flex;
         align-items: center;
-        padding: 5px 15px;
+        padding: 7px 15px;
         color: $blue;
         transition: $transition;
         margin-right: 31px;
@@ -5349,7 +5355,7 @@ body{
     &__item {
         display: flex;
         align-items: center;
-        padding: 5px 15px;
+        padding: 7px 15px;
         color: $blue;
         transition: $transition;
         margin-right: 31px;
@@ -5727,7 +5733,7 @@ body{
     &__item {
         display: flex;
         align-items: center;
-        padding: 5px 15px;
+        padding: 7px 15px;
         color: $blue;
         transition: $transition;
         margin-right: 31px;
@@ -5813,18 +5819,19 @@ body{
             // width: 1024px;
             flex-wrap: nowrap;
             justify-content: flex-start;
+            padding: 24px 14.5px;
+            min-height: 0;
         }
 
         @include for-sm {
-            padding: 24px 14.5px;
-            min-height: 0;
+            
         }
     }
 
     &__item {
         display: flex;
         align-items: center;
-        padding: 5px 15px;
+        padding: 7px 15px;
         color: $blue;
         transition: $transition;
         margin-right: 31px;
@@ -5947,18 +5954,19 @@ body{
             // width: 1024px;
             flex-wrap: nowrap;
             justify-content: flex-start;
+            padding: 24px 14.5px;
+            min-height: 0;
         }
 
         @include for-sm {
-            padding: 24px 14.5px;
-            min-height: 0;
+            
         }
     }
 
     &__item {
         display: flex;
         align-items: center;
-        padding: 5px 15px;
+        padding: 6px 15px;
         color: $blue;
         transition: $transition;
         margin-right: 20px;
@@ -6062,11 +6070,12 @@ body{
             // width: 1024px;
             flex-wrap: nowrap;
             justify-content: flex-start;
+            padding: 22px 14.5px;
+            min-height: 0;
         }
 
         @include for-sm {
-            padding: 24px 14.5px;
-            min-height: 0;
+            
         }
     }
 
@@ -6695,11 +6704,12 @@ body{
             // width: 1024px;
             flex-wrap: nowrap;
             justify-content: flex-start;
+            padding: 24px 14.5px;
+            min-height: 0;
         }
 
         @include for-sm {
-            padding: 24px 14.5px;
-            min-height: 0;
+            
         }
     }
 
