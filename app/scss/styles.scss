@@ -3101,9 +3101,11 @@ body{
         transform-origin: 50% 50%;
         &--left{
             transform: rotate(90deg);
+            transform-origin: 45% 50%;
         }
         &--right{
             transform: rotate(-90deg);
+            transform-origin: 60% 45%;
         }
     }
 }
@@ -6165,6 +6167,7 @@ body{
     &__arrow{
         width: 29px;
         height: 29px;
+        border-width: 0.8px;
     }
     &__body{
         display: none;
@@ -6187,8 +6190,8 @@ body{
         color: $blue;
         text-decoration: underline;
     }
-    &__arrow{
-        border-width: 0.8px;
+    &__arrow-icon{
+        margin-top: 3px;
     }
 }
 .reitings{
@@ -6703,7 +6706,7 @@ body{
     &__item {
         display: flex;
         align-items: center;
-        padding: 5px 15px;
+        padding: 7px 15px;
         color: $blue;
         transition: $transition;
         margin-right: 31px;
