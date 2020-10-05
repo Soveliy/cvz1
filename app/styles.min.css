@@ -6840,6 +6840,8 @@ body.fixed-header {
 .action {
   padding: 18px 0;
   border-top: 1px dotted #024B76; }
+  .action:last-child {
+    border-bottom: 1px dotted #024B76; }
   @media (max-width: 1024px) {
     .action {
       padding: 25px 0; } }
@@ -7015,13 +7017,15 @@ body.fixed-header {
     line-height: 14px;
     color: #024B76; }
   .timer__btn {
+    padding: 9px 40px;
     margin-top: 20px;
     -ms-flex-item-align: end;
         align-self: flex-end; }
     @media (max-width: 1024px) {
       .timer__btn {
         -ms-flex-item-align: center;
-            align-self: center; } }
+            align-self: center;
+        border-color: #007FC2; } }
 
 .doc-page__head {
   background-color: #F9F9F9; }

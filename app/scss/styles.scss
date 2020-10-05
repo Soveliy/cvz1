@@ -4602,6 +4602,9 @@ body{
 .action {
     padding: 18px 0;
     border-top: 1px dotted $dark_blue;
+    &:last-child{
+        border-bottom: 1px dotted $dark_blue;
+    }
 
     @include for-md(){
         padding: 25px 0;
@@ -4763,10 +4766,12 @@ body{
     }
 
     &__btn {
+        padding: 9px 40px;
         margin-top: 20px;
         align-self: flex-end;
         @include for-md {
             align-self: center;
+            border-color: $blue;
         }
     }
 }
