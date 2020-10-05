@@ -160,17 +160,6 @@ a {
     font-weight: 500; }
   .btn--bold {
     font-weight: 700; }
-  .btn--transparent {
-    background-color: transparent;
-    color: #007FC2;
-    border: 1px solid #007FC2; }
-    .btn--transparent:hover {
-      background-color: #007FC2;
-      color: #fff; }
-    .btn--transparent:active {
-      background-color: #81028E;
-      color: #fff;
-      border-color: #81028E; }
   .btn--border-dark-blue {
     background-color: transparent;
     color: #024B76;
@@ -4552,8 +4541,8 @@ body.fixed-header {
 
 .price__tr:first-child {
   background: -webkit-gradient(linear, right top, left top, from(#007fc2), to(#e57fbc));
-  background: -o-linear-gradient(right, #007fc2 0%, #e57fbc 100%);
-  background: linear-gradient(270deg, #007fc2 0%, #e57fbc 100%); }
+  background: -o-linear-gradient(right, #007fc2, #e57fbc);
+  background: linear-gradient(270deg, #007fc2, #e57fbc); }
 
 .price__tr:nth-child(2n +1) .price__td {
   background-color: #F3F3F3; }
@@ -4572,6 +4561,19 @@ body.fixed-header {
       -webkit-transform-origin: center;
           -ms-transform-origin: center;
               transform-origin: center; } }
+
+.price__tr:last-child .price__tip {
+  top: auto;
+  bottom: 25px; }
+  .price__tr:last-child .price__tip::before {
+    bottom: -20px;
+    top: auto;
+    -webkit-transform: rotate(180deg) translateX(50%);
+        -ms-transform: rotate(180deg) translateX(50%);
+            transform: rotate(180deg) translateX(50%);
+    -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+            transform-origin: center; }
 
 @media (max-width: 650px) {
   .price__tr {
@@ -5056,6 +5058,7 @@ body.fixed-header {
 
 .questions-dropdown__arrow-icon {
   margin-top: 3px;
+  margin-left: 2px;
   width: 12px;
   height: 12px;
   stroke: #024B76;
@@ -6840,9 +6843,7 @@ body.fixed-header {
   border-top: 1px dotted #024B76; }
   @media (max-width: 1024px) {
     .action {
-      padding: 25px 0; }
-      .action + .action {
-        margin-top: 20px; } }
+      padding: 25px 0; } }
   .action__inner {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -7812,8 +7813,8 @@ body.fixed-header {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    -o-object-fit: cover;
-       object-fit: cover; }
+    padding: 0 8px;
+    background-color: #EBEBEB; }
   .review-answer__title {
     margin-bottom: 8px; }
     @media (max-width: 1024px) {
@@ -8469,7 +8470,8 @@ body.fixed-header {
       .glossary-item__title.active .glossary-item__arrow-icon {
         -webkit-transform: rotate(180deg);
             -ms-transform: rotate(180deg);
-                transform: rotate(180deg); }
+                transform: rotate(180deg);
+        margin-top: 1px; }
     @media (max-width: 550px) {
       .glossary-item__title {
         padding-left: 10px; } }

@@ -2239,15 +2239,18 @@ body{
     }
     &__tr{
         &:first-child{
-            background: linear-gradient(270deg, #007fc2 0%, #e57fbc 100%);
+            background: -webkit-gradient(linear, right top, left top, from(rgba(0, 127, 194, 1)), to(rgba(229, 127, 188, 1)));
+            background: linear-gradient(270deg, rgba(0, 127, 194, 1), rgba(229, 127, 188, 1));
         }
         &:nth-child(2n +1){
             .price__td{
                 background-color: #F3F3F3;
             }
         }
+        
 
         &:nth-child(5){
+            
             @include for-tiny-tablet{
                 .price__tip{
                     top: auto;
@@ -2263,9 +2266,18 @@ body{
                 }
             }
         }
-
         &:last-child{
-            
+            .price__tip{
+                top: auto;
+                bottom: 25px;
+                &::before{
+                    bottom: -20px;   
+                    top: auto;
+                    transform: rotate(180deg) translateX(50%);
+                    transform-origin: center;
+                    
+                }
+            }
         }
         
         @include for-tiny-tablet{
@@ -2706,6 +2718,7 @@ body{
     }
     &__arrow-icon{
         margin-top: 3px;
+        margin-left: 2px;
         width: 12px;
         height: 12px;
         stroke: $dark_blue;
@@ -4576,9 +4589,7 @@ body{
 
     @include for-md(){
         padding: 25px 0;
-        & + &{
-            margin-top: 20px;
-        }
+       
     }
 
     &__inner {
@@ -5496,7 +5507,8 @@ body{
         width: 100%;
         height: 100%;
         border-radius: 50%;
-        object-fit: cover;
+        padding: 0 8px;
+        background-color: #EBEBEB;
     }
     &__title{
         margin-bottom: 8px;
@@ -6109,6 +6121,7 @@ body{
             border-bottom-color: transparent;
             .glossary-item__arrow-icon{
                 transform: rotate(180deg);
+                margin-top: 1px;
             }
         }
         @include for-md-mob{
