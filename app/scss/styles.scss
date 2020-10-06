@@ -706,6 +706,7 @@ body{
                 background-color: $white;
                 @include for-sm(){
                     width: 34px;
+                    margin-top: -2px;
                 }
             }
         }
@@ -1749,6 +1750,12 @@ body{
     &__list-item{
         &+&{
             margin-left: 10px;
+            @include for-md(){
+                margin-left: 28px;
+            }
+            @include for-lit-mob(){
+                margin-left: 15px;
+            }
         }
     }
     &__icon{
@@ -3790,6 +3797,12 @@ body{
             display: flex;
             align-items: flex-start;
             color: $white;
+
+            &:nth-child(2){
+                .map__info-item-content{
+                    padding-top: 0;
+                }
+            }
            &+&{
             padding-top:15px;
             margin-top: 15px;
@@ -6912,5 +6925,13 @@ body{
     margin-top: 50px;
     @include for-md(){
         margin-top: 35px;
+    }
+}
+.main{
+    .video-section:last-child{
+        margin-bottom: 140px;
+        @include for-md(){
+            margin-bottom: 60px;
+        }
     }
 }
