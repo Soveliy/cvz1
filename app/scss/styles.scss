@@ -2460,6 +2460,7 @@ body{
         .price__more-icon{
             transition: $transition
         }
+
         &:hover{
             .price__more-icon-container{
                 border-color: $white;                
@@ -2513,6 +2514,8 @@ body{
         height: 18px;
         stroke: $dark_blue;
         transition: $transition;
+        margin-top: 1px;
+        margin-left: 1px;
     }
     &__head-btn{
         padding: 10.5px 48px;

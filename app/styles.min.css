@@ -4826,7 +4826,9 @@ body.fixed-header {
   stroke: #024B76;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
-  transition: 0.3s; }
+  transition: 0.3s;
+  margin-top: 1px;
+  margin-left: 1px; }
 
 .price__head-btn {
   padding: 10.5px 48px;
