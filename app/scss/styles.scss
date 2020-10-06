@@ -1069,6 +1069,12 @@ body{
     }
     &--border-purple{
         border-color: $purple_border2;
+
+        @media screen and (max-width:400px) and (min-width:320px){
+            .form__title-container--abs{
+                top: -30px;
+            }
+        }
     }
     &--border-blue{
         border-color: $blue_border;

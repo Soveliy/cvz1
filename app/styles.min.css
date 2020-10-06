@@ -3382,6 +3382,9 @@ body.fixed-header {
         padding-top: 50px; } }
   .form--border-purple {
     border-color: #BE69C7; }
+    @media screen and (max-width: 400px) and (min-width: 320px) {
+      .form--border-purple .form__title-container--abs {
+        top: -30px; } }
   .form--border-blue {
     border-color: #80BFE2; }
   .form__input-container {
