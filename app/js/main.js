@@ -734,7 +734,7 @@ $('.service-menu__item').click(function() {
 });
 $('.glossary-menu__item').click(function() {
   $page.animate({
-      scrollTop: $($.attr(this, 'href')).offset().top - 75
+      scrollTop: $($.attr(this, 'href')).offset().top - 80
   }, 400);
   return false;
 });
