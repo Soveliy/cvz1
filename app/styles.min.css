@@ -4542,9 +4542,21 @@ body.fixed-header {
       border-spacing: 1px; } }
 
 .price__tr:first-child {
-  background: -webkit-gradient(linear, right top, left top, from(#007fc2), to(#e57fbc));
-  background: -o-linear-gradient(right, #007fc2, #e57fbc);
-  background: linear-gradient(270deg, #007fc2, #e57fbc); }
+  position: relative; }
+  .price__tr:first-child:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 44px;
+    left: 0;
+    top: 0;
+    background: -webkit-gradient(linear, right top, left top, from(#007fc2), to(#e57fbc));
+    background: -o-linear-gradient(right, #007fc2, #e57fbc);
+    background: linear-gradient(270deg, #007fc2, #e57fbc);
+    z-index: -1; }
+    @media (max-width: 650px) {
+      .price__tr:first-child:after {
+        height: 100%; } }
 
 .price__tr:nth-child(2n +1) .price__td {
   background-color: #F3F3F3; }
